@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/optionalnullable"
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	"github.com/solarwinds/squadcast-sdk-go/optionalnullable"
+	"github.com/solarwinds/squadcast-sdk-go/types"
 )
 
 func GenerateURL(_ context.Context, serverURL, path string, pathParams interface{}, globals interface{}) (string, error) {

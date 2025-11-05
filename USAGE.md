@@ -4,7 +4,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
 	"os"
 )

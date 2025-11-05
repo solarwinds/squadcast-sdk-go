@@ -15,7 +15,7 @@ import (
 	"reflect"
 	"regexp"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/optionalnullable"
+	"github.com/solarwinds/squadcast-sdk-go/optionalnullable"
 )
 
 const (

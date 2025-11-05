@@ -6,16 +6,36 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/solarwinds/squadcast-sdk-go/internal/config"
+	"github.com/solarwinds/squadcast-sdk-go/internal/hooks"
+	"github.com/solarwinds/squadcast-sdk-go/internal/utils"
+	"github.com/solarwinds/squadcast-sdk-go/models/apierrors"
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
+	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"net/http"
 )
 
+// Incident Export
+// - This endpoint is used to export the incident details into a `csv` or `json` file.
+// - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
+// - Header field/value: `Content-Type`: `text/csv`
+//
+// Query Params:
+//
+// ```
+// type: csv or json
+// start_time: filter by date range
+// end_time: filter by date range
+// services: filter by services
+// sources: filter by alert sources
+// assigned_to: filter by assignee
+// status: filter by incident status
+// slo_affecting: filetr by slo affected
+// slos: filter by slos
+// tags: filter by tags key=value
+//
+//	```
 type Export struct {
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration

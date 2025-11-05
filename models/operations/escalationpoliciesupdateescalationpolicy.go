@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
 )
 
 type EscalationPoliciesUpdateEscalationPolicyRequest struct {

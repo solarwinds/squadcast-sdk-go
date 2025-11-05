@@ -51,7 +51,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *Squadcas
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/SquadcastHub/squadcast-sdk-go
+go get github.com/solarwinds/squadcast-sdk-go
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -65,7 +65,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -106,7 +106,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -581,7 +581,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -628,8 +628,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"log"
 	"models/operations"
 	"os"
@@ -669,8 +669,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"log"
 	"os"
 )
@@ -737,8 +737,8 @@ package main
 import (
 	"context"
 	"errors"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go/models/apierrors"
 	"log"
 	"os"
 )
@@ -841,7 +841,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -884,7 +884,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go"
 )
 
 var (

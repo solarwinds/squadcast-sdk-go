@@ -4,8 +4,8 @@ package operations
 
 import (
 	"errors"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/solarwinds/squadcast-sdk-go/internal/utils"
+	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"time"
 )
 

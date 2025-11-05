@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/optionalnullable"
+	"github.com/solarwinds/squadcast-sdk-go/optionalnullable"
 )
 
 func PopulateHeaders(_ context.Context, req *http.Request, headers interface{}, globals interface{}) {

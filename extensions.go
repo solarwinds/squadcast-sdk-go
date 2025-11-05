@@ -3,8 +3,8 @@
 package squadcastsdk
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
+	"github.com/solarwinds/squadcast-sdk-go/internal/config"
+	"github.com/solarwinds/squadcast-sdk-go/internal/hooks"
 )
 
 type Extensions struct {

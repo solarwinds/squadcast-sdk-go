@@ -1,4 +1,4 @@
-module github.com/SquadcastHub/squadcast-sdk-go
+module github.com/solarwinds/squadcast-sdk-go
 
 go 1.22
 
