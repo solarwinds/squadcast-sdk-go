@@ -5,13 +5,13 @@
 
 ### Available Operations
 
-* [AuditLogsListAuditLogs](#auditlogslistauditlogs) - List all Audit Logs
-* [AuditLogsExportAuditLogs](#auditlogsexportauditlogs) - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
-* [AuditLogsListAuditLogsExportHistory](#auditlogslistauditlogsexporthistory) - List all Audit Logs export history
-* [AuditLogsGetAuditLogsExportHistoryByID](#auditlogsgetauditlogsexporthistorybyid) - Get details of Audit Logs export history by ID
-* [AuditLogsGetAuditLogByID](#auditlogsgetauditlogbyid) - Get audit log by ID
+* [List](#list) - List all Audit Logs
+* [Export](#export) - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+* [ListExportHistory](#listexporthistory) - List all Audit Logs export history
+* [GetExportHistoryByID](#getexporthistorybyid) - Get details of Audit Logs export history by ID
+* [GetByID](#getbyid) - Get audit log by ID
 
-## AuditLogsListAuditLogs
+## List
 
 List all Audit Logs
 Returns array of audit logs for given team and filters
@@ -38,7 +38,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.AuditLogs.AuditLogsListAuditLogs(ctx, operations.AuditLogsListAuditLogsRequest{
+    res, err := s.AuditLogs.List(ctx, operations.AuditLogsListAuditLogsRequest{
         PageSize: 832442,
         PageNumber: 555332,
         StartDate: types.MustDateFromString("2023-03-04"),
@@ -94,7 +94,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## AuditLogsExportAuditLogs
+## Export
 
 Export Audit logs
 Initiates export of audit logs based on provided filters
@@ -121,7 +121,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.AuditLogs.AuditLogsExportAuditLogs(ctx, components.V3AuditLogsExportAuditLogsRequest{
+    res, err := s.AuditLogs.Export(ctx, components.V3AuditLogsExportAuditLogsRequest{
         Filters: components.Filters{
             StartDate: types.MustDateFromString("2025-07-29"),
             EndDate: types.MustDateFromString("2023-09-09"),
@@ -167,7 +167,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## AuditLogsListAuditLogsExportHistory
+## ListExportHistory
 
 List all Audit Logs export history
 Returns array of audit logs export history
@@ -192,7 +192,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.AuditLogs.AuditLogsListAuditLogsExportHistory(ctx, 159672, 351281)
+    res, err := s.AuditLogs.ListExportHistory(ctx, 159672, 351281)
     if err != nil {
         log.Fatal(err)
     }
@@ -244,7 +244,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## AuditLogsGetAuditLogsExportHistoryByID
+## GetExportHistoryByID
 
 Get details of Audit Logs export history by ID
 Returns audit log export history details for the specified ID
@@ -269,7 +269,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.AuditLogs.AuditLogsGetAuditLogsExportHistoryByID(ctx, "<id>")
+    res, err := s.AuditLogs.GetExportHistoryByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -308,7 +308,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## AuditLogsGetAuditLogByID
+## GetByID
 
 Get audit log by ID
 Returns audit log details for the specified ID
@@ -333,7 +333,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.AuditLogs.AuditLogsGetAuditLogByID(ctx, "<id>")
+    res, err := s.AuditLogs.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }

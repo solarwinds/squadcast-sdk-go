@@ -32,10 +32,10 @@ func newAuditLogs(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// AuditLogsListAuditLogs - List all Audit Logs
+// List all Audit Logs
 // List all Audit Logs
 // Returns array of audit logs for given team and filters
-func (s *AuditLogs) AuditLogsListAuditLogs(ctx context.Context, request operations.AuditLogsListAuditLogsRequest, opts ...operations.Option) (*operations.AuditLogsListAuditLogsResponse, error) {
+func (s *AuditLogs) List(ctx context.Context, request operations.AuditLogsListAuditLogsRequest, opts ...operations.Option) (*operations.AuditLogsListAuditLogsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -228,7 +228,7 @@ func (s *AuditLogs) AuditLogsListAuditLogs(ctx context.Context, request operatio
 			return nil, nil
 		}
 
-		return s.AuditLogsListAuditLogs(
+		return s.List(
 			ctx,
 			operations.AuditLogsListAuditLogsRequest{
 				PageSize:   request.PageSize,
@@ -566,10 +566,10 @@ func (s *AuditLogs) AuditLogsListAuditLogs(ctx context.Context, request operatio
 
 }
 
-// AuditLogsExportAuditLogs - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+// Export - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
 // Export Audit logs
 // Initiates export of audit logs based on provided filters
-func (s *AuditLogs) AuditLogsExportAuditLogs(ctx context.Context, request components.V3AuditLogsExportAuditLogsRequest, opts ...operations.Option) (*operations.AuditLogsExportAuditLogsResponse, error) {
+func (s *AuditLogs) Export(ctx context.Context, request components.V3AuditLogsExportAuditLogsRequest, opts ...operations.Option) (*operations.AuditLogsExportAuditLogsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,10 +1055,10 @@ func (s *AuditLogs) AuditLogsExportAuditLogs(ctx context.Context, request compon
 
 }
 
-// AuditLogsListAuditLogsExportHistory - List all Audit Logs export history
+// ListExportHistory - List all Audit Logs export history
 // List all Audit Logs export history
 // Returns array of audit logs export history
-func (s *AuditLogs) AuditLogsListAuditLogsExportHistory(ctx context.Context, pageSize int64, pageNumber int64, opts ...operations.Option) (*operations.AuditLogsListAuditLogsExportHistoryResponse, error) {
+func (s *AuditLogs) ListExportHistory(ctx context.Context, pageSize int64, pageNumber int64, opts ...operations.Option) (*operations.AuditLogsListAuditLogsExportHistoryResponse, error) {
 	request := operations.AuditLogsListAuditLogsExportHistoryRequest{
 		PageSize:   pageSize,
 		PageNumber: pageNumber,
@@ -1256,7 +1256,7 @@ func (s *AuditLogs) AuditLogsListAuditLogsExportHistory(ctx context.Context, pag
 			return nil, nil
 		}
 
-		return s.AuditLogsListAuditLogsExportHistory(
+		return s.ListExportHistory(
 			ctx,
 			pageSize,
 			nP,
@@ -1585,10 +1585,10 @@ func (s *AuditLogs) AuditLogsListAuditLogsExportHistory(ctx context.Context, pag
 
 }
 
-// AuditLogsGetAuditLogsExportHistoryByID - Get details of Audit Logs export history by ID
+// GetExportHistoryByID - Get details of Audit Logs export history by ID
 // Get details of Audit Logs export history by ID
 // Returns audit log export history details for the specified ID
-func (s *AuditLogs) AuditLogsGetAuditLogsExportHistoryByID(ctx context.Context, id string, opts ...operations.Option) (*operations.AuditLogsGetAuditLogsExportHistoryByIDResponse, error) {
+func (s *AuditLogs) GetExportHistoryByID(ctx context.Context, id string, opts ...operations.Option) (*operations.AuditLogsGetAuditLogsExportHistoryByIDResponse, error) {
 	request := operations.AuditLogsGetAuditLogsExportHistoryByIDRequest{
 		ID: id,
 	}
@@ -2071,10 +2071,10 @@ func (s *AuditLogs) AuditLogsGetAuditLogsExportHistoryByID(ctx context.Context, 
 
 }
 
-// AuditLogsGetAuditLogByID - Get audit log by ID
+// GetByID - Get audit log by ID
 // Get audit log by ID
 // Returns audit log details for the specified ID
-func (s *AuditLogs) AuditLogsGetAuditLogByID(ctx context.Context, id string, opts ...operations.Option) (*operations.AuditLogsGetAuditLogByIDResponse, error) {
+func (s *AuditLogs) GetByID(ctx context.Context, id string, opts ...operations.Option) (*operations.AuditLogsGetAuditLogByIDResponse, error) {
 	request := operations.AuditLogsGetAuditLogByIDRequest{
 		ID: id,
 	}

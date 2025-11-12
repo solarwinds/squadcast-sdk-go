@@ -148,11 +148,11 @@ func main() {
 
 ### [AuditLogs](docs/sdks/auditlogs/README.md)
 
-* [AuditLogsListAuditLogs](docs/sdks/auditlogs/README.md#auditlogslistauditlogs) - List all Audit Logs
-* [AuditLogsExportAuditLogs](docs/sdks/auditlogs/README.md#auditlogsexportauditlogs) - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
-* [AuditLogsListAuditLogsExportHistory](docs/sdks/auditlogs/README.md#auditlogslistauditlogsexporthistory) - List all Audit Logs export history
-* [AuditLogsGetAuditLogsExportHistoryByID](docs/sdks/auditlogs/README.md#auditlogsgetauditlogsexporthistorybyid) - Get details of Audit Logs export history by ID
-* [AuditLogsGetAuditLogByID](docs/sdks/auditlogs/README.md#auditlogsgetauditlogbyid) - Get audit log by ID
+* [List](docs/sdks/auditlogs/README.md#list) - List all Audit Logs
+* [Export](docs/sdks/auditlogs/README.md#export) - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+* [ListExportHistory](docs/sdks/auditlogs/README.md#listexporthistory) - List all Audit Logs export history
+* [GetExportHistoryByID](docs/sdks/auditlogs/README.md#getexporthistorybyid) - Get details of Audit Logs export history by ID
+* [GetByID](docs/sdks/auditlogs/README.md#getbyid) - Get audit log by ID
 
 ### [CommunicationCards](docs/sdks/communicationcards/README.md)
 
@@ -604,7 +604,7 @@ func main() {
 		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
 	)
 
-	res, err := s.AuditLogs.AuditLogsListAuditLogs(ctx, operations.AuditLogsListAuditLogsRequest{
+	res, err := s.AuditLogs.List(ctx, operations.AuditLogsListAuditLogsRequest{
 		PageSize:   832442,
 		PageNumber: 555332,
 		StartDate:  types.MustDateFromString("2023-03-04"),

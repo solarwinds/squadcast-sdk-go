@@ -562,6 +562,8 @@ paths:
       tags:
         - "Audit Logs"
       x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "pageNumber", "in": "parameters", "type": "page"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
+      x-speakeasy-group: "auditLogs"
+      x-speakeasy-name-override: "list"
   "/v3/audit-logs/export":
     post:
       operationId: "AuditLogs_exportAuditLogs"
@@ -690,6 +692,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.AuditLogs.ExportAuditLogsRequest"}
+      x-speakeasy-group: "auditLogs"
+      x-speakeasy-name-override: "export"
   "/v3/audit-logs/export/history":
     get:
       operationId: "AuditLogs_listAuditLogsExportHistory"
@@ -827,6 +831,8 @@ paths:
       tags:
         - "Audit Logs"
       x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "pageNumber", "in": "parameters", "type": "page"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
+      x-speakeasy-group: "auditLogs"
+      x-speakeasy-name-override: "listExportHistory"
   "/v3/audit-logs/export/history/{id}":
     get:
       operationId: "AuditLogs_getAuditLogsExportHistoryById"
@@ -956,6 +962,8 @@ paths:
                   - "meta"
       tags:
         - "Audit Logs"
+      x-speakeasy-group: "auditLogs"
+      x-speakeasy-name-override: "getExportHistoryById"
   "/v3/audit-logs/{id}":
     get:
       operationId: "AuditLogs_getAuditLogById"
@@ -1085,6 +1093,8 @@ paths:
                   - "meta"
       tags:
         - "Audit Logs"
+      x-speakeasy-group: "auditLogs"
+      x-speakeasy-name-override: "getById"
   "/v3/escalation-policies":
     get:
       operationId: "EscalationPolicies_getEscalationPolicyByTeam"
