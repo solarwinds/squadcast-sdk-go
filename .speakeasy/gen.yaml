@@ -25,12 +25,13 @@ generation:
   sdkHooksConfigAccess: true
   schemas:
     allOfMergeStrategy: shallowMerge
+  requestBodyFieldName: ""
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 1.4.0
+  version: 1.4.4
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SquadcastSDKError

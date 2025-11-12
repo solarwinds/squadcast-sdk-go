@@ -1,7 +1,7 @@
 overlay: 1.0.0
 info:
   title: Speakeasy Suggestions - Squadcast
-  version: 0.0.4
+  version: 0.0.6
 actions:
   - target: $["paths"]["/v3/slo"]["post"]
     update:
@@ -2233,4 +2233,54 @@ actions:
       before: sdk.Squads.Squads_deleteSquad()
       created_at: 1758938430845
       reviewed_at: 1758938435492
+      type: method-name
+  - target: $["paths"]["/v3/audit-logs"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.list()
+      before: sdk.Audit Logs.AuditLogs_listAuditLogs()
+      created_at: 1762928091758
+      reviewed_at: 1762928127509
+      type: method-name
+  - target: $["paths"]["/v3/audit-logs/export/history/{id}"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: getExportHistoryById
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.getExportHistoryById()
+      before: sdk.Audit Logs.AuditLogs_getAuditLogsExportHistoryById()
+      created_at: 1762928091758
+      reviewed_at: 1762928127509
+      type: method-name
+  - target: $["paths"]["/v3/audit-logs/{id}"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: getById
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.getById()
+      before: sdk.Audit Logs.AuditLogs_getAuditLogById()
+      created_at: 1762928091758
+      reviewed_at: 1762928127509
+      type: method-name
+  - target: $["paths"]["/v3/audit-logs/export/history"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: listExportHistory
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.listExportHistory()
+      before: sdk.Audit Logs.AuditLogs_listAuditLogsExportHistory()
+      created_at: 1762928091758
+      reviewed_at: 1762928127509
+      type: method-name
+  - target: $["paths"]["/v3/audit-logs/export"]["post"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: export
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.export()
+      before: sdk.Audit Logs.AuditLogs_exportAuditLogs()
+      created_at: 1762928091758
+      reviewed_at: 1762928127509
       type: method-name
