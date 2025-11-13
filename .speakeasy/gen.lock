@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: 30ada886b5efc27ded1c2bbbf6770b1e
   docVersion: 1.0.0
-  speakeasyVersion: 1.654.0
-  generationVersion: 2.750.0
-  releaseVersion: 1.4.4
-  configChecksum: e744d04a2a0e9e550664c62128c471ea
+  speakeasyVersion: 1.656.1
+  generationVersion: 2.753.1
+  releaseVersion: 1.4.5
+  configChecksum: 575a64379d30d359a09f1a42a54f6c42
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
-    core: 3.13.1
+    core: 3.13.2
     defaultEnabledRetries: 0.2.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.3.2
@@ -8665,3 +8665,15 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `SquadcastSdk.AuditLogs.List()`: **Added**
+  * `SquadcastSdk.AuditLogs.Export()`: **Added**
+  * `SquadcastSdk.AuditLogs.ListExportHistory()`: **Added**
+  * `SquadcastSdk.AuditLogs.GetExportHistoryById()`: **Added**
+  * `SquadcastSdk.AuditLogs.GetById()`: **Added**
+  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Deleted** **Breaking** :warning:
