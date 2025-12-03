@@ -21,6 +21,9 @@ import (
 )
 
 type Schedules struct {
+	// Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+	// Export Audit logs
+	// Initiates export of audit logs based on provided filters
 	Export    *Export
 	Overrides *SchedulesOverrides
 	Rotations *SchedulesRotations
@@ -94,7 +97,7 @@ func (s *Schedules) List(ctx context.Context, request operations.SchedulesListSc
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2424,7 +2427,7 @@ func (s *Schedules) GetIcalLink(ctx context.Context, scheduleID string, myOnCall
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2714,7 +2717,7 @@ func (s *Schedules) RefreshIcalLink(ctx context.Context, scheduleID string, myOn
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3004,7 +3007,7 @@ func (s *Schedules) CreateIcalLink(ctx context.Context, scheduleID string, myOnC
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

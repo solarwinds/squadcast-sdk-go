@@ -31,7 +31,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 1.4.4
+  version: 1.5.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SquadcastSDKError
@@ -48,14 +48,16 @@ go:
       shared: models/components
       webhooks: models/webhooks
   includeEmptyObjects: false
+  inferUnionDiscriminators: false
   inputModelSuffix: input
   maxMethodParams: 4
   methodArguments: require-security-and-request
   modulePath: github.com/solarwinds/squadcast-sdk-go
+  multipartArrayFormat: legacy
   nullableOptionalWrapper: false
   outputModelSuffix: output
   packageName: github.com/solarwinds/squadcast-sdk-go
   respectRequiredFields: false
   responseFormat: envelope-http
   sdkPackageName: SquadcastSdk
-  unionDeserializationStrategy: left-to-right
+  unionStrategy: left-to-right
