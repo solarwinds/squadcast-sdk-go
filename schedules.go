@@ -21,9 +21,27 @@ import (
 )
 
 type Schedules struct {
-	// Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
-	// Export Audit logs
-	// Initiates export of audit logs based on provided filters
+	// Incident Export
+	// - This endpoint is used to export the incident details into a `csv` or `json` file.
+	// - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
+	// - Header field/value: `Content-Type`: `text/csv`
+	//
+	//
+	// Query Params:
+	//
+	// ```
+	// type: csv or json
+	// start_time: filter by date range
+	// end_time: filter by date range
+	// services: filter by services
+	// sources: filter by alert sources
+	// assigned_to: filter by assignee
+	// status: filter by incident status
+	// slo_affecting: filetr by slo affected
+	// slos: filter by slos
+	// tags: filter by tags key=value
+	//
+	//  ```
 	Export    *Export
 	Overrides *SchedulesOverrides
 	Rotations *SchedulesRotations
