@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: 30ada886b5efc27ded1c2bbbf6770b1e
   docVersion: 1.0.0
-  speakeasyVersion: 1.669.1
+  speakeasyVersion: 1.669.2
   generationVersion: 2.772.0
-  releaseVersion: 1.5.0
-  configChecksum: 8b2c11e05a9da7adf4bd9a5f8a858447
+  releaseVersion: 1.5.1
+  configChecksum: a31e4416a17da021df722e802c53c357
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: aab5c81e-819b-4a5e-a077-fc3d4e511db3
-  pristine_commit_hash: a991ce984faff11ef8b7556d8ddc5eb7b9c47c59
-  pristine_tree_hash: fd6e5f385027918c309cfbc825b509cfdc1836d1
+  generation_id: b6bdfa93-c5ed-4671-913f-d667077ef8a9
+  pristine_commit_hash: c0bb73a22e53f14a4f019a2bf77474c4d5d2c0f1
+  pristine_tree_hash: fc80221d60a047c6bb6b2e2cae20614326860e8c
 features:
   go:
     additionalDependencies: 0.1.0
@@ -5603,8 +5603,8 @@ trackedFiles:
     pristine_git_object: ff42cf8d785105942d5b3e19e66abea039d1a784
   export.go:
     id: d363dc655a95
-    last_write_checksum: sha1:387e125b683a891d6f1ce6156a0c8a4e4653c5c0
-    pristine_git_object: bd2aad6b85a5b80b558267d892492275189f26a0
+    last_write_checksum: sha1:b6b70803b050f9b8094a893c8143f040a2035d32
+    pristine_git_object: 318dcac1fc245f42c131491af4dd9b0472aec79a
   exports.go:
     id: 99a147928f19
     last_write_checksum: sha1:dbc02f565765e0bdd247c2ee84be865bd960172a
@@ -8291,8 +8291,8 @@ trackedFiles:
     pristine_git_object: 91511419dcd74877eb63808b0d2c032f0a8449cd
   schedules.go:
     id: cb5d787b107e
-    last_write_checksum: sha1:91321a2df1dd0689a141f0a48c20555a63b54e93
-    pristine_git_object: d588f07012501415e0cfe891d6ab5b7d7f6e02c6
+    last_write_checksum: sha1:a7b697f6e1f253a2deac64fb5a4505bd7ef72746
+    pristine_git_object: 4bc344f084a8c7524610d3909f631ff4a1e44328
   schedulesoverrides.go:
     id: bdf563e8ee08
     last_write_checksum: sha1:da8e6957a3d6b5dfba2dae0375e9ad06612fe593
@@ -8323,8 +8323,8 @@ trackedFiles:
     pristine_git_object: 7cdaec1f07e58a5f579cfe2fb4fd7552e955f7e0
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:221944ba0657e2a14bc0396bf7989915b12c1f51
-    pristine_git_object: fb050d122c05c1022d778afc7c91f0e011307648
+    last_write_checksum: sha1:0e302baddec13f0dd5d16ef3989703dba578e8c4
+    pristine_git_object: f986e43522792199b5886283368536232daf1fab
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:4deb239a13419fb997ebe9446d1f306c21788de4
@@ -14948,18 +14948,6 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes:
-  * `SquadcastSdk.AuditLogs.List()`: **Added**
-  * `SquadcastSdk.AuditLogs.Export()`: **Added**
-  * `SquadcastSdk.AuditLogs.ListExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.GetExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.GetById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Deleted** **Breaking** :warning:
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
