@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: 30ada886b5efc27ded1c2bbbf6770b1e
   docVersion: 1.0.0
-  speakeasyVersion: 1.672.0
-  generationVersion: 2.774.0
-  releaseVersion: 1.5.0
-  configChecksum: 8b2c11e05a9da7adf4bd9a5f8a858447
+  speakeasyVersion: 1.674.0
+  generationVersion: 2.778.0
+  releaseVersion: 1.5.1
+  configChecksum: a31e4416a17da021df722e802c53c357
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: ef4ebce3-0ea0-4a69-9596-05554d65d2de
-  pristine_commit_hash: 460912f9d1fc767fbd8a93d6574b60ec713fea5f
-  pristine_tree_hash: 6fc938829335a3e9c90c7e6a3291d67acbb82871
+  generation_id: 51a469ad-4ed8-4c7f-b27a-b0374961fd1d
+  pristine_commit_hash: f61bd5122ff682817dc3974323b647f4c5c32c54
+  pristine_tree_hash: 7b49e30ea081f4d76a843b3d92c955db0f1b520b
 features:
   go:
     additionalDependencies: 0.1.0
@@ -8299,8 +8299,8 @@ trackedFiles:
     pristine_git_object: 91511419dcd74877eb63808b0d2c032f0a8449cd
   schedules.go:
     id: cb5d787b107e
-    last_write_checksum: sha1:91321a2df1dd0689a141f0a48c20555a63b54e93
-    pristine_git_object: d588f07012501415e0cfe891d6ab5b7d7f6e02c6
+    last_write_checksum: sha1:a7b697f6e1f253a2deac64fb5a4505bd7ef72746
+    pristine_git_object: 4bc344f084a8c7524610d3909f631ff4a1e44328
   schedulesoverrides.go:
     id: bdf563e8ee08
     last_write_checksum: sha1:da8e6957a3d6b5dfba2dae0375e9ad06612fe593
@@ -8331,8 +8331,8 @@ trackedFiles:
     pristine_git_object: 7cdaec1f07e58a5f579cfe2fb4fd7552e955f7e0
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:4a8f86c655af98d7281324762b4386911a2b192b
-    pristine_git_object: b1be899cbe937b370f3efb9eddec2c59532e56b6
+    last_write_checksum: sha1:49b22b67dd83454d2012270531ac91d13aae9826
+    pristine_git_object: e35344067850d3177cf340940c2cd9c3f41015ac
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:4deb239a13419fb997ebe9446d1f306c21788de4
@@ -14956,18 +14956,6 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes:
-  * `SquadcastSdk.AuditLogs.List()`: **Added**
-  * `SquadcastSdk.AuditLogs.Export()`: **Added**
-  * `SquadcastSdk.AuditLogs.ListExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.GetExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.GetById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Deleted** **Breaking** :warning:
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
