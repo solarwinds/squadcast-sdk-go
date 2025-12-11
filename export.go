@@ -16,6 +16,9 @@ import (
 	"net/http"
 )
 
+// Export - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+// Export Audit logs
+// Initiates export of audit logs based on provided filters
 type Export struct {
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
@@ -88,7 +91,7 @@ func (s *Export) DeleteIcalLink(ctx context.Context, scheduleID string, myOnCall
 	req.Header.Set("Accept", "*/*")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

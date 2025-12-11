@@ -142,7 +142,7 @@ func main() {
 * [GetOrganization](docs/sdks/analytics/README.md#getorganization) - Get Org level analytics
 * [GetTeam](docs/sdks/analytics/README.md#getteam) - Get Team level analytics
 
-### [APITokens](docs/sdks/apitokens/README.md)
+### [ApiTokens](docs/sdks/apitokens/README.md)
 
 * [List](docs/sdks/apitokens/README.md#list) - Get All Tokens
 
@@ -171,11 +171,11 @@ func main() {
 
 * [GetDetails](docs/sdks/exports/README.md#getdetails) - Get Export Details
 
-#### [Extensions.Msteams](docs/sdks/extensionsmsteams/README.md)
+### [Extensions.Msteams](docs/sdks/extensionsmsteams/README.md)
 
 * [UpsertConfig](docs/sdks/extensionsmsteams/README.md#upsertconfig) - Create Or Update MSTeams Configuration
 
-#### [Extensions.Webhooks](docs/sdks/extensionswebhooks/README.md)
+### [Extensions.Webhooks](docs/sdks/extensionswebhooks/README.md)
 
 * [Delete](docs/sdks/extensionswebhooks/README.md#delete) - Delete Webhook
 * [GetByID](docs/sdks/extensionswebhooks/README.md#getbyid) - Get Webhook By ID
@@ -201,7 +201,7 @@ func main() {
 * [Reorder](docs/sdks/rulesets/README.md#reorder) - Reorder Ruleset
 * [ListRulesetRules](docs/sdks/rulesets/README.md#listrulesetrules) - List Ruleset Rules
 
-#### [GlobalEventRules.Rulesets.Rules](docs/sdks/rulesetsrules/README.md)
+##### [GlobalEventRules.Rulesets.Rules](docs/sdks/rulesetsrules/README.md)
 
 * [Create](docs/sdks/rulesetsrules/README.md#create) - Create Rule
 * [GetByID](docs/sdks/rulesetsrules/README.md#getbyid) - Get Rule by ID
@@ -221,7 +221,7 @@ func main() {
 * [Create](docs/sdks/globaloncallreminderrules/README.md#create) - Create Global Oncall Reminder Rules
 * [Update](docs/sdks/globaloncallreminderrules/README.md#update) - Update Global Oncall Reminder Rules
 
-#### [IncidentActions.Circleci](docs/sdks/circleci/README.md)
+### [IncidentActions.Circleci](docs/sdks/circleci/README.md)
 
 * [Rebuild](docs/sdks/circleci/README.md#rebuild) - Rebuild a Project In CircleCI
 
@@ -244,7 +244,7 @@ func main() {
 * [UpdatePostmortem](docs/sdks/incidents/README.md#updatepostmortem) - Update Postmortem By Incident
 * [UnsnoozeNotifications](docs/sdks/incidents/README.md#unsnoozenotifications) - Unsnooze Incident Notifications
 
-#### [Incidents.Actions](docs/sdks/incidentsactions/README.md)
+### [Incidents.Actions](docs/sdks/incidentsactions/README.md)
 
 * [CreateJiraCloudTicket](docs/sdks/incidentsactions/README.md#createjiracloudticket) - Create a Ticket on Jira Cloud
 * [CreateJiraServerTicket](docs/sdks/incidentsactions/README.md#createjiraserverticket) - Create a Ticket on Jira Server
@@ -254,51 +254,51 @@ func main() {
 
 * [TriggerManually](docs/sdks/webhook/README.md#triggermanually) - Trigger a Webhook Manually
 
-#### [Incidents.AdditionalResponders](docs/sdks/additionalresponders/README.md)
+### [Incidents.AdditionalResponders](docs/sdks/additionalresponders/README.md)
 
 * [Get](docs/sdks/additionalresponders/README.md#get) - Get Additional Responders
 * [Add](docs/sdks/additionalresponders/README.md#add) - Add Additional Responders
 * [Delete](docs/sdks/additionalresponders/README.md#delete) - Remove Additional Responders
 
-#### [Incidents.AutoPauseTransientAlerts](docs/sdks/autopausetransientalerts/README.md)
+### [Incidents.AutoPauseTransientAlerts](docs/sdks/autopausetransientalerts/README.md)
 
 * [MarkAsNotTransient](docs/sdks/autopausetransientalerts/README.md#markasnottransient) - Mark as Not Transient
 
-#### [Incidents.CommunicationCard](docs/sdks/communicationcard/README.md)
+### [Incidents.CommunicationCard](docs/sdks/communicationcard/README.md)
 
 * [Update](docs/sdks/communicationcard/README.md#update) - Update Communication Card
 
-#### [Incidents.CommunicationCards](docs/sdks/incidentscommunicationcards/README.md)
+### [Incidents.CommunicationCards](docs/sdks/incidentscommunicationcards/README.md)
 
 * [GetAll](docs/sdks/incidentscommunicationcards/README.md#getall) - Get All Communication Card
 * [Create](docs/sdks/incidentscommunicationcards/README.md#create) - Create Communication Card
 * [Delete](docs/sdks/incidentscommunicationcards/README.md#delete) - Delete Communication Card
 
-#### [Incidents.Events](docs/sdks/events/README.md)
+### [Incidents.Events](docs/sdks/events/README.md)
 
 * [List](docs/sdks/events/README.md#list) - Get Incident Events
 
-#### [Incidents.Notes](docs/sdks/incidentsnotes/README.md)
+### [Incidents.Notes](docs/sdks/incidentsnotes/README.md)
 
 * [Create](docs/sdks/incidentsnotes/README.md#create) - Create Notes
 * [Delete](docs/sdks/incidentsnotes/README.md#delete) - Delete Note
 * [Update](docs/sdks/incidentsnotes/README.md#update) - Update Note
 
-#### [Incidents.Postmortems](docs/sdks/postmortems/README.md)
+### [Incidents.Postmortems](docs/sdks/postmortems/README.md)
 
 * [DeleteByIncident](docs/sdks/postmortems/README.md#deletebyincident) - Delete Postmortem By Incident
 * [GetByIncident](docs/sdks/postmortems/README.md#getbyincident) - Get Postmortem By Incident
 * [Create](docs/sdks/postmortems/README.md#create) - Create Postmortem
 
-#### [Incidents.Runbooks](docs/sdks/incidentsrunbooks/README.md)
+### [Incidents.Runbooks](docs/sdks/incidentsrunbooks/README.md)
 
 * [Attach](docs/sdks/incidentsrunbooks/README.md#attach) - Attach Runbooks
 
-#### [Incidents.SnoozeNotifications](docs/sdks/snoozenotifications/README.md)
+### [Incidents.SnoozeNotifications](docs/sdks/snoozenotifications/README.md)
 
 * [Snooze](docs/sdks/snoozenotifications/README.md#snooze) - Snooze Incident Notifications
 
-#### [Incidents.Tags](docs/sdks/tags/README.md)
+### [Incidents.Tags](docs/sdks/tags/README.md)
 
 * [Update](docs/sdks/tags/README.md#update) - Update Tag
 * [Append](docs/sdks/tags/README.md#append) - Append Tag
@@ -384,26 +384,26 @@ func main() {
 * [CreateOrUpdateSuppressionRules](docs/sdks/services/README.md#createorupdatesuppressionrules) - Create or Update Suppression Rules
 * [CreateOrUpdateTaggingRules](docs/sdks/services/README.md#createorupdatetaggingrules) - Create or Update Tagging Rules
 
-#### [Services.DeduplicationRules](docs/sdks/deduplicationrules/README.md)
+### [Services.DeduplicationRules](docs/sdks/deduplicationrules/README.md)
 
 * [Get](docs/sdks/deduplicationrules/README.md#get) - Get Deduplication Rules
 * [CreateOrUpdate](docs/sdks/deduplicationrules/README.md#createorupdate) - Create or Update Deduplication Rules
 
-#### [Services.Extensions](docs/sdks/servicesextensions/README.md)
+### [Services.Extensions](docs/sdks/servicesextensions/README.md)
 
 * [UpdateSlack](docs/sdks/servicesextensions/README.md#updateslack) - Update Slack Extension
 
-#### [Services.MaintenanceMode](docs/sdks/maintenancemode/README.md)
+### [Services.MaintenanceMode](docs/sdks/maintenancemode/README.md)
 
 * [Get](docs/sdks/maintenancemode/README.md#get) - Get Maintenance Mode
 * [CreateOrUpdate](docs/sdks/maintenancemode/README.md#createorupdate) - Create or Update Maintenance Mode
 
-#### [Services.Overlay](docs/sdks/overlay/README.md)
+### [Services.Overlay](docs/sdks/overlay/README.md)
 
 * [GetKeyBasedDeduplicationOptin](docs/sdks/overlay/README.md#getkeybaseddeduplicationoptin) - Get Opt-in for Key Based Deduplication for a service
 * [OptInForKeyBasedDeduplication](docs/sdks/overlay/README.md#optinforkeybaseddeduplication) - Opt-in for Key Based Deduplication for a service
 
-#### [Services.Overlays](docs/sdks/servicesoverlays/README.md)
+### [Services.Overlays](docs/sdks/servicesoverlays/README.md)
 
 * [GetCustomContentTemplates](docs/sdks/servicesoverlays/README.md#getcustomcontenttemplates) - Get All Custom Content Template Overlay by Service
 * [GetCustomContent](docs/sdks/servicesoverlays/README.md#getcustomcontent) - Get Custom Content Template Overlay
@@ -418,15 +418,15 @@ func main() {
 * [Render](docs/sdks/dedupkey/README.md#render) - Render Dedup Key template
 * [Delete](docs/sdks/dedupkey/README.md#delete) - Delete Dedup Key Overlay
 
-#### [Services.RoutingRules](docs/sdks/routingrules/README.md)
+### [Services.RoutingRules](docs/sdks/routingrules/README.md)
 
 * [CreateOrUpdate](docs/sdks/routingrules/README.md#createorupdate) - Create or Update Routing Rules
 
-#### [Services.SuppressionRules](docs/sdks/suppressionrules/README.md)
+### [Services.SuppressionRules](docs/sdks/suppressionrules/README.md)
 
 * [Get](docs/sdks/suppressionrules/README.md#get) - Get Suppression Rules
 
-#### [Services.TaggingRules](docs/sdks/taggingrules/README.md)
+### [Services.TaggingRules](docs/sdks/taggingrules/README.md)
 
 * [Get](docs/sdks/taggingrules/README.md#get) - Get Tagging Rules
 
@@ -514,7 +514,7 @@ func main() {
 * [RemoveRole](docs/sdks/teams/README.md#removerole) - Remove Team Role
 * [UpdateRole](docs/sdks/teams/README.md#updaterole) - Update Team Role
 
-#### [Teams.Members](docs/sdks/members/README.md)
+### [Teams.Members](docs/sdks/members/README.md)
 
 * [GetAll](docs/sdks/members/README.md#getall) - Get All Team Members
 
@@ -533,11 +533,11 @@ func main() {
 * [GetByID](docs/sdks/users/README.md#getbyid) - Get User By ID
 * [Update](docs/sdks/users/README.md#update) - Update User by userID
 
-#### [Users.APIToken](docs/sdks/apitoken/README.md)
+#### [Users.ApiToken](docs/sdks/apitoken/README.md)
 
 * [Remove](docs/sdks/apitoken/README.md#remove) - Remove Token
 
-#### [V4.Squads](docs/sdks/v4squads/README.md)
+### [V4.Squads](docs/sdks/v4squads/README.md)
 
 * [Update](docs/sdks/v4squads/README.md#update) - Update Squad
 
@@ -570,7 +570,7 @@ func main() {
 * [ToggleEnable](docs/sdks/workflows/README.md#toggleenable) - Enable/Disable Workflow
 * [GetLogs](docs/sdks/workflows/README.md#getlogs) - Get Workflow Logs
 
-#### [Workflows.Actions](docs/sdks/workflowsactions/README.md)
+### [Workflows.Actions](docs/sdks/workflowsactions/README.md)
 
 * [Create](docs/sdks/workflowsactions/README.md#create) - Create Action
 
