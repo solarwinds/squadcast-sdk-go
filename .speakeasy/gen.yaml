@@ -17,6 +17,7 @@ generation:
     requestResponseComponentNamesFeb2024: true
     securityFeb2025: true
     sharedErrorComponentsApr2025: true
+    sharedNestedComponentsJan2026: false
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
@@ -26,13 +27,14 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  versioningStrategy: automatic
   persistentEdits: {}
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 1.5.0
+  version: 1.5.1
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SquadcastSDKError
@@ -40,6 +42,7 @@ go:
   defaultErrorName: APIError
   envVarPrefix: SQUADCASTSDK
   flattenGlobalSecurity: true
+  forwardCompatibleEnumsByDefault: false
   imports:
     option: openapi
     paths:
