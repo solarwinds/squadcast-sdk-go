@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.803.3
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.806.4
 
 import (
 	"context"
@@ -159,7 +159,7 @@ func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
 		SDKVersion: "1.5.1",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.5.1 2.803.3 1.0.0 github.com/solarwinds/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.5.1 2.806.4 1.0.0 github.com/solarwinds/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),

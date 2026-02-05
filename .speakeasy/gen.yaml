@@ -62,6 +62,7 @@ go:
   outputModelSuffix: output
   packageName: github.com/solarwinds/squadcast-sdk-go
   respectRequiredFields: false
+  respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sdkPackageName: SquadcastSdk
   unionStrategy: left-to-right
