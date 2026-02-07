@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: bb06d007857c75dd27cf196350186524
   docVersion: 1.0.0
-  speakeasyVersion: 1.706.1
-  generationVersion: 2.809.2
+  speakeasyVersion: 1.708.2
+  generationVersion: 2.811.4
   releaseVersion: 1.5.1
   configChecksum: 167c01470d52fafc493d04d054d43518
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: cf68a054-d2ea-48d9-ae6e-66615ff246b2
-  pristine_commit_hash: c46a1003d3bc56bf9bfe4e519021c7df7ec0c21d
-  pristine_tree_hash: f5b5662beb802f8f309b7a9d56fdba10f8b0e9fc
+  generation_id: 3c4f7d12-daea-4ffc-ad3c-6781c84add81
+  pristine_commit_hash: bffc4056a585d92e0158b13c83c637c86e516639
+  pristine_tree_hash: bcb6425cf94e8eae5656c2b816936c92ddb0606e
 features:
   go:
     additionalDependencies: 0.1.0
@@ -5619,8 +5619,8 @@ trackedFiles:
     pristine_git_object: ff42cf8d785105942d5b3e19e66abea039d1a784
   export.go:
     id: d363dc655a95
-    last_write_checksum: sha1:6c48f416f53c0019dcb3435cb25e9fa2a35a2f37
-    pristine_git_object: 3a3edcd04b1838f2386012df2089445404f7470d
+    last_write_checksum: sha1:387e125b683a891d6f1ce6156a0c8a4e4653c5c0
+    pristine_git_object: bd2aad6b85a5b80b558267d892492275189f26a0
   exports.go:
     id: 99a147928f19
     last_write_checksum: sha1:dbc02f565765e0bdd247c2ee84be865bd960172a
@@ -8315,8 +8315,8 @@ trackedFiles:
     pristine_git_object: 91511419dcd74877eb63808b0d2c032f0a8449cd
   schedules.go:
     id: cb5d787b107e
-    last_write_checksum: sha1:91321a2df1dd0689a141f0a48c20555a63b54e93
-    pristine_git_object: d588f07012501415e0cfe891d6ab5b7d7f6e02c6
+    last_write_checksum: sha1:a7b697f6e1f253a2deac64fb5a4505bd7ef72746
+    pristine_git_object: 4bc344f084a8c7524610d3909f631ff4a1e44328
   schedulesoverrides.go:
     id: bdf563e8ee08
     last_write_checksum: sha1:da8e6957a3d6b5dfba2dae0375e9ad06612fe593
@@ -8347,8 +8347,8 @@ trackedFiles:
     pristine_git_object: 7cdaec1f07e58a5f579cfe2fb4fd7552e955f7e0
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:751f4e6a353d03dd1ba35321d7dbbb3084b2abae
-    pristine_git_object: 4ba1fb09cab64855b5dae6e11bf50ecabd861adc
+    last_write_checksum: sha1:402d15689f81fe7dde545877d1e47b971f33cc34
+    pristine_git_object: fd0d13246283d3cfd8670ab6307d6181b248a3ca
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:4deb239a13419fb997ebe9446d1f306c21788de4
