@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: bb06d007857c75dd27cf196350186524
   docVersion: 1.0.0
-  speakeasyVersion: 1.708.2
+  speakeasyVersion: 1.709.0
   generationVersion: 2.811.4
   releaseVersion: 1.5.1
   configChecksum: 167c01470d52fafc493d04d054d43518
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: 3c4f7d12-daea-4ffc-ad3c-6781c84add81
-  pristine_commit_hash: bffc4056a585d92e0158b13c83c637c86e516639
-  pristine_tree_hash: bcb6425cf94e8eae5656c2b816936c92ddb0606e
+  generation_id: 998442b9-765b-4584-b472-c93d330e7768
+  pristine_commit_hash: 169d1740cdfea5264e1b5dd9f03373a853361046
+  pristine_tree_hash: bb9c6f0bd8f7c43b3dcec6a84d3f4ef370a585c3
 features:
   go:
     additionalDependencies: 0.1.0
@@ -5619,8 +5619,8 @@ trackedFiles:
     pristine_git_object: ff42cf8d785105942d5b3e19e66abea039d1a784
   export.go:
     id: d363dc655a95
-    last_write_checksum: sha1:387e125b683a891d6f1ce6156a0c8a4e4653c5c0
-    pristine_git_object: bd2aad6b85a5b80b558267d892492275189f26a0
+    last_write_checksum: sha1:b6b70803b050f9b8094a893c8143f040a2035d32
+    pristine_git_object: 318dcac1fc245f42c131491af4dd9b0472aec79a
   exports.go:
     id: 99a147928f19
     last_write_checksum: sha1:dbc02f565765e0bdd247c2ee84be865bd960172a
