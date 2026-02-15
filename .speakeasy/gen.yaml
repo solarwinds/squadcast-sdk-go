@@ -43,6 +43,7 @@ go:
   envVarPrefix: SQUADCASTSDK
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: false
+  forwardCompatibleUnionsByDefault: "false"
   imports:
     option: openapi
     paths:
