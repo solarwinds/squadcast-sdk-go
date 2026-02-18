@@ -644,6 +644,7 @@ import(
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 	"log"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
 )
 
 func main() {
@@ -662,7 +663,45 @@ func main() {
         log.Fatal(err)
     }
     if res.OneOf != nil {
-        // handle response
+        switch res.OneOf.Type {
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeSqAttachRunbooks:
+                // res.OneOf.SqAttachRunbooks is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMarkIncidentSLOAffecting:
+                // res.OneOf.V3WorkflowsSqMarkIncidentSLOAffecting is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqTriggerManualWebhook:
+                // res.OneOf.V3WorkflowsSqTriggerManualWebhook is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsUpdateIncidentPriority:
+                // res.OneOf.V3WorkflowsUpdateIncidentPriority is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqCreateStatusPageIssue:
+                // res.OneOf.V3WorkflowsSqCreateStatusPageIssue is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddIncidentNote:
+                // res.OneOf.V3WorkflowsSqAddIncidentNote is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackArchiveChannel:
+                // res.OneOf.V3WorkflowsSlackArchiveChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddCommunicationChannel:
+                // res.OneOf.V3WorkflowsSqAddCommunicationChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageChannel:
+                // res.OneOf.V3WorkflowsSlackMessageChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageUser:
+                // res.OneOf.V3WorkflowsSlackMessageUser is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMakeHTTPCall:
+                // res.OneOf.V3WorkflowsSqMakeHTTPCall is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackCreateIncidentChannel:
+                // res.OneOf.V3WorkflowsSlackCreateIncidentChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsJiraCreateTicket:
+                // res.OneOf.V3WorkflowsJiraCreateTicket is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageChannel:
+                // res.OneOf.V3WorkflowsMsTeamsMessageChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageUser:
+                // res.OneOf.V3WorkflowsMsTeamsMessageUser is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqSendEmail:
+                // res.OneOf.V3WorkflowsSqSendEmail is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsCreateMeetingLink:
+                // res.OneOf.V3WorkflowsMsTeamsCreateMeetingLink is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeAny:
+                // res.OneOf.Any is populated
+        }
+
     }
 }
 ```

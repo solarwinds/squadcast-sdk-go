@@ -17,3 +17,15 @@ badRequest := apierrors.CreateBadRequestResponseBodyError1(apierrors.ResponseBod
 badRequest := apierrors.CreateBadRequestResponseBodyError2(apierrors.ResponseBodyError2{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch badRequest.Type {
+	case apierrors.BadRequestTypeResponseBodyError1:
+		// badRequest.ResponseBodyError1 is populated
+	case apierrors.BadRequestTypeResponseBodyError2:
+		// badRequest.ResponseBodyError2 is populated
+}
+```

@@ -111,3 +111,47 @@ v3WorkflowsActionRequest := components.CreateV3WorkflowsActionRequestV3Workflows
 v3WorkflowsActionRequest := components.CreateV3WorkflowsActionRequestAny(any{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch v3WorkflowsActionRequest.Type {
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsActionRequestSqAttachRunbooks:
+		// v3WorkflowsActionRequest.V3WorkflowsActionRequestSqAttachRunbooks is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqMarkIncidentSLOAffecting:
+		// v3WorkflowsActionRequest.V3WorkflowsSqMarkIncidentSLOAffecting is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqTriggerManualWebhook:
+		// v3WorkflowsActionRequest.V3WorkflowsSqTriggerManualWebhook is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsUpdateIncidentPriority:
+		// v3WorkflowsActionRequest.V3WorkflowsUpdateIncidentPriority is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqCreateStatusPageIssue:
+		// v3WorkflowsActionRequest.V3WorkflowsSqCreateStatusPageIssue is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqAddIncidentNote:
+		// v3WorkflowsActionRequest.V3WorkflowsSqAddIncidentNote is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSlackArchiveChannel:
+		// v3WorkflowsActionRequest.V3WorkflowsSlackArchiveChannel is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqAddCommunicationChannel:
+		// v3WorkflowsActionRequest.V3WorkflowsSqAddCommunicationChannel is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSlackMessageChannel:
+		// v3WorkflowsActionRequest.V3WorkflowsSlackMessageChannel is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSlackMessageUser:
+		// v3WorkflowsActionRequest.V3WorkflowsSlackMessageUser is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqMakeHTTPCall:
+		// v3WorkflowsActionRequest.V3WorkflowsSqMakeHTTPCall is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSlackCreateIncidentChannel:
+		// v3WorkflowsActionRequest.V3WorkflowsSlackCreateIncidentChannel is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsJiraCreateTicket:
+		// v3WorkflowsActionRequest.V3WorkflowsJiraCreateTicket is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsMsTeamsMessageChannel:
+		// v3WorkflowsActionRequest.V3WorkflowsMsTeamsMessageChannel is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsMsTeamsMessageUser:
+		// v3WorkflowsActionRequest.V3WorkflowsMsTeamsMessageUser is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsSqSendEmail:
+		// v3WorkflowsActionRequest.V3WorkflowsSqSendEmail is populated
+	case components.V3WorkflowsActionRequestTypeV3WorkflowsMsTeamsCreateMeetingLink:
+		// v3WorkflowsActionRequest.V3WorkflowsMsTeamsCreateMeetingLink is populated
+	case components.V3WorkflowsActionRequestTypeAny:
+		// v3WorkflowsActionRequest.Any is populated
+}
+```

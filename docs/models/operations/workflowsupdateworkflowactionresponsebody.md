@@ -113,3 +113,47 @@ workflowsUpdateWorkflowActionResponseBody := operations.CreateWorkflowsUpdateWor
 workflowsUpdateWorkflowActionResponseBody := operations.CreateWorkflowsUpdateWorkflowActionResponseBodyAny(any{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch workflowsUpdateWorkflowActionResponseBody.Type {
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeSqAttachRunbooks:
+		// workflowsUpdateWorkflowActionResponseBody.SqAttachRunbooks is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMarkIncidentSLOAffecting:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqMarkIncidentSLOAffecting is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqTriggerManualWebhook:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqTriggerManualWebhook is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsUpdateIncidentPriority:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsUpdateIncidentPriority is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqCreateStatusPageIssue:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqCreateStatusPageIssue is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddIncidentNote:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqAddIncidentNote is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackArchiveChannel:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSlackArchiveChannel is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddCommunicationChannel:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqAddCommunicationChannel is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageChannel:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSlackMessageChannel is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageUser:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSlackMessageUser is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMakeHTTPCall:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqMakeHTTPCall is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackCreateIncidentChannel:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSlackCreateIncidentChannel is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsJiraCreateTicket:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsJiraCreateTicket is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageChannel:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsMsTeamsMessageChannel is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageUser:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsMsTeamsMessageUser is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqSendEmail:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsSqSendEmail is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsCreateMeetingLink:
+		// workflowsUpdateWorkflowActionResponseBody.V3WorkflowsMsTeamsCreateMeetingLink is populated
+	case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeAny:
+		// workflowsUpdateWorkflowActionResponseBody.Any is populated
+}
+```
