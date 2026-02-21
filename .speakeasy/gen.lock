@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: 0d429cf9a0c40e3d9ae4a1a8ca876c4d
   docVersion: 1.0.0
-  speakeasyVersion: 1.722.7
-  generationVersion: 2.832.9
+  speakeasyVersion: 1.723.0
+  generationVersion: 2.835.2
   releaseVersion: 1.5.1
-  configChecksum: 6d12a2e73d42f1846555a4e8adeadaae
+  configChecksum: 34cdeaba105a61e0f1131d1df2141903
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: 2366d413-1dc4-46cd-8178-49a9420490ab
-  pristine_commit_hash: ce681b3bf0943141a6316d75af8bd162150015fa
-  pristine_tree_hash: c9cdcc285b619ffbfabc9d3a140cb50cf4eb921b
+  generation_id: b96c2340-93d7-4958-bfc1-9c7746e14187
+  pristine_commit_hash: 66cec4a5bce81c21f1d515814eafa5488f784f7f
+  pristine_tree_hash: f826b530b798b78687bb83c1df0b89fa1612cc65
 features:
   go:
     additionalDependencies: 0.1.0
@@ -28,7 +28,7 @@ features:
     globalServerURLs: 2.83.0
     groups: 2.81.3
     intellisenseMarkdownSupport: 0.1.0
-    nameOverrides: 2.81.2
+    nameOverrides: 2.81.4
     nullables: 0.2.1
     pagination: 2.82.5
     responseFormat: 0.1.2
@@ -5619,8 +5619,8 @@ trackedFiles:
     pristine_git_object: ff42cf8d785105942d5b3e19e66abea039d1a784
   export.go:
     id: d363dc655a95
-    last_write_checksum: sha1:6c48f416f53c0019dcb3435cb25e9fa2a35a2f37
-    pristine_git_object: 3a3edcd04b1838f2386012df2089445404f7470d
+    last_write_checksum: sha1:b6b70803b050f9b8094a893c8143f040a2035d32
+    pristine_git_object: 318dcac1fc245f42c131491af4dd9b0472aec79a
   exports.go:
     id: 99a147928f19
     last_write_checksum: sha1:dbc02f565765e0bdd247c2ee84be865bd960172a
@@ -8347,8 +8347,8 @@ trackedFiles:
     pristine_git_object: 7cdaec1f07e58a5f579cfe2fb4fd7552e955f7e0
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:c30412c9c64b91a362f3230c230ac84f634392a4
-    pristine_git_object: ad74db56404b98e0f1e25261c358414588306194
+    last_write_checksum: sha1:98d59fea2ad422c39428ed0888b09c9649fa4d90
+    pristine_git_object: 6a5260a7f10cd2927c97f3865812550487e9fcdf
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:4deb239a13419fb997ebe9446d1f306c21788de4
