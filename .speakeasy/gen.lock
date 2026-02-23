@@ -10,9 +10,9 @@ management:
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: 9489176b-661c-4f52-bff6-f5e6457fcd5c
-  pristine_commit_hash: fd2c85280b217cc40d5157da13fcd6b311e407dc
-  pristine_tree_hash: 38e70055746ab21532bf83e2343e00a60f111a3c
+  generation_id: d5fa4e03-7347-44a6-9b87-38e420d61b1c
+  pristine_commit_hash: c48ad09d499146b8c23c9399e6fe68a26e11f281
+  pristine_tree_hash: cfa47b63b185ca8e6cabd0aac3c9f851bf9db164
 features:
   go:
     additionalDependencies: 0.1.0
@@ -8315,8 +8315,8 @@ trackedFiles:
     pristine_git_object: 91511419dcd74877eb63808b0d2c032f0a8449cd
   schedules.go:
     id: cb5d787b107e
-    last_write_checksum: sha1:a7b697f6e1f253a2deac64fb5a4505bd7ef72746
-    pristine_git_object: 4bc344f084a8c7524610d3909f631ff4a1e44328
+    last_write_checksum: sha1:91321a2df1dd0689a141f0a48c20555a63b54e93
+    pristine_git_object: d588f07012501415e0cfe891d6ab5b7d7f6e02c6
   schedulesoverrides.go:
     id: bdf563e8ee08
     last_write_checksum: sha1:da8e6957a3d6b5dfba2dae0375e9ad06612fe593

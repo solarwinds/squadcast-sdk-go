@@ -30,7 +30,7 @@ Based on:
 ### Releases
 - [Go v1.5.0] https://github.com/solarwinds/squadcast-sdk-go/releases/tag/v1.5.0 - .
 
-## 2026-02-22 00:39:38
+## 2026-02-23 00:39:52
 ### Changes
 Based on:
 - OpenAPI Doc  
