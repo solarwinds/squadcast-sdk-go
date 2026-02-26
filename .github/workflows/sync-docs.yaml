@@ -1,0 +1,60 @@
+name: Sync Docs to Central Repo
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/**'
+      - 'README.md'
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+
+    env:
+      SDK_LANG: go
+      DOCS_PATH: docs
+      CENTRAL_REPO: bhattu-gauravv/squadcast-sdk-docs
+
+    steps:
+      - name: Checkout SDK repo
+        uses: actions/checkout@v4
+
+      - name: Checkout central docs repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.CENTRAL_REPO }}
+          token: ${{ secrets.DOCS_REPO_PAT }}
+          path: central-docs
+
+      - name: Create branch and sync docs
+        run: |
+          BRANCH="docs-sync/${SDK_LANG}-${{ github.sha }}"
+          cd central-docs
+          git config user.name "speakeasy-docs-bot"
+          git config user.email "docs-bot@solarwinds.com"
+          git checkout -b "$BRANCH"
+          rm -rf "${SDK_LANG}/"
+          mkdir -p "${SDK_LANG}"
+          cp -r "../${DOCS_PATH}/." "${SDK_LANG}/"
+          cp ../README.md "${SDK_LANG}/"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No doc changes to sync. Exiting."
+            exit 0
+          fi
+          git commit -m "docs(${SDK_LANG}): sync from squadcast-sdk-${SDK_LANG} @ ${{ github.sha }}"
+          git push origin "$BRANCH"
+
+      - name: Create Pull Request
+        run: |
+          BRANCH="docs-sync/${SDK_LANG}-${{ github.sha }}"
+          gh pr create \
+            --repo "${CENTRAL_REPO}" \
+            --head "$BRANCH" \
+            --base main \
+            --title "docs(${SDK_LANG}): sync from squadcast-sdk-${SDK_LANG}" \
+            --body "Automated docs sync triggered by commit [${{ github.sha }}](https://github.com/solarwinds/squadcast-sdk-${SDK_LANG}/commit/${{ github.sha }}) in \`squadcast-sdk-${SDK_LANG}\`."
+        env:
+          GH_TOKEN: ${{ secrets.DOCS_REPO_PAT }}
