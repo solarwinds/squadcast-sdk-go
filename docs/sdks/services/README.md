@@ -836,6 +836,7 @@ import(
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 	"log"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
 )
 
 func main() {
@@ -856,7 +857,13 @@ func main() {
         log.Fatal(err)
     }
     if res.OneOf != nil {
-        // handle response
+        switch res.OneOf.Type {
+            case operations.OverlayUpdateDedupKeyOverlayResponseBodyTypeResponseBody1:
+                // res.OneOf.ResponseBody1 is populated
+            case operations.OverlayUpdateDedupKeyOverlayResponseBodyTypeResponseBody2:
+                // res.OneOf.ResponseBody2 is populated
+        }
+
     }
 }
 ```
