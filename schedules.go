@@ -21,6 +21,9 @@ import (
 )
 
 type Schedules struct {
+	// Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+	// Export Audit logs
+	// Initiates export of audit logs based on provided filters
 	Export    *Export
 	Overrides *SchedulesOverrides
 	Rotations *SchedulesRotations
