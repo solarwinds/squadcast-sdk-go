@@ -84,10 +84,10 @@ const (
 )
 
 type V3ServicesRoutingRulesExpressionBranchRHS struct {
-	Str     *string  `queryParam:"inline,name=rhs" union:"member"`
-	Boolean *bool    `queryParam:"inline,name=rhs" union:"member"`
-	Int32   *int     `queryParam:"inline,name=rhs" union:"member"`
-	Float32 *float32 `queryParam:"inline,name=rhs" union:"member"`
+	Str     *string  `queryParam:"inline" union:"member"`
+	Boolean *bool    `queryParam:"inline" union:"member"`
+	Int32   *int     `queryParam:"inline" union:"member"`
+	Float32 *float32 `queryParam:"inline" union:"member"`
 
 	Type V3ServicesRoutingRulesExpressionBranchRHSType
 }

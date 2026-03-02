@@ -56,7 +56,45 @@ func main() {
         log.Fatal(err)
     }
     if res.Object != nil {
-        // handle response
+        switch res.Object.Data.Type {
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsActionResponseSqAttachRunbooks:
+                // res.Object.Data.V3WorkflowsActionResponseSqAttachRunbooks is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqMarkIncidentSLOAffecting:
+                // res.Object.Data.V3WorkflowsSqMarkIncidentSLOAffecting is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqTriggerManualWebhook:
+                // res.Object.Data.V3WorkflowsSqTriggerManualWebhook is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsUpdateIncidentPriority:
+                // res.Object.Data.V3WorkflowsUpdateIncidentPriority is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqCreateStatusPageIssue:
+                // res.Object.Data.V3WorkflowsSqCreateStatusPageIssue is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqAddIncidentNote:
+                // res.Object.Data.V3WorkflowsSqAddIncidentNote is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSlackArchiveChannel:
+                // res.Object.Data.V3WorkflowsSlackArchiveChannel is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqAddCommunicationChannel:
+                // res.Object.Data.V3WorkflowsSqAddCommunicationChannel is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSlackMessageChannel:
+                // res.Object.Data.V3WorkflowsSlackMessageChannel is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSlackMessageUser:
+                // res.Object.Data.V3WorkflowsSlackMessageUser is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqMakeHTTPCall:
+                // res.Object.Data.V3WorkflowsSqMakeHTTPCall is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSlackCreateIncidentChannel:
+                // res.Object.Data.V3WorkflowsSlackCreateIncidentChannel is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsJiraCreateTicket:
+                // res.Object.Data.V3WorkflowsJiraCreateTicket is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsMsTeamsMessageChannel:
+                // res.Object.Data.V3WorkflowsMsTeamsMessageChannel is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsMsTeamsMessageUser:
+                // res.Object.Data.V3WorkflowsMsTeamsMessageUser is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsSqSendEmail:
+                // res.Object.Data.V3WorkflowsSqSendEmail is populated
+            case components.V3WorkflowsActionResponseTypeV3WorkflowsMsTeamsCreateMeetingLink:
+                // res.Object.Data.V3WorkflowsMsTeamsCreateMeetingLink is populated
+            case components.V3WorkflowsActionResponseTypeAny:
+                // res.Object.Data.Any is populated
+        }
+
     }
 }
 ```
