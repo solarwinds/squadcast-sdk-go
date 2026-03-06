@@ -3,6 +3,31 @@ info:
   title: Speakeasy Suggestions - Squadcast
   version: 0.0.6
 actions:
+  # Replace BearerAuth with a custom RefreshTokenAuth scheme.
+  # The SDK will generate Security{RefreshToken string} instead of Security{BearerAuth string}.
+  # The BeforeRequest hook in internal/hooks/refreshtokenhook.go handles the actual
+  # token exchange and sets the Authorization header on every request.
+  - target: $["components"]["securitySchemes"]["BearerAuth"]
+    remove: true
+  - target: $["components"]["securitySchemes"]
+    update:
+      RefreshTokenAuth:
+        type: http
+        scheme: custom
+        x-speakeasy-custom-security-scheme:
+          schema:
+            type: object
+            properties:
+              refreshToken:
+                type: string
+                description: Squadcast refresh token used to obtain short-lived bearer tokens.
+            required:
+              - refreshToken
+  - target: "$.security[?(@.BearerAuth)]"
+    remove: true
+  - target: $["security"]
+    update:
+      - RefreshTokenAuth: []
   - target: $["paths"]["/v3/slo"]["post"]
     update:
       x-speakeasy-group: slos
