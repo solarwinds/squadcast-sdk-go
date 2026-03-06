@@ -4647,12 +4647,12 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out components.V3WorkflowsActionResponse
+			var out operations.WorkflowsUpdateWorkflowActionResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.V3WorkflowsActionResponse = &out
+			res.OneOf = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

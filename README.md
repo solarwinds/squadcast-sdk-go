@@ -75,7 +75,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
@@ -97,9 +97,9 @@ func main() {
 
 This SDK supports the following security scheme globally:
 
-| Name         | Type | Scheme      | Environment Variable       |
-| ------------ | ---- | ----------- | -------------------------- |
-| `BearerAuth` | http | HTTP Bearer | `SQUADCASTSDK_BEARER_AUTH` |
+| Name               | Type | Scheme      | Environment Variable              |
+| ------------------ | ---- | ----------- | --------------------------------- |
+| `RefreshTokenAuth` | http | Custom HTTP | `SQUADCASTSDK_REFRESH_TOKEN_AUTH` |
 
 You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
 ```go
@@ -116,7 +116,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
@@ -601,7 +601,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.AuditLogs.List(ctx, operations.AuditLogsListAuditLogsRequest{
@@ -655,7 +655,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil, operations.WithRetries(
@@ -706,7 +706,7 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
@@ -763,7 +763,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
@@ -867,7 +867,7 @@ func main() {
 
 	s := squadcastsdk.New(
 		squadcastsdk.WithServerURL("https://api.squadcast.com"),
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)

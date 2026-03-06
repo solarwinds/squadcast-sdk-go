@@ -42,7 +42,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.List(ctx, "<id>", nil, nil)
@@ -108,7 +108,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.Create(ctx, "<id>", components.V3ServicesCreateServiceRequest{
@@ -175,7 +175,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.GetByName(ctx, "<value>", "<id>")
@@ -239,7 +239,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.GetByID(ctx, "<id>")
@@ -303,7 +303,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.Update(ctx, "<id>", components.V3ServicesUpdateServiceRequest{})
@@ -367,7 +367,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.Delete(ctx, "<id>")
@@ -431,7 +431,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.CreateOrUpdateAptaConfig(ctx, "<id>", components.V3ServicesAPTAConfigRequest{
@@ -499,7 +499,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.UpsertIagConfig(ctx, "<id>", components.V3ServicesIAGConfigRequest{
@@ -567,7 +567,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.UpdateNotificationDelayConfig(ctx, "<id>", components.V3ServicesNotificationDelayConfigRequest{
@@ -634,7 +634,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.CreateOrUpdateDependencies(ctx, "<id>", components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest{
@@ -705,7 +705,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.CreateOrUpdateNotificationTemplateOverlay(ctx, "<id>", "<value>", components.V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest{
@@ -778,7 +778,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.GetAllDedupKeyOverlays(ctx, "<id>")
@@ -836,13 +836,14 @@ import(
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 	"log"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
 )
 
 func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.UpdateDedupKeyOverlay(ctx, "<id>", "<value>", components.V3ServicesOverlayUpdateDedupKeyOverlayRequest{
@@ -856,7 +857,13 @@ func main() {
         log.Fatal(err)
     }
     if res.OneOf != nil {
-        // handle response
+        switch res.OneOf.Type {
+            case operations.OverlayUpdateDedupKeyOverlayResponseBodyTypeResponseBody1:
+                // res.OneOf.ResponseBody1 is populated
+            case operations.OverlayUpdateDedupKeyOverlayResponseBodyTypeResponseBody2:
+                // res.OneOf.ResponseBody2 is populated
+        }
+
     }
 }
 ```
@@ -913,7 +920,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.GetRoutingRules(ctx, "<id>")
@@ -977,7 +984,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.CreateOrUpdateSuppressionRules(ctx, "<id>", components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest{
@@ -1044,7 +1051,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.CreateOrUpdateTaggingRules(ctx, "<id>", components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest{

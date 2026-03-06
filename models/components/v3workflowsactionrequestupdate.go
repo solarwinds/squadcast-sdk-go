@@ -108,24 +108,24 @@ const (
 )
 
 type V3WorkflowsActionRequestUpdate struct {
-	V3WorkflowsActionRequestUpdateSqAttachRunbooks *V3WorkflowsActionRequestUpdateSqAttachRunbooks `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqMarkIncidentSLOAffectingUpdate    *V3WorkflowsSqMarkIncidentSLOAffectingUpdate    `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqTriggerManualWebhookUpdate        *V3WorkflowsSqTriggerManualWebhookUpdate        `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsUpdateIncidentPriorityUpdate        *V3WorkflowsUpdateIncidentPriorityUpdate        `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqCreateStatusPageIssueUpdate       *V3WorkflowsSqCreateStatusPageIssueUpdate       `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqAddIncidentNoteUpdate             *V3WorkflowsSqAddIncidentNoteUpdate             `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSlackArchiveChannelUpdate           *V3WorkflowsSlackArchiveChannelUpdate           `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqAddCommunicationChannelUpdate     *V3WorkflowsSqAddCommunicationChannelUpdate     `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSlackMessageChannelUpdate           *V3WorkflowsSlackMessageChannelUpdate           `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSlackMessageUserUpdate              *V3WorkflowsSlackMessageUserUpdate              `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqMakeHTTPCallUpdate                *V3WorkflowsSqMakeHTTPCallUpdate                `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSlackCreateIncidentChannelUpdate    *V3WorkflowsSlackCreateIncidentChannelUpdate    `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsJiraCreateTicketUpdate              *V3WorkflowsJiraCreateTicketUpdate              `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsMsTeamsMessageChannelUpdate         *V3WorkflowsMsTeamsMessageChannelUpdate         `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsMsTeamsMessageUserUpdate            *V3WorkflowsMsTeamsMessageUserUpdate            `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsSqSendEmailUpdate                   *V3WorkflowsSqSendEmailUpdate                   `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	V3WorkflowsMsTeamsCreateMeetingLinkUpdate      *V3WorkflowsMsTeamsCreateMeetingLinkUpdate      `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
-	Any                                            any                                             `queryParam:"inline,name=V3_Workflows_ActionRequestUpdate" union:"member"`
+	V3WorkflowsActionRequestUpdateSqAttachRunbooks *V3WorkflowsActionRequestUpdateSqAttachRunbooks `queryParam:"inline" union:"member"`
+	V3WorkflowsSqMarkIncidentSLOAffectingUpdate    *V3WorkflowsSqMarkIncidentSLOAffectingUpdate    `queryParam:"inline" union:"member"`
+	V3WorkflowsSqTriggerManualWebhookUpdate        *V3WorkflowsSqTriggerManualWebhookUpdate        `queryParam:"inline" union:"member"`
+	V3WorkflowsUpdateIncidentPriorityUpdate        *V3WorkflowsUpdateIncidentPriorityUpdate        `queryParam:"inline" union:"member"`
+	V3WorkflowsSqCreateStatusPageIssueUpdate       *V3WorkflowsSqCreateStatusPageIssueUpdate       `queryParam:"inline" union:"member"`
+	V3WorkflowsSqAddIncidentNoteUpdate             *V3WorkflowsSqAddIncidentNoteUpdate             `queryParam:"inline" union:"member"`
+	V3WorkflowsSlackArchiveChannelUpdate           *V3WorkflowsSlackArchiveChannelUpdate           `queryParam:"inline" union:"member"`
+	V3WorkflowsSqAddCommunicationChannelUpdate     *V3WorkflowsSqAddCommunicationChannelUpdate     `queryParam:"inline" union:"member"`
+	V3WorkflowsSlackMessageChannelUpdate           *V3WorkflowsSlackMessageChannelUpdate           `queryParam:"inline" union:"member"`
+	V3WorkflowsSlackMessageUserUpdate              *V3WorkflowsSlackMessageUserUpdate              `queryParam:"inline" union:"member"`
+	V3WorkflowsSqMakeHTTPCallUpdate                *V3WorkflowsSqMakeHTTPCallUpdate                `queryParam:"inline" union:"member"`
+	V3WorkflowsSlackCreateIncidentChannelUpdate    *V3WorkflowsSlackCreateIncidentChannelUpdate    `queryParam:"inline" union:"member"`
+	V3WorkflowsJiraCreateTicketUpdate              *V3WorkflowsJiraCreateTicketUpdate              `queryParam:"inline" union:"member"`
+	V3WorkflowsMsTeamsMessageChannelUpdate         *V3WorkflowsMsTeamsMessageChannelUpdate         `queryParam:"inline" union:"member"`
+	V3WorkflowsMsTeamsMessageUserUpdate            *V3WorkflowsMsTeamsMessageUserUpdate            `queryParam:"inline" union:"member"`
+	V3WorkflowsSqSendEmailUpdate                   *V3WorkflowsSqSendEmailUpdate                   `queryParam:"inline" union:"member"`
+	V3WorkflowsMsTeamsCreateMeetingLinkUpdate      *V3WorkflowsMsTeamsCreateMeetingLinkUpdate      `queryParam:"inline" union:"member"`
+	Any                                            any                                             `queryParam:"inline" union:"member"`
 
 	Type V3WorkflowsActionRequestUpdateType
 }
