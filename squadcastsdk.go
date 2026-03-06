@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.781.2
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.850.5
 
 import (
 	"context"
@@ -88,7 +88,7 @@ type SquadcastSDK struct {
 
 type SDKOption func(*SquadcastSDK)
 
-// WithServerURL allows the overriding of the default server URL
+// WithServerURL allows providing an alternative server URL
 func WithServerURL(serverURL string) SDKOption {
 	return func(sdk *SquadcastSDK) {
 		sdk.sdkConfiguration.ServerURL = serverURL
@@ -125,9 +125,9 @@ func WithClient(client HTTPClient) SDKOption {
 }
 
 // WithSecurity configures the SDK to use the provided security details
-func WithSecurity(bearerAuth string) SDKOption {
+func WithSecurity(refreshTokenAuth string) SDKOption {
 	return func(sdk *SquadcastSDK) {
-		security := components.Security{BearerAuth: &bearerAuth}
+		security := components.Security{RefreshTokenAuth: &refreshTokenAuth}
 		sdk.sdkConfiguration.Security = utils.AsSecuritySource(&security)
 	}
 }
@@ -157,9 +157,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.5.0",
+		SDKVersion: "1.6.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.5.0 2.781.2 1.0.0 github.com/solarwinds/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.6.0 2.850.5 1.0.0 github.com/solarwinds/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),

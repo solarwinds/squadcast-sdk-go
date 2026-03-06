@@ -40,7 +40,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.List(ctx, operations.SchedulesListSchedulesRequest{
@@ -109,7 +109,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.Create(ctx, components.V4CreateScheduleRequest{
@@ -177,7 +177,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.Delete(ctx, "<id>")
@@ -231,7 +231,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.GetByID(ctx, "<id>")
@@ -286,7 +286,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.Update(ctx, "<id>", components.V4UpdateScheduleRequest{
@@ -348,7 +348,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.PauseResume(ctx, "<id>", operations.SchedulesPauseresumeScheduleRequestBody{})
@@ -404,7 +404,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.ChangeTimezone(ctx, "<id>", operations.SchedulesChangeTimezoneRequestBody{})
@@ -460,7 +460,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.Clone(ctx, "<id>", operations.SchedulesCloneScheduleRequestBody{})
@@ -515,7 +515,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.GetIcalLink(ctx, "<id>", false)
@@ -571,7 +571,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.RefreshIcalLink(ctx, "<id>", true, operations.ExportRefreshScheduleIcalLinkRequestBody{})
@@ -628,7 +628,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.CreateIcalLink(ctx, "<id>", true, operations.ExportCreateScheduleIcalLinkRequestBody{})
@@ -685,7 +685,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.CreateScheduleOverride(ctx, "<id>", components.V4CreateScheduleOverrideRequest{
@@ -760,7 +760,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Schedules.DeleteRotation(ctx, "<id>", "<id>")

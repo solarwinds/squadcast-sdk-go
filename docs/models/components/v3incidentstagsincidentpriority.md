@@ -2,6 +2,16 @@
 
 Represents the priority of an incident.
 
+## Example Usage
+
+```go
+import (
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+)
+
+value := components.V3IncidentsTagsIncidentPriorityP1
+```
+
 
 ## Values
 

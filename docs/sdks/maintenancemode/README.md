@@ -28,7 +28,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.MaintenanceMode.Get(ctx, "<id>")
@@ -92,7 +92,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Services.MaintenanceMode.CreateOrUpdate(ctx, "<id>", components.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest{

@@ -32,7 +32,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Runbooks.ListByTeam(ctx)
@@ -96,7 +96,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Runbooks.Create(ctx, components.V3RunbooksCreateRunbookRequest{
@@ -168,7 +168,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Runbooks.Remove(ctx, "<id>")
@@ -232,7 +232,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Runbooks.GetByID(ctx, "<id>")
@@ -297,7 +297,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Runbooks.Update(ctx, "<id>", components.V3RunbooksUpdateRunbookRequest{

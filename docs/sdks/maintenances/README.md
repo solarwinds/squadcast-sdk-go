@@ -31,7 +31,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.StatusPages.Maintenances.Create(ctx, "<id>", components.V4StatusPagesMaintenancesCreateMaintenanceRequest{
@@ -105,7 +105,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.StatusPages.Maintenances.DeleteByID(ctx, "<id>", "<id>")
@@ -171,7 +171,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.StatusPages.Maintenances.UpdateByID(ctx, "<id>", "<id>", components.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest{

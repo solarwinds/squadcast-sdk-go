@@ -39,7 +39,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.List(ctx, operations.WorkflowsListWorkflowsRequest{
@@ -117,7 +117,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.Create(ctx, components.V3WorkflowsCreateWorkflowRequest{
@@ -196,7 +196,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.BulkEnableDisable(ctx, components.V3WorkflowsBulkEnableDisableWorkflowsRequest{
@@ -265,7 +265,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.Delete(ctx, "<id>")
@@ -328,7 +328,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.GetByID(ctx, "<id>")
@@ -392,7 +392,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.Update(ctx, "<id>", components.V3WorkflowsCreateWorkflowRequestUpdate{})
@@ -457,7 +457,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.UpdateActionsOrder(ctx, "<id>", components.V3WorkflowsUpdateActionsOrderRequest{})
@@ -521,7 +521,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.DeleteAction(ctx, "<id>", "<id>")
@@ -585,7 +585,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.GetAction(ctx, "<id>", "<id>")
@@ -644,13 +644,14 @@ import(
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 	"log"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
 )
 
 func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.UpdateAction(ctx, "<id>", "<id>", components.CreateV3WorkflowsActionRequestUpdateAny(
@@ -661,8 +662,46 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.V3WorkflowsActionResponse != nil {
-        // handle response
+    if res.OneOf != nil {
+        switch res.OneOf.Type {
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeSqAttachRunbooks:
+                // res.OneOf.SqAttachRunbooks is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMarkIncidentSLOAffecting:
+                // res.OneOf.V3WorkflowsSqMarkIncidentSLOAffecting is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqTriggerManualWebhook:
+                // res.OneOf.V3WorkflowsSqTriggerManualWebhook is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsUpdateIncidentPriority:
+                // res.OneOf.V3WorkflowsUpdateIncidentPriority is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqCreateStatusPageIssue:
+                // res.OneOf.V3WorkflowsSqCreateStatusPageIssue is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddIncidentNote:
+                // res.OneOf.V3WorkflowsSqAddIncidentNote is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackArchiveChannel:
+                // res.OneOf.V3WorkflowsSlackArchiveChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqAddCommunicationChannel:
+                // res.OneOf.V3WorkflowsSqAddCommunicationChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageChannel:
+                // res.OneOf.V3WorkflowsSlackMessageChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackMessageUser:
+                // res.OneOf.V3WorkflowsSlackMessageUser is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqMakeHTTPCall:
+                // res.OneOf.V3WorkflowsSqMakeHTTPCall is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSlackCreateIncidentChannel:
+                // res.OneOf.V3WorkflowsSlackCreateIncidentChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsJiraCreateTicket:
+                // res.OneOf.V3WorkflowsJiraCreateTicket is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageChannel:
+                // res.OneOf.V3WorkflowsMsTeamsMessageChannel is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsMessageUser:
+                // res.OneOf.V3WorkflowsMsTeamsMessageUser is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsSqSendEmail:
+                // res.OneOf.V3WorkflowsSqSendEmail is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeV3WorkflowsMsTeamsCreateMeetingLink:
+                // res.OneOf.V3WorkflowsMsTeamsCreateMeetingLink is populated
+            case operations.WorkflowsUpdateWorkflowActionResponseBodyTypeAny:
+                // res.OneOf.Any is populated
+        }
+
     }
 }
 ```
@@ -720,7 +759,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.ToggleEnable(ctx, "<id>", components.V3WorkflowsEnableDisableWorkflowRequest{})
@@ -784,7 +823,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.Workflows.GetLogs(ctx, "<id>", nil, nil)
