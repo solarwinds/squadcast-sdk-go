@@ -3,12 +3,13 @@
 package components
 
 type Security struct {
-	BearerAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization,env=squadcastsdk_bearer_auth"`
+	// Squadcast refresh token used to obtain short-lived bearer tokens.
+	RefreshTokenAuth *string `json:"refreshToken,omitempty" security:"scheme,type=http,subtype=custom,name=refreshToken,env=squadcastsdk_refresh_token_auth"`
 }
 
-func (s *Security) GetBearerAuth() *string {
+func (s *Security) GetRefreshTokenAuth() *string {
 	if s == nil {
 		return nil
 	}
-	return s.BearerAuth
+	return s.RefreshTokenAuth
 }
