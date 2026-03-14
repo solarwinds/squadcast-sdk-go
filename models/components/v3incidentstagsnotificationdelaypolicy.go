@@ -46,3 +46,6 @@ func (v *V3IncidentsTagsNotificationDelayPolicy) GetAssignTo() V3IncidentsTagsAs
 	}
 	return v.AssignTo
 }
+
+// #region class-body-v3incidentstagsnotificationdelaypolicy
+// #endregion class-body-v3incidentstagsnotificationdelaypolicy

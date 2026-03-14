@@ -35,3 +35,6 @@ func (v *V3WorkflowsRunbookResponse) GetName() string {
 	}
 	return v.Name
 }
+
+// #region class-body-v3workflowsrunbookresponse
+// #endregion class-body-v3workflowsrunbookresponse

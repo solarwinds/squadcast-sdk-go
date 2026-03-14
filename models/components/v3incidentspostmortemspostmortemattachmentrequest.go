@@ -29,3 +29,6 @@ func (v *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetFileSize() *strin
 	}
 	return v.FileSize
 }
+
+// #region class-body-v3incidentspostmortemspostmortemattachmentrequest
+// #endregion class-body-v3incidentspostmortemspostmortemattachmentrequest

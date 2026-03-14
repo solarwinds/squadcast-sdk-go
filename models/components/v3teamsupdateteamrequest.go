@@ -31,6 +31,9 @@ func (v *V3TeamsUpdateTeamRequestMember) GetRoleIds() []string {
 	return v.RoleIds
 }
 
+// #region class-body-v3teamsupdateteamrequestmember
+// #endregion class-body-v3teamsupdateteamrequestmember
+
 type V3TeamsUpdateTeamRequest struct {
 	Name        *string                          `json:"name,omitempty"`
 	Description *string                          `json:"description,omitempty"`
@@ -57,3 +60,6 @@ func (v *V3TeamsUpdateTeamRequest) GetMembers() []V3TeamsUpdateTeamRequestMember
 	}
 	return v.Members
 }
+
+// #region class-body-v3teamsupdateteamrequest
+// #endregion class-body-v3teamsupdateteamrequest

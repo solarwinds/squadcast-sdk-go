@@ -37,3 +37,6 @@ func (v *V3IncidentsAdditionalRespondersAdditionalResponder) GetTimeOfAssignment
 	}
 	return v.TimeOfAssignment
 }
+
+// #region class-body-v3incidentsadditionalrespondersadditionalresponder
+// #endregion class-body-v3incidentsadditionalrespondersadditionalresponder

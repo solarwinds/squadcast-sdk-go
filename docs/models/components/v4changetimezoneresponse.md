@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `TimeZone`         | *string*           | :heavy_check_mark: | N/A                |
+| `TimeZone`         | `string`           | :heavy_check_mark: | N/A                |

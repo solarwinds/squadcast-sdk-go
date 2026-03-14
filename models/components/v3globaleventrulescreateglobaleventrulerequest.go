@@ -36,3 +36,6 @@ func (v *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetEntityOwner() V3Glob
 	}
 	return v.EntityOwner
 }
+
+// #region class-body-v3globaleventrulescreateglobaleventrulerequest
+// #endregion class-body-v3globaleventrulescreateglobaleventrulerequest

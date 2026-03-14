@@ -44,3 +44,6 @@ func (v *V3ServicesJiraCloudExtension) GetIsManual() bool {
 	}
 	return v.IsManual
 }
+
+// #region class-body-v3servicesjiracloudextension
+// #endregion class-body-v3servicesjiracloudextension

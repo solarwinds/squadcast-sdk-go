@@ -36,3 +36,6 @@ func (v *V3UsersUserRoleResponse) GetOrder() int64 {
 	}
 	return v.Order
 }
+
+// #region class-body-v3usersuserroleresponse
+// #endregion class-body-v3usersuserroleresponse

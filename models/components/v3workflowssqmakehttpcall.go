@@ -96,6 +96,9 @@ func (v *V3WorkflowsSqMakeHTTPCallHeader) GetValue() string {
 	return v.Value
 }
 
+// #region class-body-v3workflowssqmakehttpcallheader
+// #endregion class-body-v3workflowssqmakehttpcallheader
+
 type V3WorkflowsSqMakeHTTPCallData struct {
 	Method  V3WorkflowsSqMakeHTTPCallMethod   `json:"method"`
 	URL     string                            `json:"url"`
@@ -142,6 +145,9 @@ func (v *V3WorkflowsSqMakeHTTPCallData) GetBody() *string {
 	return v.Body
 }
 
+// #region class-body-v3workflowssqmakehttpcalldata
+// #endregion class-body-v3workflowssqmakehttpcalldata
+
 type V3WorkflowsSqMakeHTTPCall struct {
 	Name V3WorkflowsSqMakeHTTPCallName `json:"name"`
 	Data V3WorkflowsSqMakeHTTPCallData `json:"data"`
@@ -171,3 +177,6 @@ func (v *V3WorkflowsSqMakeHTTPCall) GetData() V3WorkflowsSqMakeHTTPCallData {
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqmakehttpcall
+// #endregion class-body-v3workflowssqmakehttpcall

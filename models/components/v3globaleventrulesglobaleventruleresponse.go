@@ -108,3 +108,6 @@ func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetUpdatedBy() string {
 	}
 	return v.UpdatedBy
 }
+
+// #region class-body-v3globaleventrulesglobaleventruleresponse
+// #endregion class-body-v3globaleventrulesglobaleventruleresponse

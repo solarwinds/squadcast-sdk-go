@@ -91,6 +91,9 @@ func (v *V3WorkflowsUpdateIncidentPriorityUpdateData) GetPriority() *V3Workflows
 	return v.Priority
 }
 
+// #region class-body-v3workflowsupdateincidentpriorityupdatedata
+// #endregion class-body-v3workflowsupdateincidentpriorityupdatedata
+
 type V3WorkflowsUpdateIncidentPriorityUpdate struct {
 	Name V3WorkflowsUpdateIncidentPriorityUpdateName  `json:"name"`
 	Data *V3WorkflowsUpdateIncidentPriorityUpdateData `json:"data,omitempty"`
@@ -120,3 +123,6 @@ func (v *V3WorkflowsUpdateIncidentPriorityUpdate) GetData() *V3WorkflowsUpdateIn
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsupdateincidentpriorityupdate
+// #endregion class-body-v3workflowsupdateincidentpriorityupdate

@@ -20,3 +20,6 @@ func (v *V3GlobalEventRulesReorderRuleRequest) GetShiftIndexBy() *int64 {
 	}
 	return v.ShiftIndexBy
 }
+
+// #region class-body-v3globaleventrulesreorderrulerequest
+// #endregion class-body-v3globaleventrulesreorderrulerequest

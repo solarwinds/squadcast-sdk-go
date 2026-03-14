@@ -114,3 +114,6 @@ func (v *V3IncidentsRunbooksRunbookResponse) GetDeletedAt() *time.Time {
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v3incidentsrunbooksrunbookresponse
+// #endregion class-body-v3incidentsrunbooksrunbookresponse

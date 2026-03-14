@@ -69,6 +69,9 @@ func (v *V3WorkflowsSlackMessageChannelUpdateData) GetMessage() *string {
 	return v.Message
 }
 
+// #region class-body-v3workflowsslackmessagechannelupdatedata
+// #endregion class-body-v3workflowsslackmessagechannelupdatedata
+
 type V3WorkflowsSlackMessageChannelUpdate struct {
 	Name V3WorkflowsSlackMessageChannelUpdateName  `json:"name"`
 	Data *V3WorkflowsSlackMessageChannelUpdateData `json:"data,omitempty"`
@@ -98,3 +101,6 @@ func (v *V3WorkflowsSlackMessageChannelUpdate) GetData() *V3WorkflowsSlackMessag
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsslackmessagechannelupdate
+// #endregion class-body-v3workflowsslackmessagechannelupdate

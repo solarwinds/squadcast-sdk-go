@@ -21,6 +21,9 @@ func (v *V4StatusPagesUpdateStatusPageByIDRequestThemeColor) GetSecondary() stri
 	return v.Secondary
 }
 
+// #region class-body-v4statuspagesupdatestatuspagebyidrequestthemecolor
+// #endregion class-body-v4statuspagesupdatestatuspagebyidrequestthemecolor
+
 type V4StatusPagesUpdateStatusPageByIDRequestComponent1 struct {
 	Type              *string `json:"type,omitempty"`
 	Name              *string `json:"name,omitempty"`
@@ -64,6 +67,9 @@ func (v *V4StatusPagesUpdateStatusPageByIDRequestComponent1) GetServiceID() *str
 	return v.ServiceID
 }
 
+// #region class-body-v4statuspagesupdatestatuspagebyidrequestcomponent1
+// #endregion class-body-v4statuspagesupdatestatuspagebyidrequestcomponent1
+
 type V4StatusPagesUpdateStatusPageByIDRequestComponent2 struct {
 	Type              *string                                              `json:"type,omitempty"`
 	Name              *string                                              `json:"name,omitempty"`
@@ -106,6 +112,9 @@ func (v *V4StatusPagesUpdateStatusPageByIDRequestComponent2) GetComponents() []V
 	}
 	return v.Components
 }
+
+// #region class-body-v4statuspagesupdatestatuspagebyidrequestcomponent2
+// #endregion class-body-v4statuspagesupdatestatuspagebyidrequestcomponent2
 
 type V4StatusPagesUpdateStatusPageByIDRequest struct {
 	Name                         string                                               `json:"name"`
@@ -253,3 +262,6 @@ func (v *V4StatusPagesUpdateStatusPageByIDRequest) GetOwnerID() string {
 	}
 	return v.OwnerID
 }
+
+// #region class-body-v4statuspagesupdatestatuspagebyidrequest
+// #endregion class-body-v4statuspagesupdatestatuspagebyidrequest

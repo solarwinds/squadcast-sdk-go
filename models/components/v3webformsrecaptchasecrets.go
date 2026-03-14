@@ -23,3 +23,6 @@ func (v *V3WebformsRecaptchaSecrets) GetSecret() string {
 	}
 	return v.Secret
 }
+
+// #region class-body-v3webformsrecaptchasecrets
+// #endregion class-body-v3webformsrecaptchasecrets

@@ -22,3 +22,6 @@ func (v *V3TeamsUpdateTeamMemberRequest) GetRole() *string {
 	}
 	return v.Role
 }
+
+// #region class-body-v3teamsupdateteammemberrequest
+// #endregion class-body-v3teamsupdateteammemberrequest

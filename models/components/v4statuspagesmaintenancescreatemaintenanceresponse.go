@@ -76,3 +76,6 @@ func (v *V4StatusPagesMaintenancesCreateMaintenanceResponse) GetEndTime() time.T
 	}
 	return v.EndTime
 }
+
+// #region class-body-v4statuspagesmaintenancescreatemaintenanceresponse
+// #endregion class-body-v4statuspagesmaintenancescreatemaintenanceresponse

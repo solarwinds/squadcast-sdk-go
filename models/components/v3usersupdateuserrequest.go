@@ -46,3 +46,6 @@ func (v *V3UsersUpdateUserRequest) GetRole() V3UsersUpdateUserRequestRole {
 	}
 	return v.Role
 }
+
+// #region class-body-v3usersupdateuserrequest
+// #endregion class-body-v3usersupdateuserrequest

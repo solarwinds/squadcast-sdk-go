@@ -20,3 +20,6 @@ func (v *V3ExtensionsWebhooksWebhookURL) GetMethod() *string {
 	}
 	return v.Method
 }
+
+// #region class-body-v3extensionswebhookswebhookurl
+// #endregion class-body-v3extensionswebhookswebhookurl

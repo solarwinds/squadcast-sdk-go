@@ -44,3 +44,6 @@ func (v *V4StatusPagesIssuesIssueStateMessage) GetTimestamp() *time.Time {
 	}
 	return v.Timestamp
 }
+
+// #region class-body-v4statuspagesissuesissuestatemessage
+// #endregion class-body-v4statuspagesissuesissuestatemessage

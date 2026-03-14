@@ -24,3 +24,6 @@ func (v *V3IncidentsResolveIncidentRequest) GetResolutionReason() ResolutionReas
 	}
 	return v.ResolutionReason
 }
+
+// #region class-body-v3incidentsresolveincidentrequest
+// #endregion class-body-v3incidentsresolveincidentrequest

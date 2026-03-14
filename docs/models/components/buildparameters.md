@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `CircleJob`        | *string*           | :heavy_check_mark: | N/A                |
+| `CircleJob`        | `string`           | :heavy_check_mark: | N/A                |

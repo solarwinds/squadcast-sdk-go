@@ -7,5 +7,5 @@ Represents the owner of an entity.
 
 | Field                                     | Type                                      | Required                                  | Description                               |
 | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| `ID`                                      | *string*                                  | :heavy_check_mark:                        | The ID of the owner.                      |
-| `Type`                                    | *string*                                  | :heavy_check_mark:                        | The type of the owner ( "user", "squad"). |
+| `ID`                                      | `string`                                  | :heavy_check_mark:                        | The ID of the owner.                      |
+| `Type`                                    | `string`                                  | :heavy_check_mark:                        | The type of the owner ( "user", "squad"). |

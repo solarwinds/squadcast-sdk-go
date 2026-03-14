@@ -20,3 +20,6 @@ func (v *V3TeamsUpdateTeamRoleRequest) GetAbilities() *V3TeamsAbilities {
 	}
 	return v.Abilities
 }
+
+// #region class-body-v3teamsupdateteamrolerequest
+// #endregion class-body-v3teamsupdateteamrolerequest

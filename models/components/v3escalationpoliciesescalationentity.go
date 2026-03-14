@@ -70,3 +70,6 @@ func (v *V3EscalationPoliciesEscalationEntity) GetType() V3EscalationPoliciesEsc
 	}
 	return v.Type
 }
+
+// #region class-body-v3escalationpoliciesescalationentity
+// #endregion class-body-v3escalationpoliciesescalationentity

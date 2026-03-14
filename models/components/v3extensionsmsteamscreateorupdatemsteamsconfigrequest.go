@@ -113,3 +113,6 @@ func (v *V3ExtensionsMSTeamsCreateOrUpdateMSTeamsConfigRequest) GetConnectedTeam
 	}
 	return v.ConnectedTeams
 }
+
+// #region class-body-v3extensionsmsteamscreateorupdatemsteamsconfigrequest
+// #endregion class-body-v3extensionsmsteamscreateorupdatemsteamsconfigrequest

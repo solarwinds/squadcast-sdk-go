@@ -44,3 +44,6 @@ func (c *CommonV4PageInfo) GetPreviousCursor() *string {
 	}
 	return c.PreviousCursor
 }
+
+// #region class-body-commonv4pageinfo
+// #endregion class-body-commonv4pageinfo

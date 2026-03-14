@@ -36,3 +36,6 @@ func (v *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsOnMonth() string 
 	}
 	return v.RepeatsOnMonth
 }
+
+// #region class-body-v3servicessuppressionrulescustomrepetition
+// #endregion class-body-v3servicessuppressionrulescustomrepetition

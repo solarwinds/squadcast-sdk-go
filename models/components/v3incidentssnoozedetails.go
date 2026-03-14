@@ -53,3 +53,6 @@ func (v *V3IncidentsSnoozeDetails) GetTotalTimeInMins() int64 {
 	}
 	return v.TotalTimeInMins
 }
+
+// #region class-body-v3incidentssnoozedetails
+// #endregion class-body-v3incidentssnoozedetails

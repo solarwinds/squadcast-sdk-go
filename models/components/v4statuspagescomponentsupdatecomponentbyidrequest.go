@@ -52,3 +52,6 @@ func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetBelongsToGroup() 
 	}
 	return v.BelongsToGroup
 }
+
+// #region class-body-v4statuspagescomponentsupdatecomponentbyidrequest
+// #endregion class-body-v4statuspagescomponentsupdatecomponentbyidrequest

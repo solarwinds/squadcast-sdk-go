@@ -32,6 +32,9 @@ func (v *V3IncidentsIncidentActionsWebhookActionResponseHeader) GetContentType()
 	return v.ContentType
 }
 
+// #region class-body-v3incidentsincidentactionswebhookactionresponseheader
+// #endregion class-body-v3incidentsincidentactionswebhookactionresponseheader
+
 // V3IncidentsIncidentActionsWebhookActionResponse - Represents the response structure for triggering a webhook manually.
 type V3IncidentsIncidentActionsWebhookActionResponse struct {
 	ID                        string                                                `json:"id"`
@@ -211,3 +214,6 @@ func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetCustomPayload() str
 	}
 	return v.CustomPayload
 }
+
+// #region class-body-v3incidentsincidentactionswebhookactionresponse
+// #endregion class-body-v3incidentsincidentactionswebhookactionresponse

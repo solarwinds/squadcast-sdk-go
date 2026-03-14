@@ -36,3 +36,6 @@ func (v *V4StatusPagesDeleteStatusPageByIDResponse) GetTeamID() string {
 	}
 	return v.TeamID
 }
+
+// #region class-body-v4statuspagesdeletestatuspagebyidresponse
+// #endregion class-body-v4statuspagesdeletestatuspagebyidresponse

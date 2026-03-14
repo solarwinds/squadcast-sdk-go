@@ -12,3 +12,6 @@ func (v *V3WorkflowsGetWorkflowByIDResponse) GetData() V3WorkflowsWorkflowAPIRes
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsgetworkflowbyidresponse
+// #endregion class-body-v3workflowsgetworkflowbyidresponse

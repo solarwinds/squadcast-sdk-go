@@ -5,5 +5,5 @@
 
 | Field                 | Type                  | Required              | Description           |
 | --------------------- | --------------------- | --------------------- | --------------------- |
-| `IncidentID`          | *string*              | :heavy_check_mark:    | Required              |
-| `CommunicationCardID` | *string*              | :heavy_check_mark:    | N/A                   |
+| `IncidentID`          | `string`              | :heavy_check_mark:    | Required              |
+| `CommunicationCardID` | `string`              | :heavy_check_mark:    | N/A                   |

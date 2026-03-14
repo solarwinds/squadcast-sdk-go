@@ -12,3 +12,6 @@ func (v *V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest) GetRules()
 	}
 	return v.Rules
 }
+
+// #region class-body-v3servicesdeduplicationrulescreatededuplicationrulesrequest
+// #endregion class-body-v3servicesdeduplicationrulescreatededuplicationrulesrequest

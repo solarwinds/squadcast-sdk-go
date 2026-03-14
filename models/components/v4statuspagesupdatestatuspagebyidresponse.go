@@ -21,6 +21,9 @@ func (v *V4StatusPagesUpdateStatusPageByIDResponseThemeColor) GetSecondary() str
 	return v.Secondary
 }
 
+// #region class-body-v4statuspagesupdatestatuspagebyidresponsethemecolor
+// #endregion class-body-v4statuspagesupdatestatuspagebyidresponsethemecolor
+
 type V4StatusPagesUpdateStatusPageByIDResponse struct {
 	ID                           int64                                               `json:"id"`
 	OrganizationID               *string                                             `json:"organizationID,omitempty"`
@@ -159,3 +162,6 @@ func (v *V4StatusPagesUpdateStatusPageByIDResponse) GetTeamID() string {
 	}
 	return v.TeamID
 }
+
+// #region class-body-v4statuspagesupdatestatuspagebyidresponse
+// #endregion class-body-v4statuspagesupdatestatuspagebyidresponse

@@ -28,3 +28,6 @@ func (v *V3ServicesSuppressionRulesBasicExpression) GetRHS() string {
 	}
 	return v.RHS
 }
+
+// #region class-body-v3servicessuppressionrulesbasicexpression
+// #endregion class-body-v3servicessuppressionrulesbasicexpression

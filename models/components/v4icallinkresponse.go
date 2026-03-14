@@ -20,3 +20,6 @@ func (v *V4ICalLinkResponse) GetICalLinkForMyOnCalls() *string {
 	}
 	return v.ICalLinkForMyOnCalls
 }
+
+// #region class-body-v4icallinkresponse
+// #endregion class-body-v4icallinkresponse

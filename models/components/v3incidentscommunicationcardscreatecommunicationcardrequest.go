@@ -29,3 +29,6 @@ func (v *V3IncidentsCommunicationCardsCreateCommunicationCardRequest) GetTitle()
 	}
 	return v.Title
 }
+
+// #region class-body-v3incidentscommunicationcardscreatecommunicationcardrequest
+// #endregion class-body-v3incidentscommunicationcardscreatecommunicationcardrequest

@@ -12,3 +12,6 @@ func (v *V3GlobalEventRulesReorderRulesetRequest) GetOrdering() []int64 {
 	}
 	return v.Ordering
 }
+
+// #region class-body-v3globaleventrulesreorderrulesetrequest
+// #endregion class-body-v3globaleventrulesreorderrulesetrequest

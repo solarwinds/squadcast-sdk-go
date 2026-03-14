@@ -35,3 +35,6 @@ func (v *V3ServicesOverlayDedupKeyOverlay) GetDuration() int {
 	}
 	return v.Duration
 }
+
+// #region class-body-v3servicesoverlaydedupkeyoverlay
+// #endregion class-body-v3servicesoverlaydedupkeyoverlay

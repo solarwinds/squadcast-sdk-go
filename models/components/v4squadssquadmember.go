@@ -21,3 +21,6 @@ func (v *V4SquadsSquadMember) GetRole() *string {
 	}
 	return v.Role
 }
+
+// #region class-body-v4squadssquadmember
+// #endregion class-body-v4squadssquadmember

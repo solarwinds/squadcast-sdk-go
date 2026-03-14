@@ -71,3 +71,6 @@ func (v *V3WorkflowsCreateWorkflowFilter) GetFilterType() *string {
 	}
 	return v.FilterType
 }
+
+// #region class-body-v3workflowscreateworkflowfilter
+// #endregion class-body-v3workflowscreateworkflowfilter

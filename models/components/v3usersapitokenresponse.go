@@ -60,3 +60,6 @@ func (v *V3UsersAPITokenResponse) GetDeleted() bool {
 	}
 	return v.Deleted
 }
+
+// #region class-body-v3usersapitokenresponse
+// #endregion class-body-v3usersapitokenresponse

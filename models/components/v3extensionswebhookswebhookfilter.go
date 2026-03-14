@@ -20,3 +20,6 @@ func (v *V3ExtensionsWebhooksWebhookFilter) GetConditions() []V3ExtensionsWebhoo
 	}
 	return v.Conditions
 }
+
+// #region class-body-v3extensionswebhookswebhookfilter
+// #endregion class-body-v3extensionswebhookswebhookfilter

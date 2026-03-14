@@ -29,8 +29,14 @@ func (v *V3ServicesNotificationDelayConfigRequestFixedTimeslotConfig) GetRepeatD
 	return v.RepeatDays
 }
 
+// #region class-body-v3servicesnotificationdelayconfigrequestfixedtimeslotconfig
+// #endregion class-body-v3servicesnotificationdelayconfigrequestfixedtimeslotconfig
+
 type V3ServicesNotificationDelayConfigRequestCustomTimeslots struct {
 }
+
+// #region class-body-v3servicesnotificationdelayconfigrequestcustomtimeslots
+// #endregion class-body-v3servicesnotificationdelayconfigrequestcustomtimeslots
 
 type V3ServicesNotificationDelayConfigRequestAssignedTo struct {
 	ID   *string `json:"id,omitempty"`
@@ -50,6 +56,9 @@ func (v *V3ServicesNotificationDelayConfigRequestAssignedTo) GetType() *string {
 	}
 	return v.Type
 }
+
+// #region class-body-v3servicesnotificationdelayconfigrequestassignedto
+// #endregion class-body-v3servicesnotificationdelayconfigrequestassignedto
 
 type V3ServicesNotificationDelayConfigRequest struct {
 	IsEnabled              bool                                                         `json:"is_enabled"`
@@ -101,3 +110,6 @@ func (v *V3ServicesNotificationDelayConfigRequest) GetAssignedTo() *V3ServicesNo
 	}
 	return v.AssignedTo
 }
+
+// #region class-body-v3servicesnotificationdelayconfigrequest
+// #endregion class-body-v3servicesnotificationdelayconfigrequest

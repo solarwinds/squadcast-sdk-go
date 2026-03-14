@@ -70,3 +70,6 @@ func (v *V3UsersAddUserRequest) GetLastName() string {
 	}
 	return v.LastName
 }
+
+// #region class-body-v3usersadduserrequest
+// #endregion class-body-v3usersadduserrequest

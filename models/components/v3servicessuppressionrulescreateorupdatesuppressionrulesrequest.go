@@ -12,3 +12,6 @@ func (v *V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetRul
 	}
 	return v.Rules
 }
+
+// #region class-body-v3servicessuppressionrulescreateorupdatesuppressionrulesrequest
+// #endregion class-body-v3servicessuppressionrulescreateorupdatesuppressionrulesrequest

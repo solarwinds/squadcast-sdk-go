@@ -21,3 +21,6 @@ func (v *V3IncidentsNotesCreateNoteRequest) GetAttachments() []string {
 	}
 	return v.Attachments
 }
+
+// #region class-body-v3incidentsnotescreatenoterequest
+// #endregion class-body-v3incidentsnotescreatenoterequest

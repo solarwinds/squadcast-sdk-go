@@ -20,3 +20,6 @@ func (v *V3IncidentsIncidentPriorityUpdateResponse) GetPriority() string {
 	}
 	return v.Priority
 }
+
+// #region class-body-v3incidentsincidentpriorityupdateresponse
+// #endregion class-body-v3incidentsincidentpriorityupdateresponse
