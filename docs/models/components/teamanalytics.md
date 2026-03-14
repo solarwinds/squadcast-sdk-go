@@ -5,4 +5,4 @@
 
 | Field               | Type                | Required            | Description         |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-| `ReadTeamAnalytics` | **bool*             | :heavy_minus_sign:  | N/A                 |
+| `ReadTeamAnalytics` | `*bool`             | :heavy_minus_sign:  | N/A                 |

@@ -20,3 +20,6 @@ func (v *V3IncidentsIncidentExportAsyncResponse) GetRequestID() string {
 	}
 	return v.RequestID
 }
+
+// #region class-body-v3incidentsincidentexportasyncresponse
+// #endregion class-body-v3incidentsincidentexportasyncresponse

@@ -31,3 +31,6 @@ func (v *V3SLOSLOWithInsightsResponse) GetSlo() V3SloSlo {
 	}
 	return v.Slo
 }
+
+// #region class-body-v3sloslowithinsightsresponse
+// #endregion class-body-v3sloslowithinsightsresponse

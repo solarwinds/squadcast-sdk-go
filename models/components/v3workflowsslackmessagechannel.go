@@ -69,6 +69,9 @@ func (v *V3WorkflowsSlackMessageChannelData) GetMessage() string {
 	return v.Message
 }
 
+// #region class-body-v3workflowsslackmessagechanneldata
+// #endregion class-body-v3workflowsslackmessagechanneldata
+
 type V3WorkflowsSlackMessageChannel struct {
 	Name V3WorkflowsSlackMessageChannelName `json:"name"`
 	Data V3WorkflowsSlackMessageChannelData `json:"data"`
@@ -98,3 +101,6 @@ func (v *V3WorkflowsSlackMessageChannel) GetData() V3WorkflowsSlackMessageChanne
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsslackmessagechannel
+// #endregion class-body-v3workflowsslackmessagechannel

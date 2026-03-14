@@ -28,3 +28,6 @@ func (v *V3ServicesJiraProject) GetName() string {
 	}
 	return v.Name
 }
+
+// #region class-body-v3servicesjiraproject
+// #endregion class-body-v3servicesjiraproject

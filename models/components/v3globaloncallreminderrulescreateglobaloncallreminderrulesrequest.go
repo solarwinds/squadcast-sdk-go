@@ -28,3 +28,6 @@ func (v *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetR
 	}
 	return v.Rules
 }
+
+// #region class-body-v3globaloncallreminderrulescreateglobaloncallreminderrulesrequest
+// #endregion class-body-v3globaloncallreminderrulescreateglobaloncallreminderrulesrequest

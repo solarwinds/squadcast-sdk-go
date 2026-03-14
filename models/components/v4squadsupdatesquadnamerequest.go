@@ -12,3 +12,6 @@ func (v *V4SquadsUpdateSquadNameRequest) GetName() string {
 	}
 	return v.Name
 }
+
+// #region class-body-v4squadsupdatesquadnamerequest
+// #endregion class-body-v4squadsupdatesquadnamerequest

@@ -76,3 +76,6 @@ func (v *V3ServicesSuppressionRulesTimeslot) GetEndsOn() string {
 	}
 	return v.EndsOn
 }
+
+// #region class-body-v3servicessuppressionrulestimeslot
+// #endregion class-body-v3servicessuppressionrulestimeslot

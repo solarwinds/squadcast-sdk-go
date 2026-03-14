@@ -20,3 +20,6 @@ func (v *V3ServicesIAGConfigRequest) GetRollingWindowInMins() int64 {
 	}
 	return v.RollingWindowInMins
 }
+
+// #region class-body-v3servicesiagconfigrequest
+// #endregion class-body-v3servicesiagconfigrequest

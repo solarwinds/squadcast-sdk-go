@@ -76,3 +76,6 @@ func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetEndTime() ti
 	}
 	return v.EndTime
 }
+
+// #region class-body-v4statuspagesmaintenancesdeletemaintenancebyidresponse
+// #endregion class-body-v4statuspagesmaintenancesdeletemaintenancebyidresponse

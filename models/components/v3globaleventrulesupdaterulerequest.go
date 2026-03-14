@@ -28,3 +28,6 @@ func (v *V3GlobalEventRulesUpdateRuleRequest) GetAction() *V3GlobalEventRulesRul
 	}
 	return v.Action
 }
+
+// #region class-body-v3globaleventrulesupdaterulerequest
+// #endregion class-body-v3globaleventrulesupdaterulerequest

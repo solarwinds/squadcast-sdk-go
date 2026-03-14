@@ -20,3 +20,6 @@ func (v *V4GetRotationParticipantsResponse) GetParticipants() []V4ParticipantGro
 	}
 	return v.Participants
 }
+
+// #region class-body-v4getrotationparticipantsresponse
+// #endregion class-body-v4getrotationparticipantsresponse

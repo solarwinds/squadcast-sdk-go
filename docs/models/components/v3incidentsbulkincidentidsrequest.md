@@ -7,4 +7,4 @@ Request body for bulk incident operations (acknowledge, resolve).
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `IncidentIds`      | []*string*         | :heavy_check_mark: | N/A                |
+| `IncidentIds`      | []`string`         | :heavy_check_mark: | N/A                |

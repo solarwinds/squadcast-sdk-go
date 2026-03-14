@@ -53,6 +53,9 @@ func (v *V3WorkflowsSqTriggerManualWebhookData) GetID() string {
 	return v.ID
 }
 
+// #region class-body-v3workflowssqtriggermanualwebhookdata
+// #endregion class-body-v3workflowssqtriggermanualwebhookdata
+
 type V3WorkflowsSqTriggerManualWebhook struct {
 	Name V3WorkflowsSqTriggerManualWebhookName `json:"name"`
 	Data V3WorkflowsSqTriggerManualWebhookData `json:"data"`
@@ -82,3 +85,6 @@ func (v *V3WorkflowsSqTriggerManualWebhook) GetData() V3WorkflowsSqTriggerManual
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqtriggermanualwebhook
+// #endregion class-body-v3workflowssqtriggermanualwebhook

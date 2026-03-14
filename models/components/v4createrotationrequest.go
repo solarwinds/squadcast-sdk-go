@@ -100,3 +100,6 @@ func (v *V4CreateRotationRequest) GetParticipantGroups() []V4ParticipantGroup {
 	}
 	return v.ParticipantGroups
 }
+
+// #region class-body-v4createrotationrequest
+// #endregion class-body-v4createrotationrequest

@@ -52,3 +52,6 @@ func (v *V3WorkflowsSlackArchiveChannel) GetName() V3WorkflowsSlackArchiveChanne
 	}
 	return v.Name
 }
+
+// #region class-body-v3workflowsslackarchivechannel
+// #endregion class-body-v3workflowsslackarchivechannel

@@ -30,3 +30,6 @@ func (v *V3TeamsAddTeamMemberRequest) GetRole() *string {
 	}
 	return v.Role
 }
+
+// #region class-body-v3teamsaddteammemberrequest
+// #endregion class-body-v3teamsaddteammemberrequest

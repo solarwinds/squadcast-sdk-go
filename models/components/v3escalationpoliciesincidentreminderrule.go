@@ -32,3 +32,6 @@ func (v *V3EscalationPoliciesIncidentReminderRule) GetTill() int {
 	}
 	return v.Till
 }
+
+// #region class-body-v3escalationpoliciesincidentreminderrule
+// #endregion class-body-v3escalationpoliciesincidentreminderrule

@@ -53,3 +53,6 @@ func (v *V3IncidentsTagsRelevantPeopleLog) GetActionTime() time.Time {
 	}
 	return v.ActionTime
 }
+
+// #region class-body-v3incidentstagsrelevantpeoplelog
+// #endregion class-body-v3incidentstagsrelevantpeoplelog

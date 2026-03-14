@@ -20,3 +20,6 @@ func (v *V3AnalyticsAnalyticsResponse) GetMttr() float64 {
 	}
 	return v.Mttr
 }
+
+// #region class-body-v3analyticsanalyticsresponse
+// #endregion class-body-v3analyticsanalyticsresponse

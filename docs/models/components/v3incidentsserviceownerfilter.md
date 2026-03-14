@@ -7,6 +7,6 @@ Filter criteria for service owner in an export.
 
 | Field                   | Type                    | Required                | Description             |
 | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
-| `UserIDs`               | []*string*              | :heavy_check_mark:      | N/A                     |
-| `SquadIDs`              | []*string*              | :heavy_check_mark:      | N/A                     |
-| `UserIDsAndTheirSquads` | []*string*              | :heavy_minus_sign:      | N/A                     |
+| `UserIDs`               | []`string`              | :heavy_check_mark:      | N/A                     |
+| `SquadIDs`              | []`string`              | :heavy_check_mark:      | N/A                     |
+| `UserIDsAndTheirSquads` | []`string`              | :heavy_minus_sign:      | N/A                     |

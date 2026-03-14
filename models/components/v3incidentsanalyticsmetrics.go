@@ -37,3 +37,6 @@ func (v *V3IncidentsAnalyticsMetrics) GetSquadID() string {
 	}
 	return v.SquadID
 }
+
+// #region class-body-v3incidentsanalyticsmetrics
+// #endregion class-body-v3incidentsanalyticsmetrics

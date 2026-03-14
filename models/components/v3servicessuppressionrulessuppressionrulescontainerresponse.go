@@ -68,3 +68,6 @@ func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetRules()
 	}
 	return v.Rules
 }
+
+// #region class-body-v3servicessuppressionrulessuppressionrulescontainerresponse
+// #endregion class-body-v3servicessuppressionrulessuppressionrulescontainerresponse

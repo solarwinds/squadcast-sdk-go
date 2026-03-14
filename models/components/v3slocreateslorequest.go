@@ -10,6 +10,9 @@ import (
 type V3SLOCreateSLORequestTags struct {
 }
 
+// #region class-body-v3slocreateslorequesttags
+// #endregion class-body-v3slocreateslorequesttags
+
 type V3SLOCreateSLORequest struct {
 	Name                string                     `json:"name"`
 	Description         *string                    `json:"description,omitempty"`
@@ -151,3 +154,6 @@ func (v *V3SLOCreateSLORequest) GetSloOwnerType() V3SLOSLOOwnerType {
 	}
 	return v.SloOwnerType
 }
+
+// #region class-body-v3slocreateslorequest
+// #endregion class-body-v3slocreateslorequest

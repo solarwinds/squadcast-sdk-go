@@ -14,3 +14,6 @@ func (v *V3AuditLogsGetAuditLogByIDResponse) GetData() V3AuditLogsAuditLogIDResp
 	}
 	return v.Data
 }
+
+// #region class-body-v3auditlogsgetauditlogbyidresponse
+// #endregion class-body-v3auditlogsgetauditlogbyidresponse

@@ -78,3 +78,6 @@ func (v *V3IncidentsExportIncidentsFilter) GetNotes() string {
 	}
 	return v.Notes
 }
+
+// #region class-body-v3incidentsexportincidentsfilter
+// #endregion class-body-v3incidentsexportincidentsfilter

@@ -75,3 +75,6 @@ func (v *V4StatusPagesNewStatusPageComponent) GetServiceID() *string {
 	}
 	return v.ServiceID
 }
+
+// #region class-body-v4statuspagesnewstatuspagecomponent
+// #endregion class-body-v4statuspagesnewstatuspagecomponent

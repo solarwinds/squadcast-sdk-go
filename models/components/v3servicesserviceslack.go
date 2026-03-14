@@ -28,3 +28,6 @@ func (v *V3ServicesServiceSlack) GetTime() int64 {
 	}
 	return v.Time
 }
+
+// #region class-body-v3servicesserviceslack
+// #endregion class-body-v3servicesserviceslack

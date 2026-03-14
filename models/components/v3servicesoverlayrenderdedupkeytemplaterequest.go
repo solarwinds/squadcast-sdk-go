@@ -28,3 +28,6 @@ func (v *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetPayload() string {
 	}
 	return v.Payload
 }
+
+// #region class-body-v3servicesoverlayrenderdedupkeytemplaterequest
+// #endregion class-body-v3servicesoverlayrenderdedupkeytemplaterequest

@@ -60,3 +60,6 @@ func (v *V4StatusPagesComponentsCreateComponentResponse) GetGroupID() *int64 {
 	}
 	return v.GroupID
 }
+
+// #region class-body-v4statuspagescomponentscreatecomponentresponse
+// #endregion class-body-v4statuspagescomponentscreatecomponentresponse

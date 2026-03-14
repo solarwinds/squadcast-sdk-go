@@ -74,3 +74,6 @@ func (v *V3WorkflowsCommunicationChannel) GetType() V3WorkflowsCommunicationChan
 	}
 	return v.Type
 }
+
+// #region class-body-v3workflowscommunicationchannel
+// #endregion class-body-v3workflowscommunicationchannel

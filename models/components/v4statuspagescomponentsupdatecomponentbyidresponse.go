@@ -52,3 +52,6 @@ func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetAllowSubscriptio
 	}
 	return v.AllowSubscription
 }
+
+// #region class-body-v4statuspagescomponentsupdatecomponentbyidresponse
+// #endregion class-body-v4statuspagescomponentsupdatecomponentbyidresponse

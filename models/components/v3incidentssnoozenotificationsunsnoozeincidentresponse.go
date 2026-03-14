@@ -28,3 +28,6 @@ func (v *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetReassignTo()
 	}
 	return v.ReassignTo
 }
+
+// #region class-body-v3incidentssnoozenotificationsunsnoozeincidentresponse
+// #endregion class-body-v3incidentssnoozenotificationsunsnoozeincidentresponse

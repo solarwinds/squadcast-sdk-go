@@ -13,6 +13,9 @@ func (v *V3WorkflowsUpdateActionsOrderResponseData) GetActionOrder() []int {
 	return v.ActionOrder
 }
 
+// #region class-body-v3workflowsupdateactionsorderresponsedata
+// #endregion class-body-v3workflowsupdateactionsorderresponsedata
+
 type V3WorkflowsUpdateActionsOrderResponse struct {
 	Data V3WorkflowsUpdateActionsOrderResponseData `json:"data"`
 }
@@ -23,3 +26,6 @@ func (v *V3WorkflowsUpdateActionsOrderResponse) GetData() V3WorkflowsUpdateActio
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsupdateactionsorderresponse
+// #endregion class-body-v3workflowsupdateactionsorderresponse

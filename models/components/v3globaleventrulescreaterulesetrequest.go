@@ -28,3 +28,6 @@ func (v *V3GlobalEventRulesCreateRulesetRequest) GetCatchAllAction() *V3GlobalEv
 	}
 	return v.CatchAllAction
 }
+
+// #region class-body-v3globaleventrulescreaterulesetrequest
+// #endregion class-body-v3globaleventrulescreaterulesetrequest

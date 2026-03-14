@@ -54,3 +54,6 @@ func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetAttachments() []V3Inc
 	}
 	return v.Attachments
 }
+
+// #region class-body-v3incidentspostmortemscreatepostmortemrequest
+// #endregion class-body-v3incidentspostmortemscreatepostmortemrequest

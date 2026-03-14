@@ -20,3 +20,6 @@ func (v *V3ExtensionsWebhooksWebhookTrigger) GetEventType() string {
 	}
 	return v.EventType
 }
+
+// #region class-body-v3extensionswebhookswebhooktrigger
+// #endregion class-body-v3extensionswebhookswebhooktrigger

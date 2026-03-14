@@ -113,3 +113,6 @@ func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetConnectedTeams() []V3Exten
 	}
 	return v.ConnectedTeams
 }
+
+// #region class-body-v3extensionsmsteamsmsteamsconfigresponse
+// #endregion class-body-v3extensionsmsteamsmsteamsconfigresponse

@@ -28,3 +28,6 @@ func (v *V3ServicesOverlayRenderCustomContentOverlayRequest) GetPayload() string
 	}
 	return v.Payload
 }
+
+// #region class-body-v3servicesoverlayrendercustomcontentoverlayrequest
+// #endregion class-body-v3servicesoverlayrendercustomcontentoverlayrequest

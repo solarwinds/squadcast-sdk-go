@@ -77,3 +77,6 @@ func (v *V3AuditLogsFilters) GetClient() []string {
 	}
 	return v.Client
 }
+
+// #region class-body-v3auditlogsfilters
+// #endregion class-body-v3auditlogsfilters

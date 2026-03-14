@@ -625,3 +625,6 @@ func (v *V3TeamsAbilities) GetGlobalOncallReminderRules() *GlobalOncallReminderR
 	}
 	return v.GlobalOncallReminderRules
 }
+
+// #region class-body-v3teamsabilities
+// #endregion class-body-v3teamsabilities

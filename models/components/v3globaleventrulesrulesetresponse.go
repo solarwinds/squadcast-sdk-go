@@ -100,3 +100,6 @@ func (v *V3GlobalEventRulesRulesetResponse) GetUpdatedBy() *string {
 	}
 	return v.UpdatedBy
 }
+
+// #region class-body-v3globaleventrulesrulesetresponse
+// #endregion class-body-v3globaleventrulesrulesetresponse

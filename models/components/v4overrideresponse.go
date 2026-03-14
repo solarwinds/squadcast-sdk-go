@@ -92,3 +92,6 @@ func (v *V4OverrideResponse) GetUpdatedAt() string {
 	}
 	return v.UpdatedAt
 }
+
+// #region class-body-v4overrideresponse
+// #endregion class-body-v4overrideresponse

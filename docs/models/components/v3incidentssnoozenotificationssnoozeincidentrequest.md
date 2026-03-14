@@ -5,4 +5,4 @@
 
 | Field                  | Type                   | Required               | Description            |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| `SnoozeDurationInMins` | *int*                  | :heavy_check_mark:     | N/A                    |
+| `SnoozeDurationInMins` | `int`                  | :heavy_check_mark:     | N/A                    |

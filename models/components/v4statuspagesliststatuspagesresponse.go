@@ -21,6 +21,9 @@ func (v *V4StatusPagesListStatusPagesResponseMeta) GetOrgTotalCount() int64 {
 	return v.OrgTotalCount
 }
 
+// #region class-body-v4statuspagesliststatuspagesresponsemeta
+// #endregion class-body-v4statuspagesliststatuspagesresponsemeta
+
 type V4StatusPagesListStatusPagesResponse struct {
 	Data []V4StatusPagesStatusPage                `json:"data"`
 	Meta V4StatusPagesListStatusPagesResponseMeta `json:"meta"`
@@ -39,3 +42,6 @@ func (v *V4StatusPagesListStatusPagesResponse) GetMeta() V4StatusPagesListStatus
 	}
 	return v.Meta
 }
+
+// #region class-body-v4statuspagesliststatuspagesresponse
+// #endregion class-body-v4statuspagesliststatuspagesresponse

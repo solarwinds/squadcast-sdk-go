@@ -44,3 +44,6 @@ func (v *V4StatusPagesComponentsCreateComponentRequest) GetServiceID() *string {
 	}
 	return v.ServiceID
 }
+
+// #region class-body-v4statuspagescomponentscreatecomponentrequest
+// #endregion class-body-v4statuspagescomponentscreatecomponentrequest

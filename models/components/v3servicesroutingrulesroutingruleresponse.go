@@ -55,6 +55,9 @@ func (v *V3ServicesRoutingRulesRoutingRuleResponseRouteTo) GetEntityID() string 
 	return v.EntityID
 }
 
+// #region class-body-v3servicesroutingrulesroutingruleresponserouteto
+// #endregion class-body-v3servicesroutingrulesroutingruleresponserouteto
+
 type V3ServicesRoutingRulesRoutingRuleResponse struct {
 	Expression      string                                           `json:"expression"`
 	RouteTo         V3ServicesRoutingRulesRoutingRuleResponseRouteTo `json:"route_to"`
@@ -89,3 +92,6 @@ func (v *V3ServicesRoutingRulesRoutingRuleResponse) GetBasicExpression() []V3Ser
 	}
 	return v.BasicExpression
 }
+
+// #region class-body-v3servicesroutingrulesroutingruleresponse
+// #endregion class-body-v3servicesroutingrulesroutingruleresponse

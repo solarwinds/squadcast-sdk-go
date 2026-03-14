@@ -947,17 +947,11 @@ func (s *Rulesets) ListRulesetRules(ctx context.Context, request operations.Glob
 		if len(arr) < l {
 			return nil, nil
 		}
+		request.PageNumber = &nP
 
 		return s.ListRulesetRules(
 			ctx,
-			operations.GlobalEventRulesListRulesetRulesRequest{
-				GerID:                request.GerID,
-				AlertSourceVersion:   request.AlertSourceVersion,
-				AlertSourceShortname: request.AlertSourceShortname,
-				PageSize:             request.PageSize,
-				PageNumber:           &nP,
-				FiltersSearch:        request.FiltersSearch,
-			},
+			request,
 			opts...,
 		)
 	}

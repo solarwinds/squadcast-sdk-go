@@ -21,6 +21,9 @@ func (v *V4StatusPagesStatusPageComponent) GetName() string {
 	return v.Name
 }
 
+// #region class-body-v4statuspagesstatuspagecomponent
+// #endregion class-body-v4statuspagesstatuspagecomponent
+
 type V4StatusPagesStatusPageStatus struct {
 	ID    int64  `json:"id"`
 	Name  string `json:"name"`
@@ -55,6 +58,9 @@ func (v *V4StatusPagesStatusPageStatus) GetSlug() string {
 	}
 	return v.Slug
 }
+
+// #region class-body-v4statuspagesstatuspagestatus
+// #endregion class-body-v4statuspagesstatuspagestatus
 
 type StatusMaintenance struct {
 	ID    int64  `json:"id"`
@@ -245,3 +251,6 @@ func (v *V4StatusPagesStatusPage) GetOwnerID() string {
 	}
 	return v.OwnerID
 }
+
+// #region class-body-v4statuspagesstatuspage
+// #endregion class-body-v4statuspagesstatuspage

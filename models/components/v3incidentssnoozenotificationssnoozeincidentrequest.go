@@ -12,3 +12,6 @@ func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentRequest) GetSnoozeDurationI
 	}
 	return v.SnoozeDurationInMins
 }
+
+// #region class-body-v3incidentssnoozenotificationssnoozeincidentrequest
+// #endregion class-body-v3incidentssnoozenotificationssnoozeincidentrequest

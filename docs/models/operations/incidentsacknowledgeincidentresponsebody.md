@@ -7,4 +7,4 @@ The request has succeeded.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Data`             | *string*           | :heavy_check_mark: | N/A                |
+| `Data`             | `string`           | :heavy_check_mark: | N/A                |

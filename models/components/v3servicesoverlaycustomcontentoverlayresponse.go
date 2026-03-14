@@ -144,3 +144,6 @@ func (v *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceType() str
 	}
 	return v.AlertSourceType
 }
+
+// #region class-body-v3servicesoverlaycustomcontentoverlayresponse
+// #endregion class-body-v3servicesoverlaycustomcontentoverlayresponse

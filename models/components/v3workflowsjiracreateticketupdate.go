@@ -85,6 +85,9 @@ func (v *V3WorkflowsJiraCreateTicketUpdateData) GetDescription() *string {
 	return v.Description
 }
 
+// #region class-body-v3workflowsjiracreateticketupdatedata
+// #endregion class-body-v3workflowsjiracreateticketupdatedata
+
 type V3WorkflowsJiraCreateTicketUpdate struct {
 	Name V3WorkflowsJiraCreateTicketUpdateName  `json:"name"`
 	Data *V3WorkflowsJiraCreateTicketUpdateData `json:"data,omitempty"`
@@ -114,3 +117,6 @@ func (v *V3WorkflowsJiraCreateTicketUpdate) GetData() *V3WorkflowsJiraCreateTick
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsjiracreateticketupdate
+// #endregion class-body-v3workflowsjiracreateticketupdate

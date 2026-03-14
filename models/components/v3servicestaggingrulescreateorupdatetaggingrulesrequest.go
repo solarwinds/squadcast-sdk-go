@@ -12,3 +12,6 @@ func (v *V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest) GetRules() []V
 	}
 	return v.Rules
 }
+
+// #region class-body-v3servicestaggingrulescreateorupdatetaggingrulesrequest
+// #endregion class-body-v3servicestaggingrulescreateorupdatetaggingrulesrequest

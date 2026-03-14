@@ -53,6 +53,9 @@ func (v *V3WorkflowsSqAddIncidentNoteData) GetNote() string {
 	return v.Note
 }
 
+// #region class-body-v3workflowssqaddincidentnotedata
+// #endregion class-body-v3workflowssqaddincidentnotedata
+
 type V3WorkflowsSqAddIncidentNote struct {
 	Name V3WorkflowsSqAddIncidentNoteName `json:"name"`
 	Data V3WorkflowsSqAddIncidentNoteData `json:"data"`
@@ -82,3 +85,6 @@ func (v *V3WorkflowsSqAddIncidentNote) GetData() V3WorkflowsSqAddIncidentNoteDat
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqaddincidentnote
+// #endregion class-body-v3workflowssqaddincidentnote

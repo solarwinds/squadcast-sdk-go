@@ -21,3 +21,6 @@ func (v *V3IncidentsBulkIncidentsPriorityUpdateRequest) GetPriority() string {
 	}
 	return v.Priority
 }
+
+// #region class-body-v3incidentsbulkincidentspriorityupdaterequest
+// #endregion class-body-v3incidentsbulkincidentspriorityupdaterequest

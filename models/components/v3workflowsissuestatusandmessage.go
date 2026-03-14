@@ -35,3 +35,6 @@ func (v *V3WorkflowsIssueStatusAndMessage) GetStatusID() int {
 	}
 	return v.StatusID
 }
+
+// #region class-body-v3workflowsissuestatusandmessage
+// #endregion class-body-v3workflowsissuestatusandmessage

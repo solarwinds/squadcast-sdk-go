@@ -93,6 +93,9 @@ func (v *V3WorkflowsGetWorkflowLogsResponseData) GetExecutedAt() string {
 	return v.ExecutedAt
 }
 
+// #region class-body-v3workflowsgetworkflowlogsresponsedata
+// #endregion class-body-v3workflowsgetworkflowlogsresponsedata
+
 type V3WorkflowsGetWorkflowLogsResponseMeta struct {
 	TotalCount int64 `json:"total_count"`
 }
@@ -103,6 +106,9 @@ func (v *V3WorkflowsGetWorkflowLogsResponseMeta) GetTotalCount() int64 {
 	}
 	return v.TotalCount
 }
+
+// #region class-body-v3workflowsgetworkflowlogsresponsemeta
+// #endregion class-body-v3workflowsgetworkflowlogsresponsemeta
 
 type V3WorkflowsGetWorkflowLogsResponse struct {
 	Data []V3WorkflowsGetWorkflowLogsResponseData `json:"data"`
@@ -122,3 +128,6 @@ func (v *V3WorkflowsGetWorkflowLogsResponse) GetMeta() V3WorkflowsGetWorkflowLog
 	}
 	return v.Meta
 }
+
+// #region class-body-v3workflowsgetworkflowlogsresponse
+// #endregion class-body-v3workflowsgetworkflowlogsresponse

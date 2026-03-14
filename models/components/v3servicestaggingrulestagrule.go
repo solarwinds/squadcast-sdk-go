@@ -37,3 +37,6 @@ func (v *V3ServicesTaggingRulesTagRule) GetBasicExpression() []V3ServicesTagging
 	}
 	return v.BasicExpression
 }
+
+// #region class-body-v3servicestaggingrulestagrule
+// #endregion class-body-v3servicestaggingrulestagrule

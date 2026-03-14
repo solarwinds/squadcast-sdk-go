@@ -13,6 +13,9 @@ func (v *V3AuditLogsListAuditLogsResponseMetadata) GetTotalCount() int64 {
 	return v.TotalCount
 }
 
+// #region class-body-v3auditlogslistauditlogsresponsemetadata
+// #endregion class-body-v3auditlogslistauditlogsresponsemetadata
+
 // V3AuditLogsListAuditLogsResponse - Response model for listing audit logs
 type V3AuditLogsListAuditLogsResponse struct {
 	Data     []V3AuditLogsAuditLogResponse            `json:"data"`
@@ -32,3 +35,6 @@ func (v *V3AuditLogsListAuditLogsResponse) GetMetadata() V3AuditLogsListAuditLog
 	}
 	return v.Metadata
 }
+
+// #region class-body-v3auditlogslistauditlogsresponse
+// #endregion class-body-v3auditlogslistauditlogsresponse

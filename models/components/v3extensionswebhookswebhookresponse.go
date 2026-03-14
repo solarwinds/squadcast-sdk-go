@@ -5,6 +5,9 @@ package components
 type V3ExtensionsWebhooksWebhookResponseHeader struct {
 }
 
+// #region class-body-v3extensionswebhookswebhookresponseheader
+// #endregion class-body-v3extensionswebhookswebhookresponseheader
+
 type V3ExtensionsWebhooksWebhookResponse struct {
 	// Name of the webhook
 	Name string `json:"name"`
@@ -198,3 +201,6 @@ func (v *V3ExtensionsWebhooksWebhookResponse) GetVersion() *string {
 	}
 	return v.Version
 }
+
+// #region class-body-v3extensionswebhookswebhookresponse
+// #endregion class-body-v3extensionswebhookswebhookresponse

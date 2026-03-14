@@ -61,6 +61,9 @@ func (v *V3WorkflowsSlackCreateIncidentChannelData) GetChannelName() *string {
 	return v.ChannelName
 }
 
+// #region class-body-v3workflowsslackcreateincidentchanneldata
+// #endregion class-body-v3workflowsslackcreateincidentchanneldata
+
 type V3WorkflowsSlackCreateIncidentChannel struct {
 	Name V3WorkflowsSlackCreateIncidentChannelName `json:"name"`
 	Data V3WorkflowsSlackCreateIncidentChannelData `json:"data"`
@@ -90,3 +93,6 @@ func (v *V3WorkflowsSlackCreateIncidentChannel) GetData() V3WorkflowsSlackCreate
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsslackcreateincidentchannel
+// #endregion class-body-v3workflowsslackcreateincidentchannel

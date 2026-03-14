@@ -12,3 +12,6 @@ func (v *V3ServicesExtensionsUpdateSlackExtensionRequest) GetChannelID() string 
 	}
 	return v.ChannelID
 }
+
+// #region class-body-v3servicesextensionsupdateslackextensionrequest
+// #endregion class-body-v3servicesextensionsupdateslackextensionrequest

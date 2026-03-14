@@ -131,3 +131,6 @@ func (v *V4ScheduleResponse) GetUpdatedAt() string {
 	}
 	return v.UpdatedAt
 }
+
+// #region class-body-v4scheduleresponse
+// #endregion class-body-v4scheduleresponse

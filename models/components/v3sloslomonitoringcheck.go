@@ -108,3 +108,6 @@ func (v *V3SLOSLOMonitoringCheck) GetDeletedAt() *time.Time {
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v3sloslomonitoringcheck
+// #endregion class-body-v3sloslomonitoringcheck

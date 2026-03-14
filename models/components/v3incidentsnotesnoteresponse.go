@@ -128,3 +128,6 @@ func (v *V3IncidentsNotesNoteResponse) GetReplacedMessage() string {
 	}
 	return v.ReplacedMessage
 }
+
+// #region class-body-v3incidentsnotesnoteresponse
+// #endregion class-body-v3incidentsnotesnoteresponse

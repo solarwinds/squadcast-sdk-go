@@ -60,3 +60,6 @@ func (v *V4StatusPagesIssuesIssue) GetCreatedAt() *time.Time {
 	}
 	return v.CreatedAt
 }
+
+// #region class-body-v4statuspagesissuesissue
+// #endregion class-body-v4statuspagesissuesissue

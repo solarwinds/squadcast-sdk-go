@@ -5,5 +5,5 @@
 
 | Field                  | Type                   | Required               | Description            |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| `ICalLink`             | **string*              | :heavy_minus_sign:     | N/A                    |
-| `ICalLinkForMyOnCalls` | **string*              | :heavy_minus_sign:     | N/A                    |
+| `ICalLink`             | `*string`              | :heavy_minus_sign:     | N/A                    |
+| `ICalLinkForMyOnCalls` | `*string`              | :heavy_minus_sign:     | N/A                    |

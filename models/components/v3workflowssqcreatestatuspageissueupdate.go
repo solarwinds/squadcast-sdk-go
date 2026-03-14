@@ -85,6 +85,9 @@ func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetStatusPageID() *int {
 	return v.StatusPageID
 }
 
+// #region class-body-v3workflowssqcreatestatuspageissueupdatedata
+// #endregion class-body-v3workflowssqcreatestatuspageissueupdatedata
+
 type V3WorkflowsSqCreateStatusPageIssueUpdate struct {
 	Name V3WorkflowsSqCreateStatusPageIssueUpdateName  `json:"name"`
 	Data *V3WorkflowsSqCreateStatusPageIssueUpdateData `json:"data,omitempty"`
@@ -114,3 +117,6 @@ func (v *V3WorkflowsSqCreateStatusPageIssueUpdate) GetData() *V3WorkflowsSqCreat
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqcreatestatuspageissueupdate
+// #endregion class-body-v3workflowssqcreatestatuspageissueupdate

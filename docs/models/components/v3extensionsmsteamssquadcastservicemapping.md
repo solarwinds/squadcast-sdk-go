@@ -7,5 +7,5 @@ Maps a specific Squadcast service to a channel configuration.
 
 | Field                                          | Type                                           | Required                                       | Description                                    |
 | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| `SquadcastServiceID`                           | *string*                                       | :heavy_check_mark:                             | The MongoDB ObjectID of the Squadcast service. |
-| `SquadcastServiceName`                         | *string*                                       | :heavy_check_mark:                             | The name of the Squadcast service.             |
+| `SquadcastServiceID`                           | `string`                                       | :heavy_check_mark:                             | The MongoDB ObjectID of the Squadcast service. |
+| `SquadcastServiceName`                         | `string`                                       | :heavy_check_mark:                             | The name of the Squadcast service.             |

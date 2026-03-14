@@ -36,3 +36,6 @@ func (v *V4StatusPagesComponentsComponentStatus) GetSlug() string {
 	}
 	return v.Slug
 }
+
+// #region class-body-v4statuspagescomponentscomponentstatus
+// #endregion class-body-v4statuspagescomponentscomponentstatus

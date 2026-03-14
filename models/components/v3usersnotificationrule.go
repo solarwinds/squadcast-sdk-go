@@ -20,3 +20,6 @@ func (v *V3UsersNotificationRule) GetTime() int64 {
 	}
 	return v.Time
 }
+
+// #region class-body-v3usersnotificationrule
+// #endregion class-body-v3usersnotificationrule

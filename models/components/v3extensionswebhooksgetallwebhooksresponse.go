@@ -13,6 +13,9 @@ func (v *V3ExtensionsWebhooksGetAllWebhooksResponseMeta) GetTotalCount() int64 {
 	return v.TotalCount
 }
 
+// #region class-body-v3extensionswebhooksgetallwebhooksresponsemeta
+// #endregion class-body-v3extensionswebhooksgetallwebhooksresponsemeta
+
 type V3ExtensionsWebhooksGetAllWebhooksResponseData struct {
 	Result []V3ExtensionsWebhooksWebhookListItem          `json:"result"`
 	Meta   V3ExtensionsWebhooksGetAllWebhooksResponseMeta `json:"meta"`
@@ -32,6 +35,9 @@ func (v *V3ExtensionsWebhooksGetAllWebhooksResponseData) GetMeta() V3ExtensionsW
 	return v.Meta
 }
 
+// #region class-body-v3extensionswebhooksgetallwebhooksresponsedata
+// #endregion class-body-v3extensionswebhooksgetallwebhooksresponsedata
+
 type V3ExtensionsWebhooksGetAllWebhooksResponse struct {
 	Data V3ExtensionsWebhooksGetAllWebhooksResponseData `json:"data"`
 }
@@ -42,3 +48,6 @@ func (v *V3ExtensionsWebhooksGetAllWebhooksResponse) GetData() V3ExtensionsWebho
 	}
 	return v.Data
 }
+
+// #region class-body-v3extensionswebhooksgetallwebhooksresponse
+// #endregion class-body-v3extensionswebhooksgetallwebhooksresponse

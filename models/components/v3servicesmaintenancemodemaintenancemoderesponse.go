@@ -100,3 +100,6 @@ func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepeatTill() time.
 	}
 	return v.RepeatTill
 }
+
+// #region class-body-v3servicesmaintenancemodemaintenancemoderesponse
+// #endregion class-body-v3servicesmaintenancemodemaintenancemoderesponse
