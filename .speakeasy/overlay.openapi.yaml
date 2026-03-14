@@ -3,6 +3,11 @@ info:
   title: Speakeasy Suggestions - Squadcast
   version: 0.0.6
 actions:
+  # Auth is handled by the SDK hook, so the auth endpoint should not be exposed.
+  - target: $["paths"]["/oauth/access-token"]
+    remove: true
+  - target: "$.tags[?(@.name=='Auth')]"
+    remove: true
   # Replace BearerAuth with a custom RefreshTokenAuth scheme.
   # The SDK will generate Security{RefreshToken string} instead of Security{BearerAuth string}.
   # The BeforeRequest hook in internal/hooks/refreshtokenhook.go handles the actual
