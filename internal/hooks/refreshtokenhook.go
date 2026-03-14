@@ -8,11 +8,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"net/url"
+	"strings"
 	"sync"
 	"time"
 )
 
-const refreshURL = "https://auth.squadcast.com/oauth/access-token"
+const (
+	defaultRefreshURL = "https://auth.squadcast.com/oauth/access-token"
+	refreshPath       = "/oauth/access-token"
+)
 
 // ── token cache ──────────────────────────────────────────────────────────────
 
@@ -82,6 +87,8 @@ func (h *RefreshTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http
 		return req, nil
 	}
 
+	refreshURL := resolveRefreshURL(hookCtx.BaseURL, req)
+
 	// Return cached bearer token if still valid.
 	if token, ok := h.cache.get(); ok {
 		req.Header.Set("Authorization", "Bearer "+token)
@@ -89,7 +96,7 @@ func (h *RefreshTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http
 	}
 
 	// Cache miss — fetch a fresh bearer token.
-	token, expiry, err := fetchBearerToken(sec.RefreshToken)
+	token, expiry, err := fetchBearerToken(refreshURL, sec.RefreshToken)
 	if err != nil {
 		return nil, err
 	}
@@ -97,6 +104,53 @@ func (h *RefreshTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http
 	h.cache.set(token, expiry)
 	req.Header.Set("Authorization", "Bearer "+token)
 	return req, nil
+}
+
+func resolveRefreshURL(baseURL string, req *http.Request) string {
+	for _, candidate := range []string{baseURL, requestURLString(req)} {
+		if candidate == "" {
+			continue
+		}
+
+		parsedURL, err := url.Parse(candidate)
+		if err != nil || parsedURL.Hostname() == "" {
+			continue
+		}
+
+		authHost := authHostForAPIHost(parsedURL.Hostname())
+		if authHost == "" {
+			continue
+		}
+
+		return (&url.URL{
+			Scheme: "https",
+			Host:   authHost,
+			Path:   refreshPath,
+		}).String()
+	}
+
+	return defaultRefreshURL
+}
+
+func requestURLString(req *http.Request) string {
+	if req == nil || req.URL == nil {
+		return ""
+	}
+
+	return req.URL.String()
+}
+
+func authHostForAPIHost(apiHost string) string {
+	apiHost = strings.ToLower(strings.TrimSpace(apiHost))
+	if apiHost == "" {
+		return ""
+	}
+
+	if strings.HasPrefix(apiHost, "api.") {
+		return "auth." + strings.TrimPrefix(apiHost, "api.")
+	}
+
+	return "auth.squadcast.com"
 }
 
 // ── token fetch ───────────────────────────────────────────────────────────────
@@ -110,7 +164,7 @@ type refreshTokenResponse struct {
 
 // fetchBearerToken calls the Squadcast auth endpoint and returns the bearer
 // token together with its expiry time.
-func fetchBearerToken(refreshToken string) (string, time.Time, error) {
+func fetchBearerToken(refreshURL, refreshToken string) (string, time.Time, error) {
 	req, err := http.NewRequest(http.MethodGet, refreshURL, nil)
 	if err != nil {
 		return "", time.Time{}, fmt.Errorf("squadcastsdk: build refresh request: %w", err)
