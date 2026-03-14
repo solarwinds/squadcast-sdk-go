@@ -68,3 +68,6 @@ func (v *V4SquadsCreateSquadResponse) GetCreatedBy() string {
 	}
 	return v.CreatedBy
 }
+
+// #region class-body-v4squadscreatesquadresponse
+// #endregion class-body-v4squadscreatesquadresponse

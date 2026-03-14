@@ -54,3 +54,6 @@ func (v *V3GlobalEventRulesEntityOwner) GetType() V3GlobalEventRulesEntityOwnerT
 	}
 	return v.Type
 }
+
+// #region class-body-v3globaleventrulesentityowner
+// #endregion class-body-v3globaleventrulesentityowner

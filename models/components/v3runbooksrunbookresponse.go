@@ -86,3 +86,6 @@ func (v *V3RunbooksRunbookResponse) GetOwner() CommonV3RBACOwner {
 	}
 	return v.Owner
 }
+
+// #region class-body-v3runbooksrunbookresponse
+// #endregion class-body-v3runbooksrunbookresponse

@@ -21,3 +21,6 @@ func (v *V3IncidentsPostmortemsPostmortemFollowUp) GetIsDone() bool {
 	}
 	return v.IsDone
 }
+
+// #region class-body-v3incidentspostmortemspostmortemfollowup
+// #endregion class-body-v3incidentspostmortemspostmortemfollowup

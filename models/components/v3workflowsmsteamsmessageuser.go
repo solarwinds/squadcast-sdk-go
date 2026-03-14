@@ -61,6 +61,9 @@ func (v *V3WorkflowsMsTeamsMessageUserData) GetMessage() string {
 	return v.Message
 }
 
+// #region class-body-v3workflowsmsteamsmessageuserdata
+// #endregion class-body-v3workflowsmsteamsmessageuserdata
+
 type V3WorkflowsMsTeamsMessageUser struct {
 	Name V3WorkflowsMsTeamsMessageUserName `json:"name"`
 	Data V3WorkflowsMsTeamsMessageUserData `json:"data"`
@@ -90,3 +93,6 @@ func (v *V3WorkflowsMsTeamsMessageUser) GetData() V3WorkflowsMsTeamsMessageUserD
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsmsteamsmessageuser
+// #endregion class-body-v3workflowsmsteamsmessageuser

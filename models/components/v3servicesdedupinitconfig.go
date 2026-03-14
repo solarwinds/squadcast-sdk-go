@@ -51,3 +51,6 @@ func (v *V3ServicesDedupInitConfig) GetTimeUnit() V3ServicesDedupInitConfigTimeU
 	}
 	return v.TimeUnit
 }
+
+// #region class-body-v3servicesdedupinitconfig
+// #endregion class-body-v3servicesdedupinitconfig

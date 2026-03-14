@@ -63,3 +63,6 @@ func (v *V3IncidentsIncidentExportAsyncRequest) GetIncidentFilters() V3Incidents
 	}
 	return v.IncidentFilters
 }
+
+// #region class-body-v3incidentsincidentexportasyncrequest
+// #endregion class-body-v3incidentsincidentexportasyncrequest

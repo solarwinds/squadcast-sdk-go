@@ -12,3 +12,6 @@ func (v *V3GlobalEventRulesUpdateRulesetRequest) GetCatchAllAction() *V3GlobalEv
 	}
 	return v.CatchAllAction
 }
+
+// #region class-body-v3globaleventrulesupdaterulesetrequest
+// #endregion class-body-v3globaleventrulesupdaterulesetrequest

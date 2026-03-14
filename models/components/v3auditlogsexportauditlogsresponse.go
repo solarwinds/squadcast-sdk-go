@@ -21,6 +21,9 @@ func (v *V3AuditLogsExportAuditLogsResponseData) GetMessage() string {
 	return v.Message
 }
 
+// #region class-body-v3auditlogsexportauditlogsresponsedata
+// #endregion class-body-v3auditlogsexportauditlogsresponsedata
+
 // V3AuditLogsExportAuditLogsResponse - Response model for exporting audit logs
 type V3AuditLogsExportAuditLogsResponse struct {
 	Data V3AuditLogsExportAuditLogsResponseData `json:"data"`
@@ -32,3 +35,6 @@ func (v *V3AuditLogsExportAuditLogsResponse) GetData() V3AuditLogsExportAuditLog
 	}
 	return v.Data
 }
+
+// #region class-body-v3auditlogsexportauditlogsresponse
+// #endregion class-body-v3auditlogsexportauditlogsresponse

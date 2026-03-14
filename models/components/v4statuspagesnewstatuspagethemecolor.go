@@ -20,3 +20,6 @@ func (v *V4StatusPagesNewStatusPageThemeColor) GetSecondary() *string {
 	}
 	return v.Secondary
 }
+
+// #region class-body-v4statuspagesnewstatuspagethemecolor
+// #endregion class-body-v4statuspagesnewstatuspagethemecolor

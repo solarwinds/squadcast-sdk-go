@@ -28,3 +28,6 @@ func (v *V4StatusPagesListSubscribersResponseMeta) GetLastWeekSubscribersCount()
 	}
 	return v.LastWeekSubscribersCount
 }
+
+// #region class-body-v4statuspageslistsubscribersresponsemeta
+// #endregion class-body-v4statuspageslistsubscribersresponsemeta

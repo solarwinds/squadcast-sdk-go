@@ -12,3 +12,6 @@ func (v *V3ServicesOverlayOptInForKeyBasedDeduplicationRequest) GetDedupKeyEnabl
 	}
 	return v.DedupKeyEnabled
 }
+
+// #region class-body-v3servicesoverlayoptinforkeybaseddeduplicationrequest
+// #endregion class-body-v3servicesoverlayoptinforkeybaseddeduplicationrequest

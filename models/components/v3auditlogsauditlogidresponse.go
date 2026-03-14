@@ -5,6 +5,9 @@ package components
 type V3AuditLogsAuditLogIDResponseMeta struct {
 }
 
+// #region class-body-v3auditlogsauditlogidresponsemeta
+// #endregion class-body-v3auditlogsauditlogidresponsemeta
+
 // V3AuditLogsAuditLogIDResponse - Represents detailed audit log entry response
 type V3AuditLogsAuditLogIDResponse struct {
 	ID       int    `json:"id"`
@@ -114,3 +117,6 @@ func (v *V3AuditLogsAuditLogIDResponse) GetUserAgent() string {
 	}
 	return v.UserAgent
 }
+
+// #region class-body-v3auditlogsauditlogidresponse
+// #endregion class-body-v3auditlogsauditlogidresponse

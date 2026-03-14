@@ -20,3 +20,6 @@ func (v *V3ServicesJiraStatus) GetName() string {
 	}
 	return v.Name
 }
+
+// #region class-body-v3servicesjirastatus
+// #endregion class-body-v3servicesjirastatus

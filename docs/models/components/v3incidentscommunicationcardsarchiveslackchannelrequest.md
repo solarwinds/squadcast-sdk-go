@@ -7,4 +7,4 @@ Request body for archiving a Slack channel.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `SlackChannelID`   | *string*           | :heavy_check_mark: | N/A                |
+| `SlackChannelID`   | `string`           | :heavy_check_mark: | N/A                |

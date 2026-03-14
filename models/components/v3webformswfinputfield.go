@@ -23,3 +23,6 @@ func (v *V3WebformsWFInputField) GetOptions() []string {
 	}
 	return v.Options
 }
+
+// #region class-body-v3webformswfinputfield
+// #endregion class-body-v3webformswfinputfield

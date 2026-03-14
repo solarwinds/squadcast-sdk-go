@@ -69,3 +69,6 @@ func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsPriorityUpdatedActive
 	}
 	return v.IsPriorityUpdatedActive
 }
+
+// #region class-body-v3extensionsmsteamsincidentactionalertstate
+// #endregion class-body-v3extensionsmsteamsincidentactionalertstate

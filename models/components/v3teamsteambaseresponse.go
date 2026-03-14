@@ -92,3 +92,6 @@ func (v *V3TeamsTeamBaseResponse) GetDefault() bool {
 	}
 	return v.Default
 }
+
+// #region class-body-v3teamsteambaseresponse
+// #endregion class-body-v3teamsteambaseresponse

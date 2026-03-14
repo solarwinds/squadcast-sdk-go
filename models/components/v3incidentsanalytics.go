@@ -23,3 +23,6 @@ func (v *V3IncidentsAnalytics) GetTtr() V3IncidentsAnalyticsMetrics {
 	}
 	return v.Ttr
 }
+
+// #region class-body-v3incidentsanalytics
+// #endregion class-body-v3incidentsanalytics

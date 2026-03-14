@@ -13,3 +13,6 @@ func (v *V3IncidentsIngestionStatusRequest) GetRequestIds() []string {
 	}
 	return v.RequestIds
 }
+
+// #region class-body-v3incidentsingestionstatusrequest
+// #endregion class-body-v3incidentsingestionstatusrequest

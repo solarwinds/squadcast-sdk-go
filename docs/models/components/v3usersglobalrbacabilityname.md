@@ -2,6 +2,16 @@
 
 Represents the name of a global RBAC ability.
 
+## Example Usage
+
+```go
+import (
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+)
+
+value := components.V3UsersGlobalRBACAbilityNameManageAPITokens
+```
+
 
 ## Values
 

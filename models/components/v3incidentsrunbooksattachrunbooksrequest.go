@@ -12,3 +12,6 @@ func (v *V3IncidentsRunbooksAttachRunbooksRequest) GetRunbooks() []string {
 	}
 	return v.Runbooks
 }
+
+// #region class-body-v3incidentsrunbooksattachrunbooksrequest
+// #endregion class-body-v3incidentsrunbooksattachrunbooksrequest

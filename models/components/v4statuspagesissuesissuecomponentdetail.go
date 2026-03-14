@@ -36,3 +36,6 @@ func (v *V4StatusPagesIssuesIssueComponentDetail) GetStatusMaintenance() *V4Stat
 	}
 	return v.StatusMaintenance
 }
+
+// #region class-body-v4statuspagesissuesissuecomponentdetail
+// #endregion class-body-v4statuspagesissuesissuecomponentdetail

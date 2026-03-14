@@ -32,3 +32,6 @@ func (v *V3WebformsWFService) GetAlias() string {
 	}
 	return v.Alias
 }
+
+// #region class-body-v3webformswfservice
+// #endregion class-body-v3webformswfservice

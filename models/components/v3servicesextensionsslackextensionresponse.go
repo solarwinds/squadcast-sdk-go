@@ -52,3 +52,6 @@ func (v *V3ServicesExtensionsSlackExtensionResponse) GetName() string {
 	}
 	return v.Name
 }
+
+// #region class-body-v3servicesextensionsslackextensionresponse
+// #endregion class-body-v3servicesextensionsslackextensionresponse

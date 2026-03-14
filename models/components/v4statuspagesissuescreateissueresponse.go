@@ -28,3 +28,6 @@ func (v *V4StatusPagesIssuesCreateIssueResponse) GetTitle() string {
 	}
 	return v.Title
 }
+
+// #region class-body-v4statuspagesissuescreateissueresponse
+// #endregion class-body-v4statuspagesissuescreateissueresponse

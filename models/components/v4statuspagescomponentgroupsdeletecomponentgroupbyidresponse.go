@@ -36,3 +36,6 @@ func (v *V4StatusPagesComponentGroupsDeleteComponentGroupByIDResponse) GetAllowS
 	}
 	return v.AllowSubscription
 }
+
+// #region class-body-v4statuspagescomponentgroupsdeletecomponentgroupbyidresponse
+// #endregion class-body-v4statuspagescomponentgroupsdeletecomponentgroupbyidresponse

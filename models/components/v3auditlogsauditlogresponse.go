@@ -63,3 +63,6 @@ func (v *V3AuditLogsAuditLogResponse) GetTeam() V3AuditLogsTeam {
 	}
 	return v.Team
 }
+
+// #region class-body-v3auditlogsauditlogresponse
+// #endregion class-body-v3auditlogsauditlogresponse

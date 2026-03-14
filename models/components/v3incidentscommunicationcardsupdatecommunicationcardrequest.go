@@ -29,3 +29,6 @@ func (v *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetURL() s
 	}
 	return v.URL
 }
+
+// #region class-body-v3incidentscommunicationcardsupdatecommunicationcardrequest
+// #endregion class-body-v3incidentscommunicationcardsupdatecommunicationcardrequest

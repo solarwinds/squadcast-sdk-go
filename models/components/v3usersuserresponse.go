@@ -124,3 +124,6 @@ func (v *V3UsersUserResponse) GetRole() *string {
 	}
 	return v.Role
 }
+
+// #region class-body-v3usersuserresponse
+// #endregion class-body-v3usersuserresponse

@@ -66,3 +66,6 @@ func (v *V3RunbooksUpdationInfo) GetEntityOwner() *CommonV3EntityOwner {
 	}
 	return v.EntityOwner
 }
+
+// #region class-body-v3runbooksupdationinfo
+// #endregion class-body-v3runbooksupdationinfo

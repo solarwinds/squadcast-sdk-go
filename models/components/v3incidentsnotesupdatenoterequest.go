@@ -21,3 +21,6 @@ func (v *V3IncidentsNotesUpdateNoteRequest) GetAttachments() []string {
 	}
 	return v.Attachments
 }
+
+// #region class-body-v3incidentsnotesupdatenoterequest
+// #endregion class-body-v3incidentsnotesupdatenoterequest

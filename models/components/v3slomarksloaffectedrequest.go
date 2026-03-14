@@ -52,3 +52,6 @@ func (v *V3SLOMarkSLOAffectedRequest) GetOrgID() string {
 	}
 	return v.OrgID
 }
+
+// #region class-body-v3slomarksloaffectedrequest
+// #endregion class-body-v3slomarksloaffectedrequest

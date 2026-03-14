@@ -108,3 +108,6 @@ func (v *V3WorkflowsWorkflowAPIResponse) GetUpdatedBy() *string {
 	}
 	return v.UpdatedBy
 }
+
+// #region class-body-v3workflowsworkflowapiresponse
+// #endregion class-body-v3workflowsworkflowapiresponse

@@ -108,3 +108,6 @@ func (v *V3SLOSLOAction) GetDeletedAt() *time.Time {
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v3slosloaction
+// #endregion class-body-v3slosloaction

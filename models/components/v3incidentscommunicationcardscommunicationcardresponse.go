@@ -85,3 +85,6 @@ func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetArchivedAt()
 	}
 	return v.ArchivedAt
 }
+
+// #region class-body-v3incidentscommunicationcardscommunicationcardresponse
+// #endregion class-body-v3incidentscommunicationcardscommunicationcardresponse

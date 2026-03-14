@@ -34,6 +34,9 @@ func (v *V4StatusPagesMaintenancesMaintenanceComponent) GetGroupName() *string {
 	return v.GroupName
 }
 
+// #region class-body-v4statuspagesmaintenancesmaintenancecomponent
+// #endregion class-body-v4statuspagesmaintenancesmaintenancecomponent
+
 type V4StatusPagesMaintenancesMaintenance struct {
 	ID               *int64                                          `json:"id,omitempty"`
 	Title            *string                                         `json:"title,omitempty"`
@@ -111,3 +114,6 @@ func (v *V4StatusPagesMaintenancesMaintenance) GetMaintenanceState() *string {
 	}
 	return v.MaintenanceState
 }
+
+// #region class-body-v4statuspagesmaintenancesmaintenance
+// #endregion class-body-v4statuspagesmaintenancesmaintenance

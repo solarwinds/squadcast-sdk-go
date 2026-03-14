@@ -108,3 +108,6 @@ func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetIsMigrated() bool {
 	}
 	return v.IsMigrated
 }
+
+// #region class-body-v4statuspagesissuesgetissuebyidresponse
+// #endregion class-body-v4statuspagesissuesgetissuebyidresponse

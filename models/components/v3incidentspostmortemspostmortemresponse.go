@@ -21,6 +21,9 @@ func (v *V3IncidentsPostmortemsPostmortemResponseIncident) GetTimeOfCreation() s
 	return v.TimeOfCreation
 }
 
+// #region class-body-v3incidentspostmortemspostmortemresponseincident
+// #endregion class-body-v3incidentspostmortemspostmortemresponseincident
+
 // V3IncidentsPostmortemsPostmortemResponse - Represents a Postmortem in the system.
 type V3IncidentsPostmortemsPostmortemResponse struct {
 	ID             string                                     `json:"id"`
@@ -122,3 +125,6 @@ func (v *V3IncidentsPostmortemsPostmortemResponse) GetIncident() *V3IncidentsPos
 	}
 	return v.Incident
 }
+
+// #region class-body-v3incidentspostmortemspostmortemresponse
+// #endregion class-body-v3incidentspostmortemspostmortemresponse

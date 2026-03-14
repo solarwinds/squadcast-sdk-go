@@ -20,3 +20,6 @@ func (v *V4Participant) GetType() string {
 	}
 	return v.Type
 }
+
+// #region class-body-v4participant
+// #endregion class-body-v4participant

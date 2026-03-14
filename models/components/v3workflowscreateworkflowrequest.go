@@ -115,3 +115,6 @@ func (v *V3WorkflowsCreateWorkflowRequest) GetEnabled() *bool {
 	}
 	return v.Enabled
 }
+
+// #region class-body-v3workflowscreateworkflowrequest
+// #endregion class-body-v3workflowscreateworkflowrequest

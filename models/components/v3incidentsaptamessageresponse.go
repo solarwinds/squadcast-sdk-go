@@ -12,3 +12,6 @@ func (v *V3IncidentsAptaMessageResponse) GetMessage() string {
 	}
 	return v.Message
 }
+
+// #region class-body-v3incidentsaptamessageresponse
+// #endregion class-body-v3incidentsaptamessageresponse

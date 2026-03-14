@@ -32,3 +32,6 @@ func (v *V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest) GetAddit
 	}
 	return v.AdditionalResponders
 }
+
+// #region class-body-v3incidentsadditionalrespondersaddadditionalrespondersrequest
+// #endregion class-body-v3incidentsadditionalrespondersaddadditionalrespondersrequest

@@ -28,3 +28,6 @@ func (v *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetWorkflowIds() []int {
 	}
 	return v.WorkflowIds
 }
+
+// #region class-body-v3workflowsbulkenabledisableworkflowsrequest
+// #endregion class-body-v3workflowsbulkenabledisableworkflowsrequest

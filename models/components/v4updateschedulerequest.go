@@ -75,3 +75,6 @@ func (v *V4UpdateScheduleRequest) GetTags() []V4Tag {
 	}
 	return v.Tags
 }
+
+// #region class-body-v4updateschedulerequest
+// #endregion class-body-v4updateschedulerequest

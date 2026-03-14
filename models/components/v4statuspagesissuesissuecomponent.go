@@ -20,3 +20,6 @@ func (v *V4StatusPagesIssuesIssueComponent) GetName() *string {
 	}
 	return v.Name
 }
+
+// #region class-body-v4statuspagesissuesissuecomponent
+// #endregion class-body-v4statuspagesissuesissuecomponent

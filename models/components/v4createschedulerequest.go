@@ -91,3 +91,6 @@ func (v *V4CreateScheduleRequest) GetTags() []V4Tag {
 	}
 	return v.Tags
 }
+
+// #region class-body-v4createschedulerequest
+// #endregion class-body-v4createschedulerequest

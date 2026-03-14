@@ -10,6 +10,9 @@ import (
 type V3SLOSLOResponseTags struct {
 }
 
+// #region class-body-v3slosloresponsetags
+// #endregion class-body-v3slosloresponsetags
+
 type V3SLOSLOResponse struct {
 	ID                   int64                     `json:"id"`
 	Name                 string                    `json:"name"`
@@ -247,3 +250,6 @@ func (v *V3SLOSLOResponse) GetDurationInDays() *int64 {
 	}
 	return v.DurationInDays
 }
+
+// #region class-body-v3slosloresponse
+// #endregion class-body-v3slosloresponse

@@ -209,3 +209,6 @@ func (v *V3ServicesServiceResponse) GetUpdatedAt() time.Time {
 	}
 	return v.UpdatedAt
 }
+
+// #region class-body-v3servicesserviceresponse
+// #endregion class-body-v3servicesserviceresponse

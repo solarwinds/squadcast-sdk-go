@@ -28,3 +28,6 @@ func (v *V3TeamsCreateTeamRequest) GetMemberIds() []string {
 	}
 	return v.MemberIds
 }
+
+// #region class-body-v3teamscreateteamrequest
+// #endregion class-body-v3teamscreateteamrequest

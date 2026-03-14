@@ -20,3 +20,6 @@ func (v *V3GlobalOncallReminderRulesRule) GetTime() int64 {
 	}
 	return v.Time
 }
+
+// #region class-body-v3globaloncallreminderrulesrule
+// #endregion class-body-v3globaloncallreminderrulesrule

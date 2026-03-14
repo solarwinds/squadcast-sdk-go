@@ -77,3 +77,6 @@ func (v *V3EscalationPoliciesEscalationPolicyRule) GetRepeatAfter() int {
 	}
 	return v.RepeatAfter
 }
+
+// #region class-body-v3escalationpoliciesescalationpolicyrule
+// #endregion class-body-v3escalationpoliciesescalationpolicyrule

@@ -58,6 +58,9 @@ func (r *ResponseBody2) GetData() components.V3ServicesOverlayOverlayResponse {
 	return r.Data
 }
 
+// #region class-body-responsebody2
+// #endregion class-body-responsebody2
+
 type ResponseBody1 struct {
 	Data components.V3ServicesOverlayOverlayResponse `json:"data"`
 }
@@ -79,6 +82,9 @@ func (r *ResponseBody1) GetData() components.V3ServicesOverlayOverlayResponse {
 	}
 	return r.Data
 }
+
+// #region class-body-responsebody1
+// #endregion class-body-responsebody1
 
 type OverlayUpdateDedupKeyOverlayResponseBodyType string
 

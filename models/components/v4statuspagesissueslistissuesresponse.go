@@ -13,6 +13,9 @@ func (v *V4StatusPagesIssuesListIssuesResponseMeta) GetTotalCount() int64 {
 	return v.TotalCount
 }
 
+// #region class-body-v4statuspagesissueslistissuesresponsemeta
+// #endregion class-body-v4statuspagesissueslistissuesresponsemeta
+
 type V4StatusPagesIssuesListIssuesResponse struct {
 	Data []V4StatusPagesIssuesIssue                `json:"data"`
 	Meta V4StatusPagesIssuesListIssuesResponseMeta `json:"meta"`
@@ -31,3 +34,6 @@ func (v *V4StatusPagesIssuesListIssuesResponse) GetMeta() V4StatusPagesIssuesLis
 	}
 	return v.Meta
 }
+
+// #region class-body-v4statuspagesissueslistissuesresponse
+// #endregion class-body-v4statuspagesissueslistissuesresponse

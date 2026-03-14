@@ -7,4 +7,4 @@ Request body for updating incident priority.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Priority`         | **string*          | :heavy_minus_sign: | N/A                |
+| `Priority`         | `*string`          | :heavy_minus_sign: | N/A                |

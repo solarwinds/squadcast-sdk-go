@@ -7,5 +7,5 @@ Request body for bulk updating incident priority.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `IncidentIds`      | []*string*         | :heavy_check_mark: | N/A                |
-| `Priority`         | *string*           | :heavy_check_mark: | N/A                |
+| `IncidentIds`      | []`string`         | :heavy_check_mark: | N/A                |
+| `Priority`         | `string`           | :heavy_check_mark: | N/A                |

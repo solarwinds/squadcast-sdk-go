@@ -50,3 +50,6 @@ func (v *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetDescript
 	}
 	return v.DescriptionOverlay
 }
+
+// #region class-body-v3servicesoverlayupdatecustomcontenttemplateoverlayrequest
+// #endregion class-body-v3servicesoverlayupdatecustomcontenttemplateoverlayrequest

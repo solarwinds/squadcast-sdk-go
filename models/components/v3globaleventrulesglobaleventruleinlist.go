@@ -116,3 +116,6 @@ func (v *V3GlobalEventRulesGlobalEventRuleInList) GetUpdatedBy() *string {
 	}
 	return v.UpdatedBy
 }
+
+// #region class-body-v3globaleventrulesglobaleventruleinlist
+// #endregion class-body-v3globaleventrulesglobaleventruleinlist

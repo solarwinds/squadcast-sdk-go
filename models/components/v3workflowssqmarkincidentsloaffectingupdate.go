@@ -61,6 +61,9 @@ func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) GetSlo() *int {
 	return v.Slo
 }
 
+// #region class-body-v3workflowssqmarkincidentsloaffectingupdatedata
+// #endregion class-body-v3workflowssqmarkincidentsloaffectingupdatedata
+
 type V3WorkflowsSqMarkIncidentSLOAffectingUpdate struct {
 	Name V3WorkflowsSqMarkIncidentSLOAffectingUpdateName  `json:"name"`
 	Data *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData `json:"data,omitempty"`
@@ -90,3 +93,6 @@ func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) GetData() *V3WorkflowsSqMa
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqmarkincidentsloaffectingupdate
+// #endregion class-body-v3workflowssqmarkincidentsloaffectingupdate

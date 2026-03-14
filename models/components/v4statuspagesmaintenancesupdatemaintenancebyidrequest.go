@@ -60,3 +60,6 @@ func (v *V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest) GetEndTime() tim
 	}
 	return v.EndTime
 }
+
+// #region class-body-v4statuspagesmaintenancesupdatemaintenancebyidrequest
+// #endregion class-body-v4statuspagesmaintenancesupdatemaintenancebyidrequest

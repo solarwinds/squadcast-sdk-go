@@ -21,3 +21,6 @@ func (v *V3IncidentsAssignTo) GetType() *string {
 	}
 	return v.Type
 }
+
+// #region class-body-v3incidentsassignto
+// #endregion class-body-v3incidentsassignto

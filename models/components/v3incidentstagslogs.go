@@ -10,6 +10,9 @@ import (
 type V3IncidentsTagsLogsAdditionalInfo struct {
 }
 
+// #region class-body-v3incidentstagslogsadditionalinfo
+// #endregion class-body-v3incidentstagslogsadditionalinfo
+
 // V3IncidentsTagsLogs - Represents a log entry for an incident action.
 type V3IncidentsTagsLogs struct {
 	Action                 string                             `json:"action"`
@@ -128,3 +131,6 @@ func (v *V3IncidentsTagsLogs) GetShouldShowInPostmortem() *bool {
 	}
 	return v.ShouldShowInPostmortem
 }
+
+// #region class-body-v3incidentstagslogs
+// #endregion class-body-v3incidentstagslogs

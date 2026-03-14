@@ -29,3 +29,6 @@ func (v *V3IncidentsServiceOwnerFilter) GetUserIDsAndTheirSquads() []string {
 	}
 	return v.UserIDsAndTheirSquads
 }
+
+// #region class-body-v3incidentsserviceownerfilter
+// #endregion class-body-v3incidentsserviceownerfilter

@@ -12,3 +12,6 @@ func (v *V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest) GetRules() []V
 	}
 	return v.Rules
 }
+
+// #region class-body-v3servicesroutingrulescreateorupdateroutingrulesrequest
+// #endregion class-body-v3servicesroutingrulescreateorupdateroutingrulesrequest

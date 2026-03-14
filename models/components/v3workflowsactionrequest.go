@@ -54,6 +54,9 @@ func (v *V3WorkflowsActionRequestData) GetRunbooks() []string {
 	return v.Runbooks
 }
 
+// #region class-body-v3workflowsactionrequestdata
+// #endregion class-body-v3workflowsactionrequestdata
+
 type V3WorkflowsActionRequestSqAttachRunbooks struct {
 	Name V3WorkflowsActionRequestName `json:"name"`
 	Data V3WorkflowsActionRequestData `json:"data"`
@@ -83,6 +86,9 @@ func (v *V3WorkflowsActionRequestSqAttachRunbooks) GetData() V3WorkflowsActionRe
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsactionrequestsqattachrunbooks
+// #endregion class-body-v3workflowsactionrequestsqattachrunbooks
 
 type V3WorkflowsActionRequestType string
 

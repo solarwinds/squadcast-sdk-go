@@ -23,3 +23,6 @@ func (v *V3IncidentsTagsAnalytics) GetTtr() V3IncidentsTagsAnalyticsMetrics {
 	}
 	return v.Ttr
 }
+
+// #region class-body-v3incidentstagsanalytics
+// #endregion class-body-v3incidentstagsanalytics

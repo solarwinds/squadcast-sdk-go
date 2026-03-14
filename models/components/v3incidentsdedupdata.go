@@ -21,3 +21,6 @@ func (v *V3IncidentsDedupData) GetHash() *string {
 	}
 	return v.Hash
 }
+
+// #region class-body-v3incidentsdedupdata
+// #endregion class-body-v3incidentsdedupdata

@@ -53,3 +53,6 @@ func (v *V3IncidentsAssignedTo) GetReason() string {
 	}
 	return v.Reason
 }
+
+// #region class-body-v3incidentsassignedto
+// #endregion class-body-v3incidentsassignedto

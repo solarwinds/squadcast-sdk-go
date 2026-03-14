@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `DialCode`         | *string*           | :heavy_check_mark: | N/A                |
-| `PhoneNumber`      | *string*           | :heavy_check_mark: | N/A                |
+| `DialCode`         | `string`           | :heavy_check_mark: | N/A                |
+| `PhoneNumber`      | `string`           | :heavy_check_mark: | N/A                |

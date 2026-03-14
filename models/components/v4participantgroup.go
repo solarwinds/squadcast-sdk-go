@@ -12,3 +12,6 @@ func (v *V4ParticipantGroup) GetParticipants() []V4Participant {
 	}
 	return v.Participants
 }
+
+// #region class-body-v4participantgroup
+// #endregion class-body-v4participantgroup

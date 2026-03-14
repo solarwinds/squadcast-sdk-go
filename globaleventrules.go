@@ -237,16 +237,11 @@ func (s *GlobalEventRules) List(ctx context.Context, request operations.GlobalEv
 		if len(arr) < l {
 			return nil, nil
 		}
+		request.PageNumber = &nP
 
 		return s.List(
 			ctx,
-			operations.GlobalEventRulesListGlobalEventRulesRequest{
-				OwnerID:        request.OwnerID,
-				PageSize:       request.PageSize,
-				PageNumber:     &nP,
-				FiltersOwnerID: request.FiltersOwnerID,
-				FiltersSearch:  request.FiltersSearch,
-			},
+			request,
 			opts...,
 		)
 	}

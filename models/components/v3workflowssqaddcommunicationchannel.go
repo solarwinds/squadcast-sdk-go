@@ -53,6 +53,9 @@ func (v *V3WorkflowsSqAddCommunicationChannelData) GetChannels() []V3WorkflowsCo
 	return v.Channels
 }
 
+// #region class-body-v3workflowssqaddcommunicationchanneldata
+// #endregion class-body-v3workflowssqaddcommunicationchanneldata
+
 type V3WorkflowsSqAddCommunicationChannel struct {
 	Name V3WorkflowsSqAddCommunicationChannelName `json:"name"`
 	Data V3WorkflowsSqAddCommunicationChannelData `json:"data"`
@@ -82,3 +85,6 @@ func (v *V3WorkflowsSqAddCommunicationChannel) GetData() V3WorkflowsSqAddCommuni
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqaddcommunicationchannel
+// #endregion class-body-v3workflowssqaddcommunicationchannel

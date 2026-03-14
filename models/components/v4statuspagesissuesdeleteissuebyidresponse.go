@@ -28,3 +28,6 @@ func (v *V4StatusPagesIssuesDeleteIssueByIDResponse) GetTitle() string {
 	}
 	return v.Title
 }
+
+// #region class-body-v4statuspagesissuesdeleteissuebyidresponse
+// #endregion class-body-v4statuspagesissuesdeleteissuebyidresponse

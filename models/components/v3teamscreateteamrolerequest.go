@@ -20,3 +20,6 @@ func (v *V3TeamsCreateTeamRoleRequest) GetAbilities() V3TeamsAbilities {
 	}
 	return v.Abilities
 }
+
+// #region class-body-v3teamscreateteamrolerequest
+// #endregion class-body-v3teamscreateteamrolerequest

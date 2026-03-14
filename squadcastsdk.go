@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.844.3
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.865.2
 
 import (
 	"context"
@@ -18,7 +18,9 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	// production env
+	// production EU env
+	"https://api.eu.squadcast.com",
+	// production US env
 	"https://api.squadcast.com",
 }
 
@@ -48,8 +50,63 @@ func Float64(f float64) *float64 { return &f }
 // Pointer provides a helper function to return a pointer to a type
 func Pointer[T any](v T) *T { return &v }
 
+// SquadcastSDK - Squadcast: ## Overview
+// The Squadcast API provides developers the capability to extend and utilize Squadcast in conjunction with other services. Our API has resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+//
+// > **Note:** Customers using the V2 version of the Squadcast API would need to migrate to Squadcast API V3, as the former would be deprecated shortly.
+//
+// ### Service Regions
+//
+// Squadcast allows customers to choose the geographic region of the Squadcast data centers that host their account. When signing up, you can choose the service region. Currently, the available options are the United States (US) and Europe (EU).
+//
+// | Service Region | API Endpoints |
+// |---|---|
+// | US | Authentication: https://auth.squadcast.com · Other APIs: https://api.squadcast.com |
+// | EU | Authentication: https://auth.eu.squadcast.com · Other APIs: https://api.eu.squadcast.com |
+//
+// ### Authentication
+//
+// In order to access the API programmatically, HTTP bearer authentication needs to be used. HTTP bearer authentication must be constructed using an `access_token`, passed as the `Authorization` header for each request, for example `Authorization: Bearer eyJleHAiOjE2MzU1OTE1OTIsImp0aSI6Im`.
+//
+// Steps to procure the `access_token`:
+//
+// 1. Generate a `refresh_token` (API Token) from the Squadcast web app. More details on how to get the `refresh_token` can be found in the Squadcast support documentation.
+// 2. Call the authentication API with the `refresh_token` to obtain an `access_token`.
+// 3. Use the `access_token` as a Bearer token in the `Authorization` header for all subsequent API requests.
+//
+// #### Example — Generating an Access Token
+//
+// ```bash
+// curl --location --request GET 'https://auth.squadcast.com/oauth/access-token' \
+// --header 'X-Refresh-Token: 0d2a1a9a454dxxxxxxxxxxxx'
+// ```
+//
+// The API response will look similar to:
+//
+// ```json
+//
+//	{
+//	  "data": {
+//	    "access_token": "eyJhbGciOiJIUxxxxx.xxxxxxxxxxxxxxx.xxxxxxxxxxxxxxx",
+//	    "expires_at": 1587412870,
+//	    "issued_at": 1587240070,
+//	    "refresh_token": "0d2a1a9a454dxxxxxxxxxxxx",
+//	    "type": "bearer"
+//	  }
+//	}
+//
+// ```
+//
+// ### Access Control
+//
+// There are three different types of user roles in Squadcast: `account_owner`, `stakeholder`, and `user`. Refresh tokens upon creation are mapped with one of the mentioned user roles, and access to different resources is dependent on the permissions granted to these roles. For more information, please refer to the Squadcast support documentation.
+//
+// ### Authorization
+//
+// The access token authorizes users the ability to access different APIs, based on the user roles described above. Pass the access token as a Bearer token in the `Authorization` header of every request.
 type SquadcastSDK struct {
 	SDKVersion                    string
+	Auth                          *Auth
 	Analytics                     *Analytics
 	AuditLogs                     *AuditLogs
 	EscalationPolicies            *EscalationPolicies
@@ -88,7 +145,7 @@ type SquadcastSDK struct {
 
 type SDKOption func(*SquadcastSDK)
 
-// WithServerURL allows the overriding of the default server URL
+// WithServerURL allows providing an alternative server URL
 func WithServerURL(serverURL string) SDKOption {
 	return func(sdk *SquadcastSDK) {
 		sdk.sdkConfiguration.ServerURL = serverURL
@@ -157,9 +214,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.5.1",
+		SDKVersion: "1.6.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.5.1 2.844.3 1.0.0 github.com/solarwinds/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.6.0 2.865.2 1.0.0 github.com/solarwinds/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -182,6 +239,7 @@ func New(opts ...SDKOption) *SquadcastSDK {
 
 	sdk.sdkConfiguration = sdk.hooks.SDKInit(sdk.sdkConfiguration)
 
+	sdk.Auth = newAuth(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.AuditLogs = newAuditLogs(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.EscalationPolicies = newEscalationPolicies(sdk, sdk.sdkConfiguration, sdk.hooks)

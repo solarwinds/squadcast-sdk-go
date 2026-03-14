@@ -41,3 +41,6 @@ func (v *V3RunbooksCreateRunbookRequest) GetEntityOwner() *CommonV3EntityOwner {
 	}
 	return v.EntityOwner
 }
+
+// #region class-body-v3runbookscreaterunbookrequest
+// #endregion class-body-v3runbookscreaterunbookrequest

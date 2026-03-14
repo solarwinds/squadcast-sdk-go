@@ -53,6 +53,9 @@ func (v *V3WorkflowsSqTriggerManualWebhookUpdateData) GetID() *string {
 	return v.ID
 }
 
+// #region class-body-v3workflowssqtriggermanualwebhookupdatedata
+// #endregion class-body-v3workflowssqtriggermanualwebhookupdatedata
+
 type V3WorkflowsSqTriggerManualWebhookUpdate struct {
 	Name V3WorkflowsSqTriggerManualWebhookUpdateName  `json:"name"`
 	Data *V3WorkflowsSqTriggerManualWebhookUpdateData `json:"data,omitempty"`
@@ -82,3 +85,6 @@ func (v *V3WorkflowsSqTriggerManualWebhookUpdate) GetData() *V3WorkflowsSqTrigge
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqtriggermanualwebhookupdate
+// #endregion class-body-v3workflowssqtriggermanualwebhookupdate

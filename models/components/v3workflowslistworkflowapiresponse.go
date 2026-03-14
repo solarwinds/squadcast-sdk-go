@@ -24,6 +24,9 @@ func (v *V3WorkflowsListWorkflowAPIResponseMeta) GetACL() *ACL {
 	return v.ACL
 }
 
+// #region class-body-v3workflowslistworkflowapiresponsemeta
+// #endregion class-body-v3workflowslistworkflowapiresponsemeta
+
 type V3WorkflowsListWorkflowAPIResponse struct {
 	Data []V3WorkflowsWorkflowAPIResponse       `json:"data"`
 	Meta V3WorkflowsListWorkflowAPIResponseMeta `json:"meta"`
@@ -42,3 +45,6 @@ func (v *V3WorkflowsListWorkflowAPIResponse) GetMeta() V3WorkflowsListWorkflowAP
 	}
 	return v.Meta
 }
+
+// #region class-body-v3workflowslistworkflowapiresponse
+// #endregion class-body-v3workflowslistworkflowapiresponse

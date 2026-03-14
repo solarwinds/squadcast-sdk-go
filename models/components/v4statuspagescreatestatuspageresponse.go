@@ -132,3 +132,6 @@ func (v *V4StatusPagesCreateStatusPageResponse) GetTeamID() string {
 	}
 	return v.TeamID
 }
+
+// #region class-body-v4statuspagescreatestatuspageresponse
+// #endregion class-body-v4statuspagescreatestatuspageresponse

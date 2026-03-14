@@ -28,3 +28,6 @@ func (v *V3WorkflowsTag) GetValue() *string {
 	}
 	return v.Value
 }
+
+// #region class-body-v3workflowstag
+// #endregion class-body-v3workflowstag

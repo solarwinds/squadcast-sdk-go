@@ -12,3 +12,6 @@ func (v *V4StatusPagesTotalSubscribersCount) GetTotalCount() int64 {
 	}
 	return v.TotalCount
 }
+
+// #region class-body-v4statuspagestotalsubscriberscount
+// #endregion class-body-v4statuspagestotalsubscriberscount

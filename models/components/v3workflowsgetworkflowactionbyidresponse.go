@@ -36,3 +36,6 @@ func (v *V3WorkflowsGetWorkflowActionByIDResponse) GetData() any {
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsgetworkflowactionbyidresponse
+// #endregion class-body-v3workflowsgetworkflowactionbyidresponse

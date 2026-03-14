@@ -7,6 +7,6 @@ Request body for rebuilding a project in CircleCI.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `VcsType`          | *string*           | :heavy_check_mark: | N/A                |
-| `Username`         | *string*           | :heavy_check_mark: | N/A                |
-| `Reponame`         | *string*           | :heavy_check_mark: | N/A                |
+| `VcsType`          | `string`           | :heavy_check_mark: | N/A                |
+| `Username`         | `string`           | :heavy_check_mark: | N/A                |
+| `Reponame`         | `string`           | :heavy_check_mark: | N/A                |

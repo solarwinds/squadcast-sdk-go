@@ -27,3 +27,6 @@ func (c *CommonV3RBACEntityPermission) GetAbilities() Abilities {
 	}
 	return c.Abilities
 }
+
+// #region class-body-commonv3rbacentitypermission
+// #endregion class-body-commonv3rbacentitypermission
