@@ -13,3 +13,6 @@ func (v *V3GlobalEventRulesRuleActionUpdate) GetRouteTo() *string {
 	}
 	return v.RouteTo
 }
+
+// #region class-body-v3globaleventrulesruleactionupdate
+// #endregion class-body-v3globaleventrulesruleactionupdate

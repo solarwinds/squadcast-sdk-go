@@ -28,3 +28,6 @@ func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetSnoozeEndTime(
 	}
 	return v.SnoozeEndTime
 }
+
+// #region class-body-v3incidentssnoozenotificationssnoozeincidentresponse
+// #endregion class-body-v3incidentssnoozenotificationssnoozeincidentresponse

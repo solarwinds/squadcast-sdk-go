@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `DedupKeyEnabled`  | **bool*            | :heavy_minus_sign: | N/A                |
+| `DedupKeyEnabled`  | `*bool`            | :heavy_minus_sign: | N/A                |

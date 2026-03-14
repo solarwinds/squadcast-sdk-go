@@ -6,17 +6,14 @@ import (
 	"context"
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
-	"os"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
-	)
+	s := squadcastsdk.New()
 
-	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
+	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>")
 	if err != nil {
 		log.Fatal(err)
 	}

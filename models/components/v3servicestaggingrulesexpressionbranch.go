@@ -207,3 +207,6 @@ func (v *V3ServicesTaggingRulesExpressionBranch) GetRHS() V3ServicesTaggingRules
 	}
 	return v.RHS
 }
+
+// #region class-body-v3servicestaggingrulesexpressionbranch
+// #endregion class-body-v3servicestaggingrulesexpressionbranch

@@ -12,3 +12,6 @@ func (v *V4OverrideParticipantGroup) GetGroup() []V4Participant {
 	}
 	return v.Group
 }
+
+// #region class-body-v4overrideparticipantgroup
+// #endregion class-body-v4overrideparticipantgroup

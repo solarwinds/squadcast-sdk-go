@@ -20,3 +20,6 @@ func (v *V3IncidentsSnoozeNotificationsReassignTo) GetType() string {
 	}
 	return v.Type
 }
+
+// #region class-body-v3incidentssnoozenotificationsreassignto
+// #endregion class-body-v3incidentssnoozenotificationsreassignto

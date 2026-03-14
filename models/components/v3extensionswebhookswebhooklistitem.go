@@ -52,3 +52,6 @@ func (v *V3ExtensionsWebhooksWebhookListItem) GetCustomPayloadTemplateName() str
 	}
 	return v.CustomPayloadTemplateName
 }
+
+// #region class-body-v3extensionswebhookswebhooklistitem
+// #endregion class-body-v3extensionswebhookswebhooklistitem

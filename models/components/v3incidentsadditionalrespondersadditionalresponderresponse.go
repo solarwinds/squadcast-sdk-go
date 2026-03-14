@@ -12,3 +12,6 @@ func (v *V3IncidentsAdditionalRespondersAdditionalResponderResponse) GetAddition
 	}
 	return v.AdditionalResponders
 }
+
+// #region class-body-v3incidentsadditionalrespondersadditionalresponderresponse
+// #endregion class-body-v3incidentsadditionalrespondersadditionalresponderresponse

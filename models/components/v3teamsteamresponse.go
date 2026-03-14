@@ -127,3 +127,6 @@ func (v *V3TeamsTeamResponse) GetOrganization() Organization {
 	}
 	return v.Organization
 }
+
+// #region class-body-v3teamsteamresponse
+// #endregion class-body-v3teamsteamresponse

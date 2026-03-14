@@ -36,3 +36,6 @@ func (v *V4ShiftTimeSlot) GetDayOfWeek() *string {
 	}
 	return v.DayOfWeek
 }
+
+// #region class-body-v4shifttimeslot
+// #endregion class-body-v4shifttimeslot

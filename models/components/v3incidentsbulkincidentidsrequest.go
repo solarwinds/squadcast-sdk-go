@@ -13,3 +13,6 @@ func (v *V3IncidentsBulkIncidentIDsRequest) GetIncidentIds() []string {
 	}
 	return v.IncidentIds
 }
+
+// #region class-body-v3incidentsbulkincidentidsrequest
+// #endregion class-body-v3incidentsbulkincidentidsrequest

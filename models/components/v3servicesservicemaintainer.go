@@ -51,3 +51,6 @@ func (v *V3ServicesServiceMaintainer) GetType() V3ServicesServiceMaintainerType 
 	}
 	return v.Type
 }
+
+// #region class-body-v3servicesservicemaintainer
+// #endregion class-body-v3servicesservicemaintainer

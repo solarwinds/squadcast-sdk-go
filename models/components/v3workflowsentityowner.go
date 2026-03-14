@@ -20,3 +20,6 @@ func (v *V3WorkflowsEntityOwner) GetType() string {
 	}
 	return v.Type
 }
+
+// #region class-body-v3workflowsentityowner
+// #endregion class-body-v3workflowsentityowner

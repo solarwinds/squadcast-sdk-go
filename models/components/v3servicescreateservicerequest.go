@@ -84,3 +84,6 @@ func (v *V3ServicesCreateServiceRequest) GetDedupInitConfig() *V3ServicesDedupIn
 	}
 	return v.DedupInitConfig
 }
+
+// #region class-body-v3servicescreateservicerequest
+// #endregion class-body-v3servicescreateservicerequest

@@ -264,24 +264,11 @@ func (s *Schedules) List(ctx context.Context, request operations.SchedulesListSc
 		if len(arr) < l {
 			return nil, nil
 		}
+		request.Cursor = &nCVal
 
 		return s.List(
 			ctx,
-			operations.SchedulesListSchedulesRequest{
-				TeamID:                  request.TeamID,
-				ScheduleIDs:             request.ScheduleIDs,
-				Participants:            request.Participants,
-				ScheduleName:            request.ScheduleName,
-				MyOnCall:                request.MyOnCall,
-				YouAndYourSquads:        request.YouAndYourSquads,
-				Search:                  request.Search,
-				HidePaused:              request.HidePaused,
-				OwnerID:                 request.OwnerID,
-				EscalationPolicies:      request.EscalationPolicies,
-				WithoutEscalationPolicy: request.WithoutEscalationPolicy,
-				PageSize:                request.PageSize,
-				Cursor:                  &nCVal,
-			},
+			request,
 			opts...,
 		)
 	}

@@ -76,3 +76,6 @@ func (v *V3ServicesUpdateServiceRequest) GetDelayNotificationConfig() *V3Service
 	}
 	return v.DelayNotificationConfig
 }
+
+// #region class-body-v3servicesupdateservicerequest
+// #endregion class-body-v3servicesupdateservicerequest

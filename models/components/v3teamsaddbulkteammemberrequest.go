@@ -31,6 +31,9 @@ func (v *V3TeamsAddBulkTeamMemberRequestMember) GetRoleIds() []string {
 	return v.RoleIds
 }
 
+// #region class-body-v3teamsaddbulkteammemberrequestmember
+// #endregion class-body-v3teamsaddbulkteammemberrequestmember
+
 type V3TeamsAddBulkTeamMemberRequest struct {
 	Members []V3TeamsAddBulkTeamMemberRequestMember `json:"members"`
 }
@@ -41,3 +44,6 @@ func (v *V3TeamsAddBulkTeamMemberRequest) GetMembers() []V3TeamsAddBulkTeamMembe
 	}
 	return v.Members
 }
+
+// #region class-body-v3teamsaddbulkteammemberrequest
+// #endregion class-body-v3teamsaddbulkteammemberrequest

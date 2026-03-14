@@ -132,3 +132,6 @@ func (v *V4RotationResponse) GetUpdatedAt() string {
 	}
 	return v.UpdatedAt
 }
+
+// #region class-body-v4rotationresponse
+// #endregion class-body-v4rotationresponse

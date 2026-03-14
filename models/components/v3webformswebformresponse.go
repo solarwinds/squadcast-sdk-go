@@ -5,6 +5,9 @@ package components
 type V3WebformsWebformResponseTags struct {
 }
 
+// #region class-body-v3webformswebformresponsetags
+// #endregion class-body-v3webformswebformresponsetags
+
 type V3WebformsWebformResponse struct {
 	ID               int                           `json:"id"`
 	OrgID            string                        `json:"org_id"`
@@ -224,3 +227,6 @@ func (v *V3WebformsWebformResponse) GetDeletedAt() string {
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v3webformswebformresponse
+// #endregion class-body-v3webformswebformresponse

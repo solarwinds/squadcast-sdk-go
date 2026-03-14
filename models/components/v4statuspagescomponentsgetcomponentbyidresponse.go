@@ -52,3 +52,6 @@ func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetUnderMaintenance() 
 	}
 	return v.UnderMaintenance
 }
+
+// #region class-body-v4statuspagescomponentsgetcomponentbyidresponse
+// #endregion class-body-v4statuspagescomponentsgetcomponentbyidresponse

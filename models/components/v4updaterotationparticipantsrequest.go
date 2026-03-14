@@ -12,3 +12,6 @@ func (v *V4UpdateRotationParticipantsRequest) GetParticipantGroups() []V4Partici
 	}
 	return v.ParticipantGroups
 }
+
+// #region class-body-v4updaterotationparticipantsrequest
+// #endregion class-body-v4updaterotationparticipantsrequest

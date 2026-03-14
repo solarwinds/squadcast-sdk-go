@@ -101,3 +101,6 @@ func (c *CommonV3ErrorMeta) GetErrorMessage() string {
 	}
 	return c.ErrorMessage
 }
+
+// #region class-body-commonv3errormeta
+// #endregion class-body-commonv3errormeta

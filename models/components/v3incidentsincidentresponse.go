@@ -10,6 +10,9 @@ import (
 type V3IncidentsIncidentResponseTags struct {
 }
 
+// #region class-body-v3incidentsincidentresponsetags
+// #endregion class-body-v3incidentsincidentresponsetags
+
 type V3IncidentsIncidentResponseRetriggerPolicy struct {
 	EscalationPolicyID string     `json:"escalationPolicyId"`
 	RetriggerAt        *time.Time `json:"retriggerAt,omitempty"`
@@ -47,6 +50,9 @@ func (v *V3IncidentsIncidentResponseRetriggerPolicy) GetRetriggeredAt() *time.Ti
 	}
 	return v.RetriggeredAt
 }
+
+// #region class-body-v3incidentsincidentresponseretriggerpolicy
+// #endregion class-body-v3incidentsincidentresponseretriggerpolicy
 
 // V3IncidentsIncidentResponse - Represents an incident.
 type V3IncidentsIncidentResponse struct {
@@ -469,3 +475,6 @@ func (v *V3IncidentsIncidentResponse) GetDigestID() string {
 	}
 	return v.DigestID
 }
+
+// #region class-body-v3incidentsincidentresponse
+// #endregion class-body-v3incidentsincidentresponse

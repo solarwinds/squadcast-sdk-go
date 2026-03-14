@@ -20,3 +20,6 @@ func (v *V3UsersContact) GetPhoneNumber() string {
 	}
 	return v.PhoneNumber
 }
+
+// #region class-body-v3userscontact
+// #endregion class-body-v3userscontact

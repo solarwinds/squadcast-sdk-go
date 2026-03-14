@@ -21,6 +21,9 @@ func (v *V3UsersUpdateUserAbilitiesRequestData) GetAbilities() []V3UsersGlobalRB
 	return v.Abilities
 }
 
+// #region class-body-v3usersupdateuserabilitiesrequestdata
+// #endregion class-body-v3usersupdateuserabilitiesrequestdata
+
 type V3UsersUpdateUserAbilitiesRequest struct {
 	Data []V3UsersUpdateUserAbilitiesRequestData `json:"data"`
 }
@@ -31,3 +34,6 @@ func (v *V3UsersUpdateUserAbilitiesRequest) GetData() []V3UsersUpdateUserAbiliti
 	}
 	return v.Data
 }
+
+// #region class-body-v3usersupdateuserabilitiesrequest
+// #endregion class-body-v3usersupdateuserabilitiesrequest

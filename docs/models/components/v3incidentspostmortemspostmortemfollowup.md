@@ -7,5 +7,5 @@ Represents a single follow-up task in a postmortem.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Task`             | *string*           | :heavy_check_mark: | N/A                |
-| `IsDone`           | *bool*             | :heavy_check_mark: | N/A                |
+| `Task`             | `string`           | :heavy_check_mark: | N/A                |
+| `IsDone`           | `bool`             | :heavy_check_mark: | N/A                |

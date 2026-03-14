@@ -39,3 +39,6 @@ func (v *V3ServicesOverlayUpdateDedupKeyOverlayRequest) GetDedupKeyOverlay() Ded
 	}
 	return v.DedupKeyOverlay
 }
+
+// #region class-body-v3servicesoverlayupdatededupkeyoverlayrequest
+// #endregion class-body-v3servicesoverlayupdatededupkeyoverlayrequest

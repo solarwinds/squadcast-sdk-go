@@ -13,3 +13,6 @@ func (v *V3IncidentsCommunicationCardsArchiveSlackChannelRequest) GetSlackChanne
 	}
 	return v.SlackChannelID
 }
+
+// #region class-body-v3incidentscommunicationcardsarchiveslackchannelrequest
+// #endregion class-body-v3incidentscommunicationcardsarchiveslackchannelrequest

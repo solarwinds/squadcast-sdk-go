@@ -92,3 +92,6 @@ func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetDeletedAt() *t
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v4statuspagesissuesliststatuspageissuestatesresponse
+// #endregion class-body-v4statuspagesissuesliststatuspageissuestatesresponse

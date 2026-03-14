@@ -44,3 +44,6 @@ func (v *V4StatusPagesStatusPageStatusesResponse) GetColor() string {
 	}
 	return v.Color
 }
+
+// #region class-body-v4statuspagesstatuspagestatusesresponse
+// #endregion class-body-v4statuspagesstatuspagestatusesresponse

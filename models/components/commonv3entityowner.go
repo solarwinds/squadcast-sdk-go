@@ -23,3 +23,6 @@ func (c *CommonV3EntityOwner) GetType() string {
 	}
 	return c.Type
 }
+
+// #region class-body-commonv3entityowner
+// #endregion class-body-commonv3entityowner

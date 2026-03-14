@@ -21,3 +21,6 @@ func (v *V3IncidentsCommunicationCardsCreateSlackChannelRequest) GetIncidentID()
 	}
 	return v.IncidentID
 }
+
+// #region class-body-v3incidentscommunicationcardscreateslackchannelrequest
+// #endregion class-body-v3incidentscommunicationcardscreateslackchannelrequest

@@ -68,3 +68,6 @@ func (v *V3ExtensionsMSTeamsChannelConfiguration) GetMsteamsChannelName() string
 	}
 	return v.MsteamsChannelName
 }
+
+// #region class-body-v3extensionsmsteamschannelconfiguration
+// #endregion class-body-v3extensionsmsteamschannelconfiguration

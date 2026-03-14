@@ -12,3 +12,6 @@ func (v *V3ServicesTaggingRulesTagsObject) GetSeverity() *V3ServicesTaggingRules
 	}
 	return v.Severity
 }
+
+// #region class-body-v3servicestaggingrulestagsobject
+// #endregion class-body-v3servicestaggingrulestagsobject

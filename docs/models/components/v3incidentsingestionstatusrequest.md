@@ -7,4 +7,4 @@ Request body for getting ingestion status.
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `RequestIds`       | []*string*         | :heavy_check_mark: | N/A                |
+| `RequestIds`       | []`string`         | :heavy_check_mark: | N/A                |

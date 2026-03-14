@@ -7,4 +7,4 @@ Represents a single step in a runbook.
 
 | Field                                        | Type                                         | Required                                     | Description                                  |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| `Content`                                    | *string*                                     | :heavy_check_mark:                           | The content of the step, in Markdown format. |
+| `Content`                                    | `string`                                     | :heavy_check_mark:                           | The content of the step, in Markdown format. |

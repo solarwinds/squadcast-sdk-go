@@ -13,6 +13,9 @@ func (v *V3AuditLogsListAuditLogsExportHistoryResponseMetadata) GetTotalCount() 
 	return v.TotalCount
 }
 
+// #region class-body-v3auditlogslistauditlogsexporthistoryresponsemetadata
+// #endregion class-body-v3auditlogslistauditlogsexporthistoryresponsemetadata
+
 // V3AuditLogsListAuditLogsExportHistoryResponse - Response model for listing audit logs export history
 type V3AuditLogsListAuditLogsExportHistoryResponse struct {
 	Data     []V3AuditLogsAuditLogsExportHistoryResponse           `json:"data"`
@@ -32,3 +35,6 @@ func (v *V3AuditLogsListAuditLogsExportHistoryResponse) GetMetadata() V3AuditLog
 	}
 	return v.Metadata
 }
+
+// #region class-body-v3auditlogslistauditlogsexporthistoryresponse
+// #endregion class-body-v3auditlogslistauditlogsexporthistoryresponse

@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `JiraStatus`       | *string*           | :heavy_check_mark: | N/A                |
-| `SystemStatus`     | *string*           | :heavy_check_mark: | N/A                |
+| `JiraStatus`       | `string`           | :heavy_check_mark: | N/A                |
+| `SystemStatus`     | `string`           | :heavy_check_mark: | N/A                |

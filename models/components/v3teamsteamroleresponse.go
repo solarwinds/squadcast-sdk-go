@@ -44,3 +44,6 @@ func (v *V3TeamsTeamRoleResponse) GetAbilities() *V3TeamsAbilities {
 	}
 	return v.Abilities
 }
+
+// #region class-body-v3teamsteamroleresponse
+// #endregion class-body-v3teamsteamroleresponse

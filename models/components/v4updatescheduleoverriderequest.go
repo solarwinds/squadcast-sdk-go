@@ -44,3 +44,6 @@ func (v *V4UpdateScheduleOverrideRequest) GetOverrideWith() V4OverrideParticipan
 	}
 	return v.OverrideWith
 }
+
+// #region class-body-v4updatescheduleoverriderequest
+// #endregion class-body-v4updatescheduleoverriderequest

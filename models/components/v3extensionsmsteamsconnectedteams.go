@@ -41,3 +41,6 @@ func (v *V3ExtensionsMSTeamsConnectedTeams) GetChannelConfigurations() []V3Exten
 	}
 	return v.ChannelConfigurations
 }
+
+// #region class-body-v3extensionsmsteamsconnectedteams
+// #endregion class-body-v3extensionsmsteamsconnectedteams

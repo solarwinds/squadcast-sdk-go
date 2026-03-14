@@ -20,3 +20,6 @@ func (v *V3ServicesOverlayCustomContent) GetDescription() string {
 	}
 	return v.Description
 }
+
+// #region class-body-v3servicesoverlaycustomcontent
+// #endregion class-body-v3servicesoverlaycustomcontent

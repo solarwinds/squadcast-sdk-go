@@ -69,6 +69,9 @@ func (v *V3WorkflowsSqSendEmailUpdateData) GetBody() *string {
 	return v.Body
 }
 
+// #region class-body-v3workflowssqsendemailupdatedata
+// #endregion class-body-v3workflowssqsendemailupdatedata
+
 type V3WorkflowsSqSendEmailUpdate struct {
 	Name V3WorkflowsSqSendEmailUpdateName  `json:"name"`
 	Data *V3WorkflowsSqSendEmailUpdateData `json:"data,omitempty"`
@@ -98,3 +101,6 @@ func (v *V3WorkflowsSqSendEmailUpdate) GetData() *V3WorkflowsSqSendEmailUpdateDa
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqsendemailupdate
+// #endregion class-body-v3workflowssqsendemailupdate

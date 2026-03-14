@@ -7,5 +7,5 @@ reCAPTCHA credentials to be validated
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `SiteKey`            | *string*             | :heavy_check_mark:   | reCAPTCHA site key   |
-| `Secret`             | *string*             | :heavy_check_mark:   | reCAPTCHA secret key |
+| `SiteKey`            | `string`             | :heavy_check_mark:   | reCAPTCHA site key   |
+| `Secret`             | `string`             | :heavy_check_mark:   | reCAPTCHA secret key |

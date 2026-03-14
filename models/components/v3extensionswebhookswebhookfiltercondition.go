@@ -28,3 +28,6 @@ func (v *V3ExtensionsWebhooksWebhookFilterCondition) GetRHS() *string {
 	}
 	return v.RHS
 }
+
+// #region class-body-v3extensionswebhookswebhookfiltercondition
+// #endregion class-body-v3extensionswebhookswebhookfiltercondition

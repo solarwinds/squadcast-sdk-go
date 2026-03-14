@@ -13,3 +13,6 @@ func (v *V3IncidentsMergeIncidentEntityReference) GetID() string {
 	}
 	return v.ID
 }
+
+// #region class-body-v3incidentsmergeincidententityreference
+// #endregion class-body-v3incidentsmergeincidententityreference

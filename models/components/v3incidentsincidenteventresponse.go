@@ -10,6 +10,9 @@ import (
 type V3IncidentsIncidentEventResponseTags struct {
 }
 
+// #region class-body-v3incidentsincidenteventresponsetags
+// #endregion class-body-v3incidentsincidenteventresponsetags
+
 type DeduplicationReason struct {
 	MatchedEventID      string `json:"matched_event_id"`
 	EvaluatedExpression string `json:"evaluated_expression"`
@@ -118,3 +121,6 @@ func (v *V3IncidentsIncidentEventResponse) GetPayload() Payload {
 	}
 	return v.Payload
 }
+
+// #region class-body-v3incidentsincidenteventresponse
+// #endregion class-body-v3incidentsincidenteventresponse

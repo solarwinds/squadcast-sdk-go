@@ -75,3 +75,6 @@ func (v *V4StatusPagesNewStatusPageComponentList) GetComponents() []V4StatusPage
 	}
 	return v.Components
 }
+
+// #region class-body-v4statuspagesnewstatuspagecomponentlist
+// #endregion class-body-v4statuspagesnewstatuspagecomponentlist

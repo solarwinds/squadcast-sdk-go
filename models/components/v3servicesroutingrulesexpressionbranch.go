@@ -207,3 +207,6 @@ func (v *V3ServicesRoutingRulesExpressionBranch) GetRHS() V3ServicesRoutingRules
 	}
 	return v.RHS
 }
+
+// #region class-body-v3servicesroutingrulesexpressionbranch
+// #endregion class-body-v3servicesroutingrulesexpressionbranch

@@ -71,3 +71,6 @@ func (v *V3AuditLogsAuditLogsExportHistoryResponse) GetFilters() V3AuditLogsFilt
 	}
 	return v.Filters
 }
+
+// #region class-body-v3auditlogsauditlogsexporthistoryresponse
+// #endregion class-body-v3auditlogsauditlogsexporthistoryresponse

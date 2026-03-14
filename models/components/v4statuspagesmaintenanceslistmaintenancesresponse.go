@@ -13,6 +13,9 @@ func (v *V4StatusPagesMaintenancesListMaintenancesResponseMeta) GetTotalCount() 
 	return v.TotalCount
 }
 
+// #region class-body-v4statuspagesmaintenanceslistmaintenancesresponsemeta
+// #endregion class-body-v4statuspagesmaintenanceslistmaintenancesresponsemeta
+
 type V4StatusPagesMaintenancesListMaintenancesResponse struct {
 	Data []V4StatusPagesMaintenancesMaintenance                `json:"data"`
 	Meta V4StatusPagesMaintenancesListMaintenancesResponseMeta `json:"meta"`
@@ -31,3 +34,6 @@ func (v *V4StatusPagesMaintenancesListMaintenancesResponse) GetMeta() V4StatusPa
 	}
 	return v.Meta
 }
+
+// #region class-body-v4statuspagesmaintenanceslistmaintenancesresponse
+// #endregion class-body-v4statuspagesmaintenanceslistmaintenancesresponse

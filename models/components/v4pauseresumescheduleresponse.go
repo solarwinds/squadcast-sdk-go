@@ -20,3 +20,6 @@ func (v *V4PauseResumeScheduleResponse) GetSuccess() bool {
 	}
 	return v.Success
 }
+
+// #region class-body-v4pauseresumescheduleresponse
+// #endregion class-body-v4pauseresumescheduleresponse

@@ -96,6 +96,9 @@ func (v *V3WorkflowsSqMakeHTTPCallUpdateHeader) GetValue() string {
 	return v.Value
 }
 
+// #region class-body-v3workflowssqmakehttpcallupdateheader
+// #endregion class-body-v3workflowssqmakehttpcallupdateheader
+
 type V3WorkflowsSqMakeHTTPCallUpdateData struct {
 	Method  *V3WorkflowsSqMakeHTTPCallUpdateMethod  `json:"method,omitempty"`
 	URL     *string                                 `json:"url,omitempty"`
@@ -142,6 +145,9 @@ func (v *V3WorkflowsSqMakeHTTPCallUpdateData) GetBody() *string {
 	return v.Body
 }
 
+// #region class-body-v3workflowssqmakehttpcallupdatedata
+// #endregion class-body-v3workflowssqmakehttpcallupdatedata
+
 type V3WorkflowsSqMakeHTTPCallUpdate struct {
 	Name V3WorkflowsSqMakeHTTPCallUpdateName  `json:"name"`
 	Data *V3WorkflowsSqMakeHTTPCallUpdateData `json:"data,omitempty"`
@@ -171,3 +177,6 @@ func (v *V3WorkflowsSqMakeHTTPCallUpdate) GetData() *V3WorkflowsSqMakeHTTPCallUp
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowssqmakehttpcallupdate
+// #endregion class-body-v3workflowssqmakehttpcallupdate

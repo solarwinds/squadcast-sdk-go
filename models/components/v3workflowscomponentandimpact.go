@@ -35,3 +35,6 @@ func (v *V3WorkflowsComponentAndImpact) GetImpactStatusID() int {
 	}
 	return v.ImpactStatusID
 }
+
+// #region class-body-v3workflowscomponentandimpact
+// #endregion class-body-v3workflowscomponentandimpact
