@@ -20,3 +20,6 @@ func (v *V4StatusPagesListSubscribersResponse) GetMeta() *V4StatusPagesListSubsc
 	}
 	return v.Meta
 }
+
+// #region class-body-v4statuspageslistsubscribersresponse
+// #endregion class-body-v4statuspageslistsubscribersresponse

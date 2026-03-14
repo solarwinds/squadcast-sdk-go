@@ -5,6 +5,9 @@ package components
 type V3IncidentsTagsAppendTagRequestTags struct {
 }
 
+// #region class-body-v3incidentstagsappendtagrequesttags
+// #endregion class-body-v3incidentstagsappendtagrequesttags
+
 type V3IncidentsTagsAppendTagRequest struct {
 	Tags *V3IncidentsTagsAppendTagRequestTags `json:"tags,omitempty"`
 }
@@ -15,3 +18,6 @@ func (v *V3IncidentsTagsAppendTagRequest) GetTags() *V3IncidentsTagsAppendTagReq
 	}
 	return v.Tags
 }
+
+// #region class-body-v3incidentstagsappendtagrequest
+// #endregion class-body-v3incidentstagsappendtagrequest

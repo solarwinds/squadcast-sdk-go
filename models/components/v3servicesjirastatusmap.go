@@ -20,3 +20,6 @@ func (v *V3ServicesJiraStatusMap) GetSystemStatus() string {
 	}
 	return v.SystemStatus
 }
+
+// #region class-body-v3servicesjirastatusmap
+// #endregion class-body-v3servicesjirastatusmap

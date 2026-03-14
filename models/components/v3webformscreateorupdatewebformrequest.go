@@ -6,6 +6,9 @@ package components
 type V3WebformsCreateOrUpdateWebformRequestTags struct {
 }
 
+// #region class-body-v3webformscreateorupdatewebformrequesttags
+// #endregion class-body-v3webformscreateorupdatewebformrequesttags
+
 // V3WebformsCreateOrUpdateWebformRequest - Public API request for creating a webform
 type V3WebformsCreateOrUpdateWebformRequest struct {
 	// Unique identifier of the owner (string or UUID)
@@ -171,3 +174,6 @@ func (v *V3WebformsCreateOrUpdateWebformRequest) GetDescription() *string {
 	}
 	return v.Description
 }
+
+// #region class-body-v3webformscreateorupdatewebformrequest
+// #endregion class-body-v3webformscreateorupdatewebformrequest

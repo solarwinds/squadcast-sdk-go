@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `OwnerID`          | *string*           | :heavy_check_mark: | required *         |
+| `OwnerID`          | `string`           | :heavy_check_mark: | required *         |

@@ -75,3 +75,6 @@ func (v *V3WorkflowsWorkflowFilters) GetFilters() []V3WorkflowsWorkflowFilters {
 	}
 	return v.Filters
 }
+
+// #region class-body-v3workflowsworkflowfilters
+// #endregion class-body-v3workflowsworkflowfilters

@@ -12,3 +12,6 @@ func (v *V3WorkflowsEnableDisableWorkflowRequest) GetEnabled() *bool {
 	}
 	return v.Enabled
 }
+
+// #region class-body-v3workflowsenabledisableworkflowrequest
+// #endregion class-body-v3workflowsenabledisableworkflowrequest

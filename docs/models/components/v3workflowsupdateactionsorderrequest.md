@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ActionOrder`      | []*int*            | :heavy_minus_sign: | N/A                |
+| `ActionOrder`      | []`int`            | :heavy_minus_sign: | N/A                |

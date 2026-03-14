@@ -13,3 +13,6 @@ func (v *V3IncidentsPostmortemsTotalPostmortemCount) GetCount() int64 {
 	}
 	return v.Count
 }
+
+// #region class-body-v3incidentspostmortemstotalpostmortemcount
+// #endregion class-body-v3incidentspostmortemstotalpostmortemcount

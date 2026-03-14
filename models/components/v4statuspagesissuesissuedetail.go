@@ -20,3 +20,6 @@ func (v *V4StatusPagesIssuesIssueDetail) GetStateMessages() []V4StatusPagesIssue
 	}
 	return v.StateMessages
 }
+
+// #region class-body-v4statuspagesissuesissuedetail
+// #endregion class-body-v4statuspagesissuesissuedetail

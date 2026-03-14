@@ -61,6 +61,9 @@ func (v *V3WorkflowsSlackCreateIncidentChannelUpdateData) GetChannelName() *stri
 	return v.ChannelName
 }
 
+// #region class-body-v3workflowsslackcreateincidentchannelupdatedata
+// #endregion class-body-v3workflowsslackcreateincidentchannelupdatedata
+
 type V3WorkflowsSlackCreateIncidentChannelUpdate struct {
 	Name V3WorkflowsSlackCreateIncidentChannelUpdateName  `json:"name"`
 	Data *V3WorkflowsSlackCreateIncidentChannelUpdateData `json:"data,omitempty"`
@@ -90,3 +93,6 @@ func (v *V3WorkflowsSlackCreateIncidentChannelUpdate) GetData() *V3WorkflowsSlac
 	}
 	return v.Data
 }
+
+// #region class-body-v3workflowsslackcreateincidentchannelupdate
+// #endregion class-body-v3workflowsslackcreateincidentchannelupdate

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Ordering`         | []*int64*          | :heavy_minus_sign: | N/A                |
+| `Ordering`         | []`int64`          | :heavy_minus_sign: | N/A                |

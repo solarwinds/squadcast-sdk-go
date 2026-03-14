@@ -52,3 +52,6 @@ func (v *V3WorkflowsMsTeamsCreateMeetingLinkUpdate) GetName() V3WorkflowsMsTeams
 	}
 	return v.Name
 }
+
+// #region class-body-v3workflowsmsteamscreatemeetinglinkupdate
+// #endregion class-body-v3workflowsmsteamscreatemeetinglinkupdate

@@ -45,9 +45,9 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `gerID`                                                  | *int64*                                                  | :heavy_check_mark:                                       | N/A                                                      |
-| `alertSourceVersion`                                     | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `alertSourceShortname`                                   | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `gerID`                                                  | `int64`                                                  | :heavy_check_mark:                                       | N/A                                                      |
+| `alertSourceVersion`                                     | `string`                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `alertSourceShortname`                                   | `string`                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response

@@ -37,3 +37,6 @@ func (v *V3AuditLogsActor) GetFullName() string {
 	}
 	return v.FullName
 }
+
+// #region class-body-v3auditlogsactor
+// #endregion class-body-v3auditlogsactor

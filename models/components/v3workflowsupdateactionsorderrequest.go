@@ -12,3 +12,6 @@ func (v *V3WorkflowsUpdateActionsOrderRequest) GetActionOrder() []int {
 	}
 	return v.ActionOrder
 }
+
+// #region class-body-v3workflowsupdateactionsorderrequest
+// #endregion class-body-v3workflowsupdateactionsorderrequest

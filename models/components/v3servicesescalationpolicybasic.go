@@ -41,3 +41,6 @@ func (v *V3ServicesEscalationPolicyBasic) GetSlug() string {
 	}
 	return v.Slug
 }
+
+// #region class-body-v3servicesescalationpolicybasic
+// #endregion class-body-v3servicesescalationpolicybasic

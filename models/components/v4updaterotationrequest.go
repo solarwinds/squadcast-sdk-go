@@ -92,3 +92,6 @@ func (v *V4UpdateRotationRequest) GetEndsAfterIterations() *int64 {
 	}
 	return v.EndsAfterIterations
 }
+
+// #region class-body-v4updaterotationrequest
+// #endregion class-body-v4updaterotationrequest

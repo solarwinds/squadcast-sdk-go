@@ -12,3 +12,6 @@ func (v *V4ChangeTimezoneResponse) GetTimeZone() string {
 	}
 	return v.TimeZone
 }
+
+// #region class-body-v4changetimezoneresponse
+// #endregion class-body-v4changetimezoneresponse

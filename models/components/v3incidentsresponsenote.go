@@ -45,3 +45,6 @@ func (v *V3IncidentsResponseNote) GetUserID() string {
 	}
 	return v.UserID
 }
+
+// #region class-body-v3incidentsresponsenote
+// #endregion class-body-v3incidentsresponsenote

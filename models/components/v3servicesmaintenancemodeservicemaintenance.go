@@ -76,3 +76,6 @@ func (v *V3ServicesMaintenanceModeServiceMaintenance) GetRepeatTill() string {
 	}
 	return v.RepeatTill
 }
+
+// #region class-body-v3servicesmaintenancemodeservicemaintenance
+// #endregion class-body-v3servicesmaintenancemodeservicemaintenance

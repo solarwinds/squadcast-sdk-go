@@ -108,3 +108,6 @@ func (v *V3ServicesSuppressionRulesSuppressionRule) GetBasicExpression() []V3Ser
 	}
 	return v.BasicExpression
 }
+
+// #region class-body-v3servicessuppressionrulessuppressionrule
+// #endregion class-body-v3servicessuppressionrulessuppressionrule

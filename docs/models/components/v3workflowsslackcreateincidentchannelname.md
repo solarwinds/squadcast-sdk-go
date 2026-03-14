@@ -1,5 +1,15 @@
 # V3WorkflowsSlackCreateIncidentChannelName
 
+## Example Usage
+
+```go
+import (
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+)
+
+value := components.V3WorkflowsSlackCreateIncidentChannelNameSlackCreateIncidentChannel
+```
+
 
 ## Values
 

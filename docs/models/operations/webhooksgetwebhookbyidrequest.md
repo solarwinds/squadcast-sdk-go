@@ -5,4 +5,4 @@
 
 | Field                       | Type                        | Required                    | Description                 |
 | --------------------------- | --------------------------- | --------------------------- | --------------------------- |
-| `EventWebhookID`            | *string*                    | :heavy_check_mark:          | (Required) event webhook ID |
+| `EventWebhookID`            | `string`                    | :heavy_check_mark:          | (Required) event webhook ID |

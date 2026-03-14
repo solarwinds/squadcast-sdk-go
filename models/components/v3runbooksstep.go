@@ -14,3 +14,6 @@ func (v *V3RunbooksStep) GetContent() string {
 	}
 	return v.Content
 }
+
+// #region class-body-v3runbooksstep
+// #endregion class-body-v3runbooksstep

@@ -23,3 +23,6 @@ func (v *V3ExtensionsMSTeamsTriggers) GetCustom() []V3ExtensionsMSTeamsEventClas
 	}
 	return v.Custom
 }
+
+// #region class-body-v3extensionsmsteamstriggers
+// #endregion class-body-v3extensionsmsteamstriggers

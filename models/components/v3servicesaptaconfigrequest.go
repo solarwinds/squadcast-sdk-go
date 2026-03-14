@@ -20,3 +20,6 @@ func (v *V3ServicesAPTAConfigRequest) GetTimeoutInMins() int64 {
 	}
 	return v.TimeoutInMins
 }
+
+// #region class-body-v3servicesaptaconfigrequest
+// #endregion class-body-v3servicesaptaconfigrequest

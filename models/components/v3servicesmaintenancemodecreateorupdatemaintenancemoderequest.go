@@ -20,3 +20,6 @@ func (v *V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetServi
 	}
 	return v.ServiceMaintenance
 }
+
+// #region class-body-v3servicesmaintenancemodecreateorupdatemaintenancemoderequest
+// #endregion class-body-v3servicesmaintenancemodecreateorupdatemaintenancemoderequest

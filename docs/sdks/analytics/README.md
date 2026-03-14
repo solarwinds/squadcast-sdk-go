@@ -46,10 +46,10 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `from`                                                   | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `to`                                                     | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `teamID`                                                 | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
-| `userID`                                                 | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `from`                                                   | `string`                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `to`                                                     | `string`                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `teamID`                                                 | `*string`                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `userID`                                                 | `*string`                                                | :heavy_minus_sign:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response

@@ -29,3 +29,6 @@ func (v *V3AuditLogsTeam) GetIsDeleted() bool {
 	}
 	return v.IsDeleted
 }
+
+// #region class-body-v3auditlogsteam
+// #endregion class-body-v3auditlogsteam

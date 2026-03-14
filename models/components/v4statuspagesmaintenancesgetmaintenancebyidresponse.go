@@ -100,3 +100,6 @@ func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetDeletedAt() *ti
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v4statuspagesmaintenancesgetmaintenancebyidresponse
+// #endregion class-body-v4statuspagesmaintenancesgetmaintenancebyidresponse

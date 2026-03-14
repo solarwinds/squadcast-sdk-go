@@ -76,3 +76,6 @@ func (v *V4SquadsSquadResponse) GetUpdatedBy() *string {
 	}
 	return v.UpdatedBy
 }
+
+// #region class-body-v4squadssquadresponse
+// #endregion class-body-v4squadssquadresponse

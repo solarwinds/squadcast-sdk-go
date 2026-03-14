@@ -21,6 +21,9 @@ func (v *V3IncidentsPostmortemsPostmortemListResultIncident) GetTimeOfCreation()
 	return v.TimeOfCreation
 }
 
+// #region class-body-v3incidentspostmortemspostmortemlistresultincident
+// #endregion class-body-v3incidentspostmortemspostmortemlistresultincident
+
 // V3IncidentsPostmortemsPostmortemListResult - Represents a single result in the postmortem list response.
 type V3IncidentsPostmortemsPostmortemListResult struct {
 	ID             string                                     `json:"id"`
@@ -170,3 +173,6 @@ func (v *V3IncidentsPostmortemsPostmortemListResult) GetActiveFollowUpsCount() i
 	}
 	return v.ActiveFollowUpsCount
 }
+
+// #region class-body-v3incidentspostmortemspostmortemlistresult
+// #endregion class-body-v3incidentspostmortemspostmortemlistresult

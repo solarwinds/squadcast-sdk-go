@@ -60,3 +60,6 @@ func (v *V3ExportExportResponse) GetErrorMessage() *string {
 	}
 	return v.ErrorMessage
 }
+
+// #region class-body-v3exportexportresponse
+// #endregion class-body-v3exportexportresponse

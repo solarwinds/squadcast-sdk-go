@@ -132,3 +132,6 @@ func (v *V3SLOSLOViolatingIncidentResponse) GetDeletedAt() *time.Time {
 	}
 	return v.DeletedAt
 }
+
+// #region class-body-v3slosloviolatingincidentresponse
+// #endregion class-body-v3slosloviolatingincidentresponse

@@ -28,3 +28,6 @@ func (v *V4Tag) GetColor() string {
 	}
 	return v.Color
 }
+
+// #region class-body-v4tag
+// #endregion class-body-v4tag

@@ -44,3 +44,6 @@ func (v *V4StatusPagesComponentGroupsCreateComponentGroupResponse) GetAllowSubsc
 	}
 	return v.AllowSubscription
 }
+
+// #region class-body-v4statuspagescomponentgroupscreatecomponentgroupresponse
+// #endregion class-body-v4statuspagescomponentgroupscreatecomponentgroupresponse

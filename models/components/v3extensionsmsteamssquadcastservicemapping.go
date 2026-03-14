@@ -23,3 +23,6 @@ func (v *V3ExtensionsMSTeamsSquadCastServiceMapping) GetSquadcastServiceName() s
 	}
 	return v.SquadcastServiceName
 }
+
+// #region class-body-v3extensionsmsteamssquadcastservicemapping
+// #endregion class-body-v3extensionsmsteamssquadcastservicemapping

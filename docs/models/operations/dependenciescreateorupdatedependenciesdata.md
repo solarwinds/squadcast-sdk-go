@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Ok`               | *bool*             | :heavy_check_mark: | N/A                |
+| `Ok`               | `bool`             | :heavy_check_mark: | N/A                |

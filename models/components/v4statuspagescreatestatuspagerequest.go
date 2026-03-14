@@ -166,3 +166,6 @@ func (v *V4StatusPagesCreateStatusPageRequest) GetOwnerID() string {
 	}
 	return v.OwnerID
 }
+
+// #region class-body-v4statuspagescreatestatuspagerequest
+// #endregion class-body-v4statuspagescreatestatuspagerequest

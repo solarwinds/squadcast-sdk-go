@@ -140,3 +140,6 @@ func (v *V3AuditLogsExportAuditLogsRequest) GetExportType() ExportType {
 	}
 	return v.ExportType
 }
+
+// #region class-body-v3auditlogsexportauditlogsrequest
+// #endregion class-body-v3auditlogsexportauditlogsrequest

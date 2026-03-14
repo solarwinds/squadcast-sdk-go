@@ -28,3 +28,6 @@ func (v *V3ServicesJiraIssueType) GetStatuses() []V3ServicesJiraStatus {
 	}
 	return v.Statuses
 }
+
+// #region class-body-v3servicesjiraissuetype
+// #endregion class-body-v3servicesjiraissuetype

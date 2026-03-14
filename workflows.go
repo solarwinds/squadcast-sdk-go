@@ -235,22 +235,11 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 		if len(arr) < l {
 			return nil, nil
 		}
+		request.PageNumber = &nP
 
 		return s.List(
 			ctx,
-			operations.WorkflowsListWorkflowsRequest{
-				OwnerID:    request.OwnerID,
-				PageSize:   request.PageSize,
-				PageNumber: &nP,
-				Search:     request.Search,
-				Event:      request.Event,
-				Actions:    request.Actions,
-				Tags:       request.Tags,
-				Owner:      request.Owner,
-				CreatedBy:  request.CreatedBy,
-				UpdatedBy:  request.UpdatedBy,
-				Enabled:    request.Enabled,
-			},
+			request,
 			opts...,
 		)
 	}

@@ -20,3 +20,6 @@ func (v *V4SquadsRemoveSquadMemberResponse) GetMembers() []V4SquadsSquadMember {
 	}
 	return v.Members
 }
+
+// #region class-body-v4squadsremovesquadmemberresponse
+// #endregion class-body-v4squadsremovesquadmemberresponse

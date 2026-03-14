@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ChannelID`        | *string*           | :heavy_check_mark: | N/A                |
-| `Message`          | *string*           | :heavy_check_mark: | N/A                |
+| `ChannelID`        | `string`           | :heavy_check_mark: | N/A                |
+| `Message`          | `string`           | :heavy_check_mark: | N/A                |

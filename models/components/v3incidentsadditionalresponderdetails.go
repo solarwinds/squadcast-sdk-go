@@ -69,3 +69,6 @@ func (v *V3IncidentsAdditionalResponderDetails) GetLastNotifiedAt() time.Time {
 	}
 	return v.LastNotifiedAt
 }
+
+// #region class-body-v3incidentsadditionalresponderdetails
+// #endregion class-body-v3incidentsadditionalresponderdetails

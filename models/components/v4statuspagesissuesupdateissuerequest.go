@@ -26,6 +26,9 @@ func (v *V4StatusPagesIssuesUpdateIssueRequestComponent) GetStatusID() *int64 {
 	return v.StatusID
 }
 
+// #region class-body-v4statuspagesissuesupdateissuerequestcomponent
+// #endregion class-body-v4statuspagesissuesupdateissuerequestcomponent
+
 type V4StatusPagesIssuesUpdateIssueRequestStateMessage struct {
 	Text      *string    `json:"text,omitempty"`
 	Timestamp *time.Time `json:"timestamp,omitempty"`
@@ -56,6 +59,9 @@ func (v *V4StatusPagesIssuesUpdateIssueRequestStateMessage) GetTimestamp() *time
 	return v.Timestamp
 }
 
+// #region class-body-v4statuspagesissuesupdateissuerequeststatemessage
+// #endregion class-body-v4statuspagesissuesupdateissuerequeststatemessage
+
 type V4StatusPagesIssuesUpdateIssueRequestIssue struct {
 	StateID       *int64                                              `json:"stateID,omitempty"`
 	StateMessages []V4StatusPagesIssuesUpdateIssueRequestStateMessage `json:"stateMessages,omitempty"`
@@ -74,6 +80,9 @@ func (v *V4StatusPagesIssuesUpdateIssueRequestIssue) GetStateMessages() []V4Stat
 	}
 	return v.StateMessages
 }
+
+// #region class-body-v4statuspagesissuesupdateissuerequestissue
+// #endregion class-body-v4statuspagesissuesupdateissuerequestissue
 
 type V4StatusPagesIssuesUpdateIssueRequest struct {
 	Title      string                                           `json:"title"`
@@ -109,3 +118,6 @@ func (v *V4StatusPagesIssuesUpdateIssueRequest) GetIssues() []V4StatusPagesIssue
 	}
 	return v.Issues
 }
+
+// #region class-body-v4statuspagesissuesupdateissuerequest
+// #endregion class-body-v4statuspagesissuesupdateissuerequest

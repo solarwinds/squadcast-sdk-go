@@ -20,3 +20,6 @@ func (v *V3ServicesTaggingRulesTagConfigObject) GetColor() string {
 	}
 	return v.Color
 }
+
+// #region class-body-v3servicestaggingrulestagconfigobject
+// #endregion class-body-v3servicestaggingrulestagconfigobject

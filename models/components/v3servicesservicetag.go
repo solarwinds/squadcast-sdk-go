@@ -20,3 +20,6 @@ func (v *V3ServicesServiceTag) GetValue() string {
 	}
 	return v.Value
 }
+
+// #region class-body-v3servicesservicetag
+// #endregion class-body-v3servicesservicetag

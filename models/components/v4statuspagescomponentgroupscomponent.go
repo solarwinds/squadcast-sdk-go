@@ -84,3 +84,6 @@ func (v *V4StatusPagesComponentGroupsComponent) GetIsHidden() *bool {
 	}
 	return v.IsHidden
 }
+
+// #region class-body-v4statuspagescomponentgroupscomponent
+// #endregion class-body-v4statuspagescomponentgroupscomponent

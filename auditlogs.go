@@ -227,20 +227,11 @@ func (s *AuditLogs) List(ctx context.Context, request operations.AuditLogsListAu
 		if len(arr) < l {
 			return nil, nil
 		}
+		request.PageNumber = nP
 
 		return s.List(
 			ctx,
-			operations.AuditLogsListAuditLogsRequest{
-				PageSize:   request.PageSize,
-				PageNumber: nP,
-				StartDate:  request.StartDate,
-				EndDate:    request.EndDate,
-				Action:     request.Action,
-				Resource:   request.Resource,
-				Actor:      request.Actor,
-				Team:       request.Team,
-				Client:     request.Client,
-			},
+			request,
 			opts...,
 		)
 	}

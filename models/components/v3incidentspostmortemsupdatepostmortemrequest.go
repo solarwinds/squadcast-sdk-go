@@ -54,3 +54,6 @@ func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetStatus() *V3Incidents
 	}
 	return v.Status
 }
+
+// #region class-body-v3incidentspostmortemsupdatepostmortemrequest
+// #endregion class-body-v3incidentspostmortemsupdatepostmortemrequest

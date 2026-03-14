@@ -76,3 +76,6 @@ func (v *V4StatusPagesStatusPageSubscriber) GetSubscribedOn() time.Time {
 	}
 	return v.SubscribedOn
 }
+
+// #region class-body-v4statuspagesstatuspagesubscriber
+// #endregion class-body-v4statuspagesstatuspagesubscriber

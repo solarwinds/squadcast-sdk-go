@@ -77,3 +77,6 @@ func (v *V3IncidentsPinnedMessage) GetMessageSenderName() string {
 	}
 	return v.MessageSenderName
 }
+
+// #region class-body-v3incidentspinnedmessage
+// #endregion class-body-v3incidentspinnedmessage

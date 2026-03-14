@@ -32,3 +32,6 @@ func (v *V3IncidentsReassignIncidentRequest) GetReassignTo() ReassignTo {
 	}
 	return v.ReassignTo
 }
+
+// #region class-body-v3incidentsreassignincidentrequest
+// #endregion class-body-v3incidentsreassignincidentrequest

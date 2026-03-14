@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ActionOrder`      | []*int*            | :heavy_check_mark: | N/A                |
+| `ActionOrder`      | []`int`            | :heavy_check_mark: | N/A                |

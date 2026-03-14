@@ -12,3 +12,6 @@ func (v *V3ServicesDependenciesCreateOrUpdateDependenciesRequest) GetDependencie
 	}
 	return v.Dependencies
 }
+
+// #region class-body-v3servicesdependenciescreateorupdatedependenciesrequest
+// #endregion class-body-v3servicesdependenciescreateorupdatedependenciesrequest

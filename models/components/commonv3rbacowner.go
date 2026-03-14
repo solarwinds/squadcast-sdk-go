@@ -52,3 +52,6 @@ func (c *CommonV3RBACOwner) GetType() CommonV3RBACOwnerType {
 	}
 	return c.Type
 }
+
+// #region class-body-commonv3rbacowner
+// #endregion class-body-commonv3rbacowner
