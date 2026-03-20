@@ -119,14 +119,17 @@ import (
 	"context"
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"log"
+	"os"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := squadcastsdk.New()
+	s := squadcastsdk.New(
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
+	)
 
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>")
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -145,9 +148,9 @@ func main() {
 
 This SDK supports the following security scheme globally:
 
-| Name         | Type | Scheme      | Environment Variable       |
-| ------------ | ---- | ----------- | -------------------------- |
-| `BearerAuth` | http | HTTP Bearer | `SQUADCASTSDK_BEARER_AUTH` |
+| Name               | Type | Scheme      | Environment Variable              |
+| ------------------ | ---- | ----------- | --------------------------------- |
+| `RefreshTokenAuth` | http | Custom HTTP | `SQUADCASTSDK_REFRESH_TOKEN_AUTH` |
 
 You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
 ```go
@@ -164,10 +167,10 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>")
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -201,10 +204,6 @@ func main() {
 * [ListExportHistory](docs/sdks/auditlogs/README.md#listexporthistory) - List all Audit Logs export history
 * [GetExportHistoryByID](docs/sdks/auditlogs/README.md#getexporthistorybyid) - Get details of Audit Logs export history by ID
 * [GetByID](docs/sdks/auditlogs/README.md#getbyid) - Get audit log by ID
-
-### [Auth](docs/sdks/auth/README.md)
-
-* [AuthGetAccessToken](docs/sdks/auth/README.md#authgetaccesstoken) - Get Access Token
 
 ### [CommunicationCards](docs/sdks/communicationcards/README.md)
 
@@ -653,7 +652,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.AuditLogs.List(ctx, operations.AuditLogsListAuditLogsRequest{
@@ -700,14 +699,17 @@ import (
 	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"log"
 	"models/operations"
+	"os"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := squadcastsdk.New()
+	s := squadcastsdk.New(
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
+	)
 
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>", operations.WithRetries(
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
 			Backoff: &retry.BackoffStrategy{
@@ -737,6 +739,7 @@ import (
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/retry"
 	"log"
+	"os"
 )
 
 func main() {
@@ -754,9 +757,10 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>")
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -775,7 +779,7 @@ Handling errors in this SDK should largely match your expectations. All operatio
 
 By Default, an API error will return `apierrors.APIError`. When custom error responses are specified for an operation, the SDK may also return their associated error. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation.
 
-For example, the `AuthGetAccessToken` function may return the following errors:
+For example, the `GetOrganization` function may return the following errors:
 
 | Error Type                         | Status Code | Content Type     |
 | ---------------------------------- | ----------- | ---------------- |
@@ -803,14 +807,17 @@ import (
 	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
 	"github.com/solarwinds/squadcast-sdk-go/models/apierrors"
 	"log"
+	"os"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := squadcastsdk.New()
+	s := squadcastsdk.New(
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
+	)
 
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>")
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 
 		var e *apierrors.BadRequestError
@@ -919,7 +926,7 @@ func main() {
 
 	s := squadcastsdk.New(
 		squadcastsdk.WithServerIndex(0),
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
@@ -951,39 +958,10 @@ func main() {
 
 	s := squadcastsdk.New(
 		squadcastsdk.WithServerURL("https://api.squadcast.com"),
-		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if res.Object != nil {
-		// handle response
-	}
-}
-
-```
-
-### Override Server URL Per-Operation
-
-The server URL can also be overridden on a per-operation basis, provided a server list was specified for the operation. For example:
-```go
-package main
-
-import (
-	"context"
-	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
-	"github.com/solarwinds/squadcast-sdk-go/models/operations"
-	"log"
-)
-
-func main() {
-	ctx := context.Background()
-
-	s := squadcastsdk.New()
-
-	res, err := s.Auth.AuthGetAccessToken(ctx, "<value>", operations.WithServerURL("https://auth.eu.squadcast.com"))
 	if err != nil {
 		log.Fatal(err)
 	}

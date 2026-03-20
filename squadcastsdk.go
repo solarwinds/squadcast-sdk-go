@@ -106,7 +106,6 @@ func Pointer[T any](v T) *T { return &v }
 // The access token authorizes users the ability to access different APIs, based on the user roles described above. Pass the access token as a Bearer token in the `Authorization` header of every request.
 type SquadcastSDK struct {
 	SDKVersion                    string
-	Auth                          *Auth
 	Analytics                     *Analytics
 	AuditLogs                     *AuditLogs
 	EscalationPolicies            *EscalationPolicies
@@ -182,9 +181,9 @@ func WithClient(client HTTPClient) SDKOption {
 }
 
 // WithSecurity configures the SDK to use the provided security details
-func WithSecurity(bearerAuth string) SDKOption {
+func WithSecurity(refreshTokenAuth string) SDKOption {
 	return func(sdk *SquadcastSDK) {
-		security := components.Security{BearerAuth: &bearerAuth}
+		security := components.Security{RefreshTokenAuth: &refreshTokenAuth}
 		sdk.sdkConfiguration.Security = utils.AsSecuritySource(&security)
 	}
 }
@@ -214,9 +213,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.6.0",
+		SDKVersion: "1.7.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.6.0 2.865.2 1.0.0 github.com/solarwinds/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.7.0 2.865.2 1.0.0 github.com/solarwinds/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -239,7 +238,6 @@ func New(opts ...SDKOption) *SquadcastSDK {
 
 	sdk.sdkConfiguration = sdk.hooks.SDKInit(sdk.sdkConfiguration)
 
-	sdk.Auth = newAuth(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.AuditLogs = newAuditLogs(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.EscalationPolicies = newEscalationPolicies(sdk, sdk.sdkConfiguration, sdk.hooks)

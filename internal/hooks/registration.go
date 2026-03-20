@@ -9,10 +9,7 @@ package hooks
  */
 
 func initHooks(h *Hooks) {
-	// exampleHook := &ExampleHook{}
-
-	// h.registerSDKInitHook(exampleHook)
-	// h.registerBeforeRequestHook(exampleHook)
-	// h.registerAfterErrorHook(exampleHook)
-	// h.registerAfterSuccessHook(exampleHook)
+	// RefreshTokenHook exchanges a refresh token for a bearer token on every
+	// request, caching the result until it expires.
+	h.registerBeforeRequestHook(&AccessTokenHook{})
 }
