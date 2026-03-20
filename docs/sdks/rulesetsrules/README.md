@@ -29,7 +29,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.GlobalEventRules.Rulesets.Rules.Create(ctx, 934313, "<value>", "<value>", components.V3GlobalEventRulesCreateOrUpdateRuleRequest{
@@ -101,7 +101,7 @@ func main() {
     ctx := context.Background()
 
     s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
     res, err := s.GlobalEventRules.Rulesets.Rules.GetByID(ctx, 518804, "<value>", "<value>", "<id>")

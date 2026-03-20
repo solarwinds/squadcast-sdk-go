@@ -11,5 +11,5 @@ package hooks
 func initHooks(h *Hooks) {
 	// RefreshTokenHook exchanges a refresh token for a bearer token on every
 	// request, caching the result until it expires.
-	h.registerBeforeRequestHook(&RefreshTokenHook{})
+	h.registerBeforeRequestHook(&AccessTokenHook{})
 }

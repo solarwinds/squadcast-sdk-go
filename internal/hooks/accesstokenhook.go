@@ -21,13 +21,13 @@ const (
 
 // ── token cache ──────────────────────────────────────────────────────────────
 
-type tokenCache struct {
+type accessTokenCache struct {
 	mu     sync.Mutex
 	token  string
 	expiry time.Time
 }
 
-func (c *tokenCache) get() (string, bool) {
+func (c *accessTokenCache) get() (string, bool) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	if c.token != "" && time.Now().Before(c.expiry) {
@@ -36,7 +36,7 @@ func (c *tokenCache) get() (string, bool) {
 	return "", false
 }
 
-func (c *tokenCache) set(token string, expiry time.Time) {
+func (c *accessTokenCache) set(token string, expiry time.Time) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	c.token = token
@@ -45,18 +45,18 @@ func (c *tokenCache) set(token string, expiry time.Time) {
 
 // ── hook ──────────────────────────────────────────────────────────────────────
 
-// RefreshTokenHook implements BeforeRequestHook.
+// AccessTokenHook implements BeforeRequestHook.
 // It reads the refresh token from the SDK's security source, exchanges it for
 // a bearer token (caching the result), and sets the Authorization header on
 // every outgoing request.
-type RefreshTokenHook struct {
-	cache tokenCache
+type AccessTokenHook struct {
+	cache accessTokenCache
 }
 
 // compile-time assertion
-var _ beforeRequestHook = (*RefreshTokenHook)(nil)
+var _ beforeRequestHook = (*AccessTokenHook)(nil)
 
-func (h *RefreshTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http.Request) (*http.Request, error) {
+func (h *AccessTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http.Request) (*http.Request, error) {
 	if hookCtx.SecuritySource == nil {
 		return req, nil
 	}
@@ -96,7 +96,7 @@ func (h *RefreshTokenHook) BeforeRequest(hookCtx BeforeRequestContext, req *http
 	}
 
 	// Cache miss — fetch a fresh bearer token.
-	token, expiry, err := fetchBearerToken(refreshURL, sec.RefreshToken)
+	token, expiry, err := fetchAccessToken(refreshURL, sec.RefreshToken)
 	if err != nil {
 		return nil, err
 	}
@@ -155,16 +155,16 @@ func authHostForAPIHost(apiHost string) string {
 
 // ── token fetch ───────────────────────────────────────────────────────────────
 
-type refreshTokenResponse struct {
+type accessTokenResponse struct {
 	Data struct {
 		AccessToken string `json:"access_token"`
 		ExpiresAt   int64  `json:"expires_at"`
 	} `json:"data"`
 }
 
-// fetchBearerToken calls the Squadcast auth endpoint and returns the bearer
+// fetchAccessToken calls the Squadcast auth endpoint and returns the bearer
 // token together with its expiry time.
-func fetchBearerToken(refreshURL, refreshToken string) (string, time.Time, error) {
+func fetchAccessToken(refreshURL, refreshToken string) (string, time.Time, error) {
 	req, err := http.NewRequest(http.MethodGet, refreshURL, nil)
 	if err != nil {
 		return "", time.Time{}, fmt.Errorf("squadcastsdk: build refresh request: %w", err)
@@ -182,7 +182,7 @@ func fetchBearerToken(refreshURL, refreshToken string) (string, time.Time, error
 		return "", time.Time{}, fmt.Errorf("squadcastsdk: unexpected status %d from token endpoint", resp.StatusCode)
 	}
 
-	var tr refreshTokenResponse
+	var tr accessTokenResponse
 	if err := json.NewDecoder(resp.Body).Decode(&tr); err != nil {
 		return "", time.Time{}, fmt.Errorf("squadcastsdk: decode token response: %w", err)
 	}
