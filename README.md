@@ -2,29 +2,11 @@
 
 Developer-friendly & type-safe Go SDK specifically catered to leverage *Squadcast* API.
 
-<div align="left" style="margin-bottom: 0;">
-    <a href="https://www.speakeasy.com/?utm_source=squadcastsdk&utm_campaign=go" class="badge-link">
-        <span class="badge-container">
-            <span class="badge-icon-section">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30 30" fill="none" style="vertical-align: middle;"><title>Speakeasy Logo</title><path fill="currentColor" d="m20.639 27.548-19.17-2.724L0 26.1l20.639 2.931 8.456-7.336-1.468-.208-6.988 6.062Z"></path><path fill="currentColor" d="m20.639 23.1 8.456-7.336-1.468-.207-6.988 6.06-6.84-.972-9.394-1.333-2.936-.417L0 20.169l2.937.416L0 23.132l20.639 2.931 8.456-7.334-1.468-.208-6.986 6.062-9.78-1.39 1.468-1.273 8.31 1.18Z"></path><path fill="currentColor" d="m20.639 18.65-19.17-2.724L0 17.201l20.639 2.931 8.456-7.334-1.468-.208-6.988 6.06Z"></path><path fill="currentColor" d="M27.627 6.658 24.69 9.205 20.64 12.72l-7.923-1.126L1.469 9.996 0 11.271l11.246 1.596-1.467 1.275-8.311-1.181L0 14.235l20.639 2.932 8.456-7.334-2.937-.418 2.937-2.549-1.468-.208Z"></path><path fill="currentColor" d="M29.095 3.902 8.456.971 0 8.305l20.639 2.934 8.456-7.337Z"></path></svg>
-            </span>
-            <span class="badge-text badge-text-section">BUILT BY SPEAKEASY</span>
-        </span>
-    </a>
-    <a href="https://opensource.org/licenses/MIT" class="badge-link">
-        <span class="badge-container blue">
-            <span class="badge-text badge-text-section">LICENSE // MIT</span>
-        </span>
-    </a>
-</div>
+[![Built by Speakeasy](https://img.shields.io/badge/Built_by-SPEAKEASY-374151?style=for-the-badge&labelColor=f3f4f6)](https://www.speakeasy.com/?utm_source=squadcast-sdk&utm_campaign=python)
+[![License: MIT](https://img.shields.io/badge/LICENSE_//_MIT-3b5bdb?style=for-the-badge&labelColor=eff6ff)](https://opensource.org/licenses/MIT)
+<br />
 
-
-<br /><br />
-
-<!-- Start Summary [summary] -->
-## Summary
-
-Squadcast: ## Overview
+##Overview
 The Squadcast API provides developers the capability to extend and utilize Squadcast in conjunction with other services. Our API has resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
 > **Note:** Customers using the V2 version of the Squadcast API would need to migrate to Squadcast API V3, as the former would be deprecated shortly.
