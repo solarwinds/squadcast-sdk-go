@@ -3,51 +3,23 @@
 package components
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/solarwinds/squadcast-sdk-go/internal/utils"
 	"time"
 )
 
-type V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType string
-
-const (
-	V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateTypeMessage     V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType = "message"
-	V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateTypeDescription V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType = "description"
-)
-
-func (e V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType) ToPointer() *V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType {
-	return &e
-}
-func (e *V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "message":
-		fallthrough
-	case "description":
-		*e = V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType: %v", v)
-	}
-}
-
 type V3ServicesOverlayCustomContentOverlayResponse struct {
-	CreatedAt            time.Time                                                        `json:"created_at"`
-	UpdatedAt            time.Time                                                        `json:"updated_at"`
-	DeletedAt            *time.Time                                                       `json:"deleted_at"`
-	OrgID                string                                                           `json:"org_id"`
-	ServiceID            string                                                           `json:"service_id"`
-	AlertSourceVersion   string                                                           `json:"alert_source_version"`
-	AlertSourceShortname string                                                           `json:"alert_source_shortname"`
-	OverlayTemplateType  V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType `json:"overlay_template_type"`
-	Overlay              V3ServicesOverlayCustomContent                                   `json:"overlay"`
-	CreatedBy            string                                                           `json:"created_by"`
-	UpdatedBy            string                                                           `json:"updated_by"`
-	AlertSourceType      string                                                           `json:"alert_source_type"`
+	CreatedAt            time.Time                      `json:"created_at"`
+	UpdatedAt            time.Time                      `json:"updated_at"`
+	DeletedAt            *time.Time                     `json:"deleted_at"`
+	OrgID                string                         `json:"org_id"`
+	ServiceID            string                         `json:"service_id"`
+	AlertSourceVersion   string                         `json:"alert_source_version"`
+	AlertSourceShortname string                         `json:"alert_source_shortname"`
+	OverlayTemplateType  string                         `json:"overlay_template_type"`
+	Overlay              V3ServicesOverlayCustomContent `json:"overlay"`
+	CreatedBy            string                         `json:"created_by"`
+	UpdatedBy            string                         `json:"updated_by"`
+	AlertSourceType      string                         `json:"alert_source_type"`
 }
 
 func (v V3ServicesOverlayCustomContentOverlayResponse) MarshalJSON() ([]byte, error) {
@@ -110,9 +82,9 @@ func (v *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceShortname(
 	return v.AlertSourceShortname
 }
 
-func (v *V3ServicesOverlayCustomContentOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetOverlayTemplateType() string {
 	if v == nil {
-		return V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType("")
+		return ""
 	}
 	return v.OverlayTemplateType
 }

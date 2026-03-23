@@ -60,7 +60,7 @@ func (o *OverridesListOverridesRequest) GetCursor() *string {
 // OverridesListOverridesResponseBody - The request has succeeded.
 type OverridesListOverridesResponseBody struct {
 	Data     []components.V4OverrideResponse `json:"data"`
-	PageInfo components.CommonV4PageInfo     `json:"pageInfo"`
+	PageInfo *components.CommonV4PageInfo    `json:"pageInfo,omitempty"`
 }
 
 func (o *OverridesListOverridesResponseBody) GetData() []components.V4OverrideResponse {
@@ -70,9 +70,9 @@ func (o *OverridesListOverridesResponseBody) GetData() []components.V4OverrideRe
 	return o.Data
 }
 
-func (o *OverridesListOverridesResponseBody) GetPageInfo() components.CommonV4PageInfo {
+func (o *OverridesListOverridesResponseBody) GetPageInfo() *components.CommonV4PageInfo {
 	if o == nil {
-		return components.CommonV4PageInfo{}
+		return nil
 	}
 	return o.PageInfo
 }

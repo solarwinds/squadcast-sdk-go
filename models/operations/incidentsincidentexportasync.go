@@ -6,29 +6,16 @@ import (
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 )
 
-// IncidentsIncidentExportAsyncBody - The body type of the operation request or response.
-type IncidentsIncidentExportAsyncBody struct {
+// IncidentsIncidentExportAsyncResponseBody - The request has been accepted for processing, but processing has not yet completed.
+type IncidentsIncidentExportAsyncResponseBody struct {
 	Data components.V3IncidentsIncidentExportAsyncResponse
 }
 
-func (i *IncidentsIncidentExportAsyncBody) GetData() components.V3IncidentsIncidentExportAsyncResponse {
+func (i *IncidentsIncidentExportAsyncResponseBody) GetData() components.V3IncidentsIncidentExportAsyncResponse {
 	if i == nil {
 		return components.V3IncidentsIncidentExportAsyncResponse{}
 	}
 	return i.Data
-}
-
-// IncidentsIncidentExportAsyncResponseBody - The request has been accepted for processing, but processing has not yet completed.
-type IncidentsIncidentExportAsyncResponseBody struct {
-	// The body type of the operation request or response.
-	Body IncidentsIncidentExportAsyncBody
-}
-
-func (i *IncidentsIncidentExportAsyncResponseBody) GetBody() IncidentsIncidentExportAsyncBody {
-	if i == nil {
-		return IncidentsIncidentExportAsyncBody{}
-	}
-	return i.Body
 }
 
 type IncidentsIncidentExportAsyncResponse struct {

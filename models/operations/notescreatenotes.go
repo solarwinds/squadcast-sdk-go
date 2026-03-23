@@ -26,29 +26,16 @@ func (n *NotesCreateNotesRequest) GetV3IncidentsNotesCreateNoteRequest() compone
 	return n.V3IncidentsNotesCreateNoteRequest
 }
 
-// NotesCreateNotesBody - The body type of the operation request or response.
-type NotesCreateNotesBody struct {
+// NotesCreateNotesResponseBody - The request has succeeded and a new resource has been created as a result.
+type NotesCreateNotesResponseBody struct {
 	Data components.V3IncidentsNotesNoteResponse `json:"data"`
 }
 
-func (n *NotesCreateNotesBody) GetData() components.V3IncidentsNotesNoteResponse {
+func (n *NotesCreateNotesResponseBody) GetData() components.V3IncidentsNotesNoteResponse {
 	if n == nil {
 		return components.V3IncidentsNotesNoteResponse{}
 	}
 	return n.Data
-}
-
-// NotesCreateNotesResponseBody - The request has succeeded and a new resource has been created as a result.
-type NotesCreateNotesResponseBody struct {
-	// The body type of the operation request or response.
-	Body NotesCreateNotesBody `json:"body"`
-}
-
-func (n *NotesCreateNotesResponseBody) GetBody() NotesCreateNotesBody {
-	if n == nil {
-		return NotesCreateNotesBody{}
-	}
-	return n.Body
 }
 
 type NotesCreateNotesResponse struct {

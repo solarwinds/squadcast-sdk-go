@@ -906,8 +906,8 @@ You can override the default server globally using the `WithServerIndex(serverIn
 
 | #   | Server                         | Description       |
 | --- | ------------------------------ | ----------------- |
-| 0   | `https://api.eu.squadcast.com` | production EU env |
-| 1   | `https://api.squadcast.com`    | production US env |
+| 0   | `https://api.squadcast.com`    | production US env |
+| 1   | `https://api.eu.squadcast.com` | production EU env |
 
 #### Example
 
@@ -957,7 +957,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithServerURL("https://api.squadcast.com"),
+		squadcastsdk.WithServerURL("https://api.eu.squadcast.com"),
 		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
 	)
 
