@@ -116,7 +116,7 @@ func (s *SchedulesListSchedulesRequest) GetCursor() *string {
 // SchedulesListSchedulesResponseBody - The request has succeeded.
 type SchedulesListSchedulesResponseBody struct {
 	Data     []components.V4ScheduleResponse `json:"data"`
-	PageInfo components.CommonV4PageInfo     `json:"pageInfo"`
+	PageInfo *components.CommonV4PageInfo    `json:"pageInfo,omitempty"`
 }
 
 func (s *SchedulesListSchedulesResponseBody) GetData() []components.V4ScheduleResponse {
@@ -126,9 +126,9 @@ func (s *SchedulesListSchedulesResponseBody) GetData() []components.V4ScheduleRe
 	return s.Data
 }
 
-func (s *SchedulesListSchedulesResponseBody) GetPageInfo() components.CommonV4PageInfo {
+func (s *SchedulesListSchedulesResponseBody) GetPageInfo() *components.CommonV4PageInfo {
 	if s == nil {
-		return components.CommonV4PageInfo{}
+		return nil
 	}
 	return s.PageInfo
 }

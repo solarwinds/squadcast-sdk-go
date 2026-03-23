@@ -3,11 +3,11 @@
 package components
 
 type CommonV4PageInfo struct {
-	PageSize       int     `json:"pageSize"`
-	HasNext        bool    `json:"hasNext"`
-	HasPrevious    bool    `json:"hasPrevious"`
-	NextCursor     *string `json:"nextCursor,omitempty"`
-	PreviousCursor *string `json:"previousCursor,omitempty"`
+	PageSize   int     `json:"pageSize"`
+	HasNext    bool    `json:"hasNext"`
+	HasPrev    bool    `json:"hasPrev"`
+	NextCursor *string `json:"nextCursor,omitempty"`
+	PrevCursor *string `json:"prevCursor,omitempty"`
 }
 
 func (c *CommonV4PageInfo) GetPageSize() int {
@@ -24,11 +24,11 @@ func (c *CommonV4PageInfo) GetHasNext() bool {
 	return c.HasNext
 }
 
-func (c *CommonV4PageInfo) GetHasPrevious() bool {
+func (c *CommonV4PageInfo) GetHasPrev() bool {
 	if c == nil {
 		return false
 	}
-	return c.HasPrevious
+	return c.HasPrev
 }
 
 func (c *CommonV4PageInfo) GetNextCursor() *string {
@@ -38,11 +38,11 @@ func (c *CommonV4PageInfo) GetNextCursor() *string {
 	return c.NextCursor
 }
 
-func (c *CommonV4PageInfo) GetPreviousCursor() *string {
+func (c *CommonV4PageInfo) GetPrevCursor() *string {
 	if c == nil {
 		return nil
 	}
-	return c.PreviousCursor
+	return c.PrevCursor
 }
 
 // #region class-body-commonv4pageinfo

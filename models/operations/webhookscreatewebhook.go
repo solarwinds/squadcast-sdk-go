@@ -6,29 +6,16 @@ import (
 	"github.com/solarwinds/squadcast-sdk-go/models/components"
 )
 
-// WebhooksCreateWebhookBody - The body type of the operation request or response.
-type WebhooksCreateWebhookBody struct {
+// WebhooksCreateWebhookResponseBody - The request has succeeded and a new resource has been created as a result.
+type WebhooksCreateWebhookResponseBody struct {
 	Data components.V3ExtensionsWebhooksWebhookResponse `json:"data"`
 }
 
-func (w *WebhooksCreateWebhookBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
+func (w *WebhooksCreateWebhookResponseBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
 	if w == nil {
 		return components.V3ExtensionsWebhooksWebhookResponse{}
 	}
 	return w.Data
-}
-
-// WebhooksCreateWebhookResponseBody - The request has succeeded and a new resource has been created as a result.
-type WebhooksCreateWebhookResponseBody struct {
-	// The body type of the operation request or response.
-	Body WebhooksCreateWebhookBody `json:"body"`
-}
-
-func (w *WebhooksCreateWebhookResponseBody) GetBody() WebhooksCreateWebhookBody {
-	if w == nil {
-		return WebhooksCreateWebhookBody{}
-	}
-	return w.Body
 }
 
 type WebhooksCreateWebhookResponse struct {

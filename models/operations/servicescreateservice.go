@@ -25,29 +25,16 @@ func (s *ServicesCreateServiceRequest) GetV3ServicesCreateServiceRequest() compo
 	return s.V3ServicesCreateServiceRequest
 }
 
-// ServicesCreateServiceBody - The body type of the operation request or response.
-type ServicesCreateServiceBody struct {
+// ServicesCreateServiceResponseBody - The request has succeeded and a new resource has been created as a result.
+type ServicesCreateServiceResponseBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (s *ServicesCreateServiceBody) GetData() components.V3ServicesServiceResponse {
+func (s *ServicesCreateServiceResponseBody) GetData() components.V3ServicesServiceResponse {
 	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
 	return s.Data
-}
-
-// ServicesCreateServiceResponseBody - The request has succeeded and a new resource has been created as a result.
-type ServicesCreateServiceResponseBody struct {
-	// The body type of the operation request or response.
-	Body ServicesCreateServiceBody `json:"body"`
-}
-
-func (s *ServicesCreateServiceResponseBody) GetBody() ServicesCreateServiceBody {
-	if s == nil {
-		return ServicesCreateServiceBody{}
-	}
-	return s.Body
 }
 
 type ServicesCreateServiceResponse struct {

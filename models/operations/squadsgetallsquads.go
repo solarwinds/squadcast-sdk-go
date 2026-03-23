@@ -20,7 +20,7 @@ func (s *SquadsGetAllSquadsRequest) GetOwnerID() string {
 // SquadsGetAllSquadsResponseBody - The request has succeeded.
 type SquadsGetAllSquadsResponseBody struct {
 	Data     []components.V4SquadsSquadResponse `json:"data"`
-	PageInfo components.CommonV4PageInfo        `json:"pageInfo"`
+	PageInfo *components.CommonV4PageInfo       `json:"pageInfo,omitempty"`
 }
 
 func (s *SquadsGetAllSquadsResponseBody) GetData() []components.V4SquadsSquadResponse {
@@ -30,9 +30,9 @@ func (s *SquadsGetAllSquadsResponseBody) GetData() []components.V4SquadsSquadRes
 	return s.Data
 }
 
-func (s *SquadsGetAllSquadsResponseBody) GetPageInfo() components.CommonV4PageInfo {
+func (s *SquadsGetAllSquadsResponseBody) GetPageInfo() *components.CommonV4PageInfo {
 	if s == nil {
-		return components.CommonV4PageInfo{}
+		return nil
 	}
 	return s.PageInfo
 }

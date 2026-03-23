@@ -25,29 +25,16 @@ func (p *PostmortemsCreatePostmortemRequest) GetV3IncidentsPostmortemsCreatePost
 	return p.V3IncidentsPostmortemsCreatePostmortemRequest
 }
 
-// PostmortemsCreatePostmortemBody - The body type of the operation request or response.
-type PostmortemsCreatePostmortemBody struct {
+// PostmortemsCreatePostmortemResponseBody - The request has succeeded and a new resource has been created as a result.
+type PostmortemsCreatePostmortemResponseBody struct {
 	Data components.V3IncidentsPostmortemsPostmortemResponse `json:"data"`
 }
 
-func (p *PostmortemsCreatePostmortemBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
+func (p *PostmortemsCreatePostmortemResponseBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
 	if p == nil {
 		return components.V3IncidentsPostmortemsPostmortemResponse{}
 	}
 	return p.Data
-}
-
-// PostmortemsCreatePostmortemResponseBody - The request has succeeded and a new resource has been created as a result.
-type PostmortemsCreatePostmortemResponseBody struct {
-	// The body type of the operation request or response.
-	Body PostmortemsCreatePostmortemBody `json:"body"`
-}
-
-func (p *PostmortemsCreatePostmortemResponseBody) GetBody() PostmortemsCreatePostmortemBody {
-	if p == nil {
-		return PostmortemsCreatePostmortemBody{}
-	}
-	return p.Body
 }
 
 type PostmortemsCreatePostmortemResponse struct {

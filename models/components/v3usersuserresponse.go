@@ -99,7 +99,7 @@ func (v *V3UsersUserResponse) GetBio() string {
 
 func (v *V3UsersUserResponse) GetNotificationRules() []V3UsersNotificationRule {
 	if v == nil {
-		return []V3UsersNotificationRule{}
+		return nil
 	}
 	return v.NotificationRules
 }

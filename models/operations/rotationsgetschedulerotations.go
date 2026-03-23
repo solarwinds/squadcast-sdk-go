@@ -24,7 +24,7 @@ type RotationsGetScheduleRotationsResponseBody struct {
 
 func (r *RotationsGetScheduleRotationsResponseBody) GetData() []components.V4RotationResponse {
 	if r == nil {
-		return []components.V4RotationResponse{}
+		return nil
 	}
 	return r.Data
 }

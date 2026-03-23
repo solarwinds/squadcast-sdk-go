@@ -9,42 +9,42 @@ import (
 	"time"
 )
 
-type V3ServicesOverlayOverlayResponseOverlayTemplateType string
+type OverlayTemplateType string
 
 const (
-	V3ServicesOverlayOverlayResponseOverlayTemplateTypeDedupKey V3ServicesOverlayOverlayResponseOverlayTemplateType = "dedup_key"
+	OverlayTemplateTypeDedupKey OverlayTemplateType = "dedup_key"
 )
 
-func (e V3ServicesOverlayOverlayResponseOverlayTemplateType) ToPointer() *V3ServicesOverlayOverlayResponseOverlayTemplateType {
+func (e OverlayTemplateType) ToPointer() *OverlayTemplateType {
 	return &e
 }
-func (e *V3ServicesOverlayOverlayResponseOverlayTemplateType) UnmarshalJSON(data []byte) error {
+func (e *OverlayTemplateType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
 	switch v {
 	case "dedup_key":
-		*e = V3ServicesOverlayOverlayResponseOverlayTemplateType(v)
+		*e = OverlayTemplateType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for V3ServicesOverlayOverlayResponseOverlayTemplateType: %v", v)
+		return fmt.Errorf("invalid value for OverlayTemplateType: %v", v)
 	}
 }
 
 type V3ServicesOverlayOverlayResponse struct {
-	CreatedAt            time.Time                                           `json:"created_at"`
-	UpdatedAt            time.Time                                           `json:"updated_at"`
-	DeletedAt            *time.Time                                          `json:"deleted_at"`
-	OrgID                string                                              `json:"org_id"`
-	ServiceID            string                                              `json:"service_id"`
-	AlertSourceVersion   string                                              `json:"alert_source_version"`
-	AlertSourceShortname string                                              `json:"alert_source_shortname"`
-	OverlayTemplateType  V3ServicesOverlayOverlayResponseOverlayTemplateType `json:"overlay_template_type"`
-	Overlay              V3ServicesOverlayDedupKeyOverlay                    `json:"overlay"`
-	CreatedBy            string                                              `json:"created_by"`
-	UpdatedBy            string                                              `json:"updated_by"`
-	AlertSourceType      string                                              `json:"alert_source_type"`
+	CreatedAt            time.Time                        `json:"created_at"`
+	UpdatedAt            time.Time                        `json:"updated_at"`
+	DeletedAt            *time.Time                       `json:"deleted_at"`
+	OrgID                string                           `json:"org_id"`
+	ServiceID            string                           `json:"service_id"`
+	AlertSourceVersion   string                           `json:"alert_source_version"`
+	AlertSourceShortname string                           `json:"alert_source_shortname"`
+	OverlayTemplateType  OverlayTemplateType              `json:"overlay_template_type"`
+	Overlay              V3ServicesOverlayDedupKeyOverlay `json:"overlay"`
+	CreatedBy            string                           `json:"created_by"`
+	UpdatedBy            string                           `json:"updated_by"`
+	AlertSourceType      string                           `json:"alert_source_type"`
 }
 
 func (v V3ServicesOverlayOverlayResponse) MarshalJSON() ([]byte, error) {
@@ -107,9 +107,9 @@ func (v *V3ServicesOverlayOverlayResponse) GetAlertSourceShortname() string {
 	return v.AlertSourceShortname
 }
 
-func (v *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayOverlayResponseOverlayTemplateType {
+func (v *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() OverlayTemplateType {
 	if v == nil {
-		return V3ServicesOverlayOverlayResponseOverlayTemplateType("")
+		return OverlayTemplateType("")
 	}
 	return v.OverlayTemplateType
 }
