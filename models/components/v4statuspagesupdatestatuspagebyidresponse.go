@@ -32,7 +32,7 @@ type V4StatusPagesUpdateStatusPageByIDResponse struct {
 	Timezone                     string                                              `json:"timezone"`
 	Description                  *string                                             `json:"description,omitempty"`
 	DomainName                   string                                              `json:"domainName"`
-	CustomDomainName             string                                              `json:"customDomainName"`
+	CustomDomainName             *string                                             `json:"customDomainName,omitempty"`
 	ContactEmail                 string                                              `json:"contactEmail"`
 	ThemeColor                   V4StatusPagesUpdateStatusPageByIDResponseThemeColor `json:"themeColor"`
 	AllowComponentsSubscription  bool                                                `json:"allowComponentsSubscription"`
@@ -93,9 +93,9 @@ func (v *V4StatusPagesUpdateStatusPageByIDResponse) GetDomainName() string {
 	return v.DomainName
 }
 
-func (v *V4StatusPagesUpdateStatusPageByIDResponse) GetCustomDomainName() string {
+func (v *V4StatusPagesUpdateStatusPageByIDResponse) GetCustomDomainName() *string {
 	if v == nil {
-		return ""
+		return nil
 	}
 	return v.CustomDomainName
 }

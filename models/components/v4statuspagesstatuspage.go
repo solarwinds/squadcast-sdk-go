@@ -102,7 +102,7 @@ type V4StatusPagesStatusPage struct {
 	Name                    string                             `json:"name"`
 	IsPublic                bool                               `json:"isPublic"`
 	DomainName              string                             `json:"domainName"`
-	CustomDomainName        string                             `json:"customDomainName"`
+	CustomDomainName        *string                            `json:"customDomainName,omitempty"`
 	Timezone                string                             `json:"timezone"`
 	LogoURL                 string                             `json:"logoUrl"`
 	Components              []V4StatusPagesStatusPageComponent `json:"components"`
@@ -147,9 +147,9 @@ func (v *V4StatusPagesStatusPage) GetDomainName() string {
 	return v.DomainName
 }
 
-func (v *V4StatusPagesStatusPage) GetCustomDomainName() string {
+func (v *V4StatusPagesStatusPage) GetCustomDomainName() *string {
 	if v == nil {
-		return ""
+		return nil
 	}
 	return v.CustomDomainName
 }
