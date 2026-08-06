@@ -12,7 +12,7 @@ type V3TeamsTeamBaseResponse struct {
 	Description    string              `json:"description"`
 	Slug           string              `json:"slug"`
 	Members        []V3TeamsTeamMember `json:"members"`
-	Roles          []V3TeamsTeamRole   `json:"roles"`
+	Roles          []V3TeamsTeamRole   `json:"roles,omitempty"`
 	Default        bool                `json:"default"`
 }
 
@@ -81,7 +81,7 @@ func (v *V3TeamsTeamBaseResponse) GetMembers() []V3TeamsTeamMember {
 
 func (v *V3TeamsTeamBaseResponse) GetRoles() []V3TeamsTeamRole {
 	if v == nil {
-		return []V3TeamsTeamRole{}
+		return nil
 	}
 	return v.Roles
 }

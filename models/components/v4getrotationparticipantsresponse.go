@@ -3,8 +3,8 @@
 package components
 
 type V4GetRotationParticipantsResponse struct {
-	RotationID   int64                `json:"rotationID"`
-	Participants []V4ParticipantGroup `json:"participants"`
+	RotationID        int64                `json:"rotationID"`
+	ParticipantGroups []V4ParticipantGroup `json:"participantGroups"`
 }
 
 func (v *V4GetRotationParticipantsResponse) GetRotationID() int64 {
@@ -14,11 +14,11 @@ func (v *V4GetRotationParticipantsResponse) GetRotationID() int64 {
 	return v.RotationID
 }
 
-func (v *V4GetRotationParticipantsResponse) GetParticipants() []V4ParticipantGroup {
+func (v *V4GetRotationParticipantsResponse) GetParticipantGroups() []V4ParticipantGroup {
 	if v == nil {
 		return []V4ParticipantGroup{}
 	}
-	return v.Participants
+	return v.ParticipantGroups
 }
 
 // #region class-body-v4getrotationparticipantsresponse

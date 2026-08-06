@@ -113,6 +113,7 @@ func main() {
 
     res, err := s.Services.Create(ctx, "<id>", components.V3ServicesCreateServiceRequest{
         Name: "<value>",
+        OwnerID: "<id>",
         EscalationPolicyID: "<id>",
     })
     if err != nil {

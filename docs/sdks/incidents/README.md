@@ -7,6 +7,7 @@
 * [BulkAcknowledge](#bulkacknowledge) - Bulk Acknowledge Incidents
 * [Export](#export) - Incident Export
 * [ExportAsync](#exportasync) - Incident Export Async
+* [Merge](#merge) - Merge Incidents
 * [BulkUpdatePriority](#bulkupdatepriority) - Bulk Incidents Priority Update
 * [BulkResolve](#bulkresolve) - Bulk Resolve Incidents
 * [GetByID](#getbyid) - Get Incident by ID
@@ -15,6 +16,7 @@
 * [UpdatePriority](#updatepriority) - Incident Priority Update
 * [Reassign](#reassign) - Reassign Incident
 * [Resolve](#resolve) - Resolve Incident
+* [Unmerge](#unmerge) - Unmerge Incident
 * [GetStatusByRequestIds](#getstatusbyrequestids) - Get Incidents Status By RequestIDs
 * [GetAllPostmortems](#getallpostmortems) - Get All Postmortems
 * [MarkAsTransient](#markastransient) - Mark as Transient
@@ -284,6 +286,92 @@ func main() {
 ### Response
 
 **[*operations.IncidentsIncidentExportAsyncResponse](../../models/operations/incidentsincidentexportasyncresponse.md), error**
+
+### Errors
+
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
+
+## Merge
+
+- This endpoint merges incidents under an existing parent incident or a newly created parent incident. A parent can have at most 100 child incidents in total.
+- All selected child incidents must belong to the team specified by `owner_id` and must not be suppressed, already merged as a child, or a parent with child incidents.
+- An existing parent incident must belong to the same team and must not be suppressed or already merged as a child.
+- When using an existing parent, the parent and child incidents must all be resolved or all be open (`triggered` or `acknowledged`).
+- When creating a new parent, provide at least two open child incidents and the `new_incident` details instead of `parent_incident_id`.
+- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Incidents_mergeIncidents" method="post" path="/v3/incidents/merge" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+	"github.com/solarwinds/squadcast-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
+    )
+
+    res, err := s.Incidents.Merge(ctx, operations.CreateIncidentsMergeIncidentsRequestV3IncidentsMergeIntoNewParentRequest(
+        components.V3IncidentsMergeIntoNewParentRequest{
+            OwnerID: "<id>",
+            Children: []string{
+                "<value 1>",
+                "<value 2>",
+            },
+            NewIncident: components.V3IncidentsMergeNewParentIncidentRequest{
+                Message: "<value>",
+                Assignee: components.V3IncidentsAssignee{
+                    ID: "<id>",
+                    Type: components.V3IncidentsAssigneeTypeEscalationpolicy,
+                },
+                ServiceID: "<id>",
+            },
+        },
+    ))
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.IncidentsMergeIncidentsRequest](../../models/operations/incidentsmergeincidentsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../models/operations/option.md)                                               | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.IncidentsMergeIncidentsResponse](../../models/operations/incidentsmergeincidentsresponse.md), error**
 
 ### Errors
 
@@ -729,9 +817,9 @@ func main() {
     )
 
     res, err := s.Incidents.Reassign(ctx, "<id>", components.V3IncidentsReassignIncidentRequest{
-        ReassignTo: components.ReassignTo{
+        ReassignTo: components.V3IncidentsAssignee{
             ID: "<id>",
-            Type: "<value>",
+            Type: components.V3IncidentsAssigneeTypeEscalationpolicy,
         },
     })
     if err != nil {
@@ -828,6 +916,78 @@ func main() {
 ### Response
 
 **[*operations.IncidentsResolveIncidentResponse](../../models/operations/incidentsresolveincidentresponse.md), error**
+
+### Errors
+
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
+
+## Unmerge
+
+- This endpoint unmerges a child incident from its parent incident.
+- The incident must currently be a child of a parent incident, and the parent incident must not be resolved or suppressed.
+- `send_notification`: if `true`, sends notifications for the unmerged incident.
+- `assign_me`: if `true`, assigns the unmerged incident to the requesting user. If `false`, the incident keeps its last assignee, provided that assignee still exists; otherwise the request fails and `assign_me` must be set to `true`.
+- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Incidents_unmergeIncident" method="put" path="/v3/incidents/{incidentID}/unmerge" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/solarwinds/squadcast-sdk-go"
+	"github.com/solarwinds/squadcast-sdk-go/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
+    )
+
+    res, err := s.Incidents.Unmerge(ctx, "<id>", components.V3IncidentsUnmergeIncidentRequest{
+        SendNotification: false,
+        AssignMe: true,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `incidentID`                                                                                                 | `string`                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `v3IncidentsUnmergeIncidentRequest`                                                                          | [components.V3IncidentsUnmergeIncidentRequest](../../models/components/v3incidentsunmergeincidentrequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `opts`                                                                                                       | [][operations.Option](../../models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.IncidentsUnmergeIncidentResponse](../../models/operations/incidentsunmergeincidentresponse.md), error**
 
 ### Errors
 

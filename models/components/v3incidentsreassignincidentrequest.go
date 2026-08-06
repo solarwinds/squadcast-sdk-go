@@ -2,33 +2,15 @@
 
 package components
 
-type ReassignTo struct {
-	ID   string `json:"id"`
-	Type string `json:"type"`
-}
-
-func (r *ReassignTo) GetID() string {
-	if r == nil {
-		return ""
-	}
-	return r.ID
-}
-
-func (r *ReassignTo) GetType() string {
-	if r == nil {
-		return ""
-	}
-	return r.Type
-}
-
 // V3IncidentsReassignIncidentRequest - Request body for reassigning an incident.
 type V3IncidentsReassignIncidentRequest struct {
-	ReassignTo ReassignTo `json:"reassignTo"`
+	// Assignment target for an incident.
+	ReassignTo V3IncidentsAssignee `json:"reassignTo"`
 }
 
-func (v *V3IncidentsReassignIncidentRequest) GetReassignTo() ReassignTo {
+func (v *V3IncidentsReassignIncidentRequest) GetReassignTo() V3IncidentsAssignee {
 	if v == nil {
-		return ReassignTo{}
+		return V3IncidentsAssignee{}
 	}
 	return v.ReassignTo
 }

@@ -2314,3 +2314,31 @@ actions:
       created_at: 1762928091758
       reviewed_at: 1762928127509
       type: method-name
+  - target: $["paths"]["/v3/incidents/{incidentID}/unmerge"]["put"]
+    update:
+      x-speakeasy-name-override: unmerge
+    x-speakeasy-metadata:
+      after: sdk.incidents.unmerge()
+      before: sdk.Incidents.Incidents_unmergeIncident()
+      created_at: 1785993166668
+      reviewed_at: 1785993186209
+      type: method-name
+  - target: $["paths"]["/v4/statuspages/{statuspageID}/subscribers/{subscriberID}"]["delete"]
+    update:
+      x-speakeasy-group: statusPages.subscribers
+      x-speakeasy-name-override: deleteById
+    x-speakeasy-metadata:
+      after: sdk.statusPages.subscribers.deleteById()
+      before: sdk.Status Pages/Subscribers.StatusPages_deleteSubscriberById()
+      created_at: 1785993166668
+      reviewed_at: 1785993186209
+      type: method-name
+  - target: $["paths"]["/v3/incidents/merge"]["post"]
+    update:
+      x-speakeasy-name-override: merge
+    x-speakeasy-metadata:
+      after: sdk.incidents.merge()
+      before: sdk.Incidents.Incidents_mergeIncidents()
+      created_at: 1785993166668
+      reviewed_at: 1785993186209
+      type: method-name
