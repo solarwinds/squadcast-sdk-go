@@ -3,7 +3,9 @@
 package components
 
 type V3ServicesCreateServiceRequest struct {
-	Name                            string                                    `json:"name"`
+	Name string `json:"name"`
+	// The owner_id is required for POST operations
+	OwnerID                         string                                    `json:"owner_id"`
 	EscalationPolicyID              string                                    `json:"escalation_policy_id"`
 	Description                     *string                                   `json:"description,omitempty"`
 	EmailPrefix                     *string                                   `json:"email_prefix,omitempty"`
@@ -20,6 +22,13 @@ func (v *V3ServicesCreateServiceRequest) GetName() string {
 		return ""
 	}
 	return v.Name
+}
+
+func (v *V3ServicesCreateServiceRequest) GetOwnerID() string {
+	if v == nil {
+		return ""
+	}
+	return v.OwnerID
 }
 
 func (v *V3ServicesCreateServiceRequest) GetEscalationPolicyID() string {

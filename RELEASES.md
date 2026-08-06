@@ -59,3 +59,13 @@ Based on:
 - [go v1.7.1] .
 ### Releases
 - [Go v1.7.1] https://github.com/solarwinds/squadcast-sdk-go/releases/tag/v1.7.1 - .
+
+## 2026-08-06 05:00:26
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.791.4 (2.926.8) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v1.7.2] .
+### Releases
+- [Go v1.7.2] https://github.com/solarwinds/squadcast-sdk-go/releases/tag/v1.7.2 - .

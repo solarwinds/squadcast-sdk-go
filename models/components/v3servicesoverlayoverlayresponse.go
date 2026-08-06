@@ -3,34 +3,9 @@
 package components
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/solarwinds/squadcast-sdk-go/internal/utils"
 	"time"
 )
-
-type OverlayTemplateType string
-
-const (
-	OverlayTemplateTypeDedupKey OverlayTemplateType = "dedup_key"
-)
-
-func (e OverlayTemplateType) ToPointer() *OverlayTemplateType {
-	return &e
-}
-func (e *OverlayTemplateType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "dedup_key":
-		*e = OverlayTemplateType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for OverlayTemplateType: %v", v)
-	}
-}
 
 type V3ServicesOverlayOverlayResponse struct {
 	CreatedAt            time.Time                        `json:"created_at"`
@@ -40,7 +15,7 @@ type V3ServicesOverlayOverlayResponse struct {
 	ServiceID            string                           `json:"service_id"`
 	AlertSourceVersion   string                           `json:"alert_source_version"`
 	AlertSourceShortname string                           `json:"alert_source_shortname"`
-	OverlayTemplateType  OverlayTemplateType              `json:"overlay_template_type"`
+	OverlayTemplateType  string                           `json:"overlay_template_type"`
 	Overlay              V3ServicesOverlayDedupKeyOverlay `json:"overlay"`
 	CreatedBy            string                           `json:"created_by"`
 	UpdatedBy            string                           `json:"updated_by"`
@@ -107,9 +82,9 @@ func (v *V3ServicesOverlayOverlayResponse) GetAlertSourceShortname() string {
 	return v.AlertSourceShortname
 }
 
-func (v *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() OverlayTemplateType {
+func (v *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() string {
 	if v == nil {
-		return OverlayTemplateType("")
+		return ""
 	}
 	return v.OverlayTemplateType
 }

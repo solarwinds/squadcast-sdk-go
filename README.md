@@ -9,6 +9,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *Incident
 <!-- Start Summary [summary] -->
 ## Summary
 
+Squadcast: ## Overview
 The Squadcast API provides developers the capability to extend and utilize Squadcast in conjunction with other services. Our API has resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
 > **Note:** Customers using the V2 version of the Squadcast API would need to migrate to Squadcast API V3, as the former would be deprecated shortly.
@@ -265,6 +266,7 @@ func main() {
 * [BulkAcknowledge](docs/sdks/incidents/README.md#bulkacknowledge) - Bulk Acknowledge Incidents
 * [Export](docs/sdks/incidents/README.md#export) - Incident Export
 * [ExportAsync](docs/sdks/incidents/README.md#exportasync) - Incident Export Async
+* [IncidentsMergeIncidents](docs/sdks/incidents/README.md#incidentsmergeincidents) - Merge Incidents
 * [BulkUpdatePriority](docs/sdks/incidents/README.md#bulkupdatepriority) - Bulk Incidents Priority Update
 * [BulkResolve](docs/sdks/incidents/README.md#bulkresolve) - Bulk Resolve Incidents
 * [GetByID](docs/sdks/incidents/README.md#getbyid) - Get Incident by ID
@@ -273,6 +275,7 @@ func main() {
 * [UpdatePriority](docs/sdks/incidents/README.md#updatepriority) - Incident Priority Update
 * [Reassign](docs/sdks/incidents/README.md#reassign) - Reassign Incident
 * [Resolve](docs/sdks/incidents/README.md#resolve) - Resolve Incident
+* [IncidentsUnmergeIncident](docs/sdks/incidents/README.md#incidentsunmergeincident) - Unmerge Incident
 * [GetStatusByRequestIds](docs/sdks/incidents/README.md#getstatusbyrequestids) - Get Incidents Status By RequestIDs
 * [GetAllPostmortems](docs/sdks/incidents/README.md#getallpostmortems) - Get All Postmortems
 * [MarkAsTransient](docs/sdks/incidents/README.md#markastransient) - Mark as Transient
@@ -487,6 +490,10 @@ func main() {
 
 * [Create](docs/sdks/squadsv4/README.md#create) - Create Squad
 * [GetByID](docs/sdks/squadsv4/README.md#getbyid) - Get Squad By ID
+
+### [StatusPagesSubscribers](docs/sdks/statuspagessubscribers/README.md)
+
+* [StatusPagesDeleteSubscriberByID](docs/sdks/statuspagessubscribers/README.md#statuspagesdeletesubscriberbyid) - Delete Subscriber By ID
 
 ### [StatusPages](docs/sdks/statuspages/README.md)
 

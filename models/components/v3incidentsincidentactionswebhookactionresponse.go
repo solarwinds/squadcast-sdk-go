@@ -46,7 +46,7 @@ type V3IncidentsIncidentActionsWebhookActionResponse struct {
 	Name                      string                                                `json:"name"`
 	Slug                      string                                                `json:"slug"`
 	Description               string                                                `json:"description"`
-	Triggers                  []string                                              `json:"triggers"`
+	Triggers                  []V3IncidentsIncidentActionsEventWebhookTrigger       `json:"triggers"`
 	Urls                      []URLObj                                              `json:"urls"`
 	Teams                     []string                                              `json:"teams"`
 	IsAllTeamsConfigured      bool                                                  `json:"is_all_teams_configured"`
@@ -124,9 +124,9 @@ func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetDescription() strin
 	return v.Description
 }
 
-func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggers() []string {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggers() []V3IncidentsIncidentActionsEventWebhookTrigger {
 	if v == nil {
-		return []string{}
+		return []V3IncidentsIncidentActionsEventWebhookTrigger{}
 	}
 	return v.Triggers
 }

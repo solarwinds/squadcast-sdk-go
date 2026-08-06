@@ -1,0 +1,9 @@
+# IncidentsUnmergeIncidentRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `IncidentID`                                                                                                 | `string`                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `V3IncidentsUnmergeIncidentRequest`                                                                          | [components.V3IncidentsUnmergeIncidentRequest](../../models/components/v3incidentsunmergeincidentrequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
