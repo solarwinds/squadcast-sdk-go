@@ -7,7 +7,7 @@
 * [BulkAcknowledge](#bulkacknowledge) - Bulk Acknowledge Incidents
 * [Export](#export) - Incident Export
 * [ExportAsync](#exportasync) - Incident Export Async
-* [IncidentsMergeIncidents](#incidentsmergeincidents) - Merge Incidents
+* [Merge](#merge) - Merge Incidents
 * [BulkUpdatePriority](#bulkupdatepriority) - Bulk Incidents Priority Update
 * [BulkResolve](#bulkresolve) - Bulk Resolve Incidents
 * [GetByID](#getbyid) - Get Incident by ID
@@ -16,7 +16,7 @@
 * [UpdatePriority](#updatepriority) - Incident Priority Update
 * [Reassign](#reassign) - Reassign Incident
 * [Resolve](#resolve) - Resolve Incident
-* [IncidentsUnmergeIncident](#incidentsunmergeincident) - Unmerge Incident
+* [Unmerge](#unmerge) - Unmerge Incident
 * [GetStatusByRequestIds](#getstatusbyrequestids) - Get Incidents Status By RequestIDs
 * [GetAllPostmortems](#getallpostmortems) - Get All Postmortems
 * [MarkAsTransient](#markastransient) - Mark as Transient
@@ -304,7 +304,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## IncidentsMergeIncidents
+## Merge
 
 - This endpoint merges incidents under an existing parent incident or a newly created parent incident. A parent can have at most 100 child incidents in total.
 - All selected child incidents must belong to the team specified by `owner_id` and must not be suppressed, already merged as a child, or a parent with child incidents.
@@ -335,7 +335,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
-    res, err := s.Incidents.IncidentsMergeIncidents(ctx, operations.CreateIncidentsMergeIncidentsRequestV3IncidentsMergeIntoNewParentRequest(
+    res, err := s.Incidents.Merge(ctx, operations.CreateIncidentsMergeIncidentsRequestV3IncidentsMergeIntoNewParentRequest(
         components.V3IncidentsMergeIntoNewParentRequest{
             OwnerID: "<id>",
             Children: []string{
@@ -934,7 +934,7 @@ func main() {
 | apierrors.GatewayTimeoutError      | 504                                | application/json                   |
 | apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
-## IncidentsUnmergeIncident
+## Unmerge
 
 - This endpoint unmerges a child incident from its parent incident.
 - The incident must currently be a child of a parent incident, and the parent incident must not be resolved or suppressed.
@@ -963,7 +963,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_REFRESH_TOKEN_AUTH")),
     )
 
-    res, err := s.Incidents.IncidentsUnmergeIncident(ctx, "<id>", components.V3IncidentsUnmergeIncidentRequest{
+    res, err := s.Incidents.Unmerge(ctx, "<id>", components.V3IncidentsUnmergeIncidentRequest{
         SendNotification: false,
         AssignMe: true,
     })

@@ -1483,14 +1483,14 @@ func (s *Incidents) ExportAsync(ctx context.Context, request components.V3Incide
 
 }
 
-// IncidentsMergeIncidents - Merge Incidents
+// Merge Incidents
 // - This endpoint merges incidents under an existing parent incident or a newly created parent incident. A parent can have at most 100 child incidents in total.
 // - All selected child incidents must belong to the team specified by `owner_id` and must not be suppressed, already merged as a child, or a parent with child incidents.
 // - An existing parent incident must belong to the same team and must not be suppressed or already merged as a child.
 // - When using an existing parent, the parent and child incidents must all be resolved or all be open (`triggered` or `acknowledged`).
 // - When creating a new parent, provide at least two open child incidents and the `new_incident` details instead of `parent_incident_id`.
 // - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
-func (s *Incidents) IncidentsMergeIncidents(ctx context.Context, request operations.IncidentsMergeIncidentsRequest, opts ...operations.Option) (*operations.IncidentsMergeIncidentsResponse, error) {
+func (s *Incidents) Merge(ctx context.Context, request operations.IncidentsMergeIncidentsRequest, opts ...operations.Option) (*operations.IncidentsMergeIncidentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5897,13 +5897,13 @@ func (s *Incidents) Resolve(ctx context.Context, incidentID string, v3IncidentsR
 
 }
 
-// IncidentsUnmergeIncident - Unmerge Incident
+// Unmerge Incident
 // - This endpoint unmerges a child incident from its parent incident.
 // - The incident must currently be a child of a parent incident, and the parent incident must not be resolved or suppressed.
 // - `send_notification`: if `true`, sends notifications for the unmerged incident.
 // - `assign_me`: if `true`, assigns the unmerged incident to the requesting user. If `false`, the incident keeps its last assignee, provided that assignee still exists; otherwise the request fails and `assign_me` must be set to `true`.
 // - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
-func (s *Incidents) IncidentsUnmergeIncident(ctx context.Context, incidentID string, v3IncidentsUnmergeIncidentRequest components.V3IncidentsUnmergeIncidentRequest, opts ...operations.Option) (*operations.IncidentsUnmergeIncidentResponse, error) {
+func (s *Incidents) Unmerge(ctx context.Context, incidentID string, v3IncidentsUnmergeIncidentRequest components.V3IncidentsUnmergeIncidentRequest, opts ...operations.Option) (*operations.IncidentsUnmergeIncidentResponse, error) {
 	request := operations.IncidentsUnmergeIncidentRequest{
 		IncidentID:                        incidentID,
 		V3IncidentsUnmergeIncidentRequest: v3IncidentsUnmergeIncidentRequest,

@@ -137,7 +137,6 @@ type SquadcastSDK struct {
 	Squads                        *Squads
 	V4                            *V4
 	StatusPages                   *StatusPages
-	StatusPagesSubscribers        *StatusPagesSubscribers
 
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -214,9 +213,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.7.2",
+		SDKVersion: "1.7.3",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.7.2 2.926.8 1.0.0 github.com/solarwinds/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.7.3 2.926.8 1.0.0 github.com/solarwinds/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -270,7 +269,6 @@ func New(opts ...SDKOption) *SquadcastSDK {
 	sdk.Squads = newSquads(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.V4 = newV4(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.StatusPages = newStatusPages(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesSubscribers = newStatusPagesSubscribers(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk
 }

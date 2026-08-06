@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
-  docChecksum: e9bbc5a70e24a6d94389c17da8a6bb66
+  docChecksum: 950123ec68dd4fc80057bcadf8686a65
   docVersion: 1.0.0
   speakeasyVersion: 1.791.4
   generationVersion: 2.926.8
-  releaseVersion: 1.7.2
-  configChecksum: d01192eeb0e772145d499e7720f1a3c4
+  releaseVersion: 1.7.3
+  configChecksum: 47e37400c835aae411a92f0ed3c1fbf2
   repoURL: https://github.com/solarwinds/squadcast-sdk-go.git
   installationURL: https://github.com/solarwinds/squadcast-sdk-go
 persistentEdits:
-  generation_id: 522f4508-3ec9-49e5-acee-6a6ba3a21294
-  pristine_commit_hash: 2bf26b2261b06ae1cf1aab5b6a38c7e83e3df756
-  pristine_tree_hash: 0dfe95cea37f554d582a50e48c83872cc10a644a
+  generation_id: 9ae4d27b-1470-42d4-8629-7dea5a3deaa3
+  pristine_commit_hash: e245a57eef48b4ffb185530578c064b65c34f8b2
+  pristine_tree_hash: c569c2b7dd6a5d7d2f1c5880d91ff603ee7b2fb2
 features:
   go:
     additionalDependencies: 0.1.0
@@ -5476,8 +5476,8 @@ trackedFiles:
     pristine_git_object: 94733345b8bf4e1e546f6e321141bf351b528dc5
   docs/sdks/incidents/README.md:
     id: 6ce620b07518
-    last_write_checksum: sha1:652b035c3b080d43c18013d64237297fba666a04
-    pristine_git_object: b2f18cee693e16e9e52e588c5130dab86bb626f6
+    last_write_checksum: sha1:37305b736e7de7fb29f0acf8363c486a079ef03a
+    pristine_git_object: eb6a9759c6b9e8a7e060a41a1444ef457beaaefe
   docs/sdks/incidentsactions/README.md:
     id: c4891acabbd7
     last_write_checksum: sha1:557914af7ef0b6293d0e5689b2813c2c72214056
@@ -5602,14 +5602,10 @@ trackedFiles:
     id: eefbb24afdb4
     last_write_checksum: sha1:1c847dd5b36fb9901e1f26f8b32ab3194804d6e1
     pristine_git_object: 406dd81f895f8a2f0c762159fd3de02726a4aa2b
-  docs/sdks/statuspagessubscribers/README.md:
-    id: 50cb00b60e22
-    last_write_checksum: sha1:c36850e031bffbe7c47ec443434d9dcf0fd8b8d8
-    pristine_git_object: a28956cb80036d533ab771aab809cc054a847a56
   docs/sdks/subscribers/README.md:
     id: 14c599d74195
-    last_write_checksum: sha1:3d9c7c1e0f8e0a9a16d8b069a5b519f865dca434
-    pristine_git_object: 3ae731f57c8a448a9fee1422a072f0bba299a85b
+    last_write_checksum: sha1:bf3b579bda522d74ba0c6faf90bc41b5e26fdd9b
+    pristine_git_object: 13da21dbce34222aab800edeb01ddc9ca4c9793f
   docs/sdks/suppressionrules/README.md:
     id: 340b29b64030
     last_write_checksum: sha1:94579c23d2ab8fc8ac69a8a2dba49956ede4ca12
@@ -5716,8 +5712,8 @@ trackedFiles:
     pristine_git_object: bcfcbc7e4bcfddf2e54d765a52b9262f6da47106
   incidents.go:
     id: ad38bd844f1f
-    last_write_checksum: sha1:efcb174f4300cb7e92d4e2372c49bf2713327d83
-    pristine_git_object: ce08ab6de02dbca774e630068ca4fa2e8bee6db1
+    last_write_checksum: sha1:32b17c4e7de8db155b517af8e4d4a40c61b8b515
+    pristine_git_object: 14760548060b46546e40d4325abbe9f279687406
   incidentsactions.go:
     id: da4049ddead6
     last_write_checksum: sha1:b3c15159d184032f299298b7034624ad5a36c22b
@@ -8448,8 +8444,8 @@ trackedFiles:
     pristine_git_object: 6e9400c99dc1adb3ac1432058fccfd5a299b48b0
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:8c28584db4016f042ca2979ab91f58da6884012e
-    pristine_git_object: 2d4e5cda2a786520e9d649a04a062e6311d43cc4
+    last_write_checksum: sha1:a0d2eebb0cb9d674840fe35dd7a546d13e4e0d9c
+    pristine_git_object: 707aa46a3b263bb47831c7d601c55797cd2f3dab
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:0ce0de0b26e8631907429c98b500c3fca6c1bf44
@@ -8462,14 +8458,10 @@ trackedFiles:
     id: 1c6b8846d775
     last_write_checksum: sha1:d9550ab638b94af85bfe74560fc46f20d1b4c95b
     pristine_git_object: a673a99a6cd85547bb84dc3d6cf1b1a7bdd66a8f
-  statuspagessubscribers.go:
-    id: 67f3dc673569
-    last_write_checksum: sha1:e5332f3a54053cd924ab1e57f67c6b8834ddd268
-    pristine_git_object: 1e570b6e671dbd78fddd8b52062dcf741bffd60c
   subscribers.go:
     id: 2e50924150d4
-    last_write_checksum: sha1:6760f0f1e7a779df064002b833907a0360049a22
-    pristine_git_object: cd866fc021b6eb0d9bbf19bec66f59b89c506868
+    last_write_checksum: sha1:5029a099947c5e40d6b49923ce282d72bc50495c
+    pristine_git_object: 4b4aa711e57465bdc423d93ee503d79c80a2aed1
   suppressionrules.go:
     id: 1e7b4066e9bf
     last_write_checksum: sha1:c569e329e7d37aea66fe4c5b2fa140fb83db28e7
@@ -15199,7 +15191,6 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: "## Go SDK Changes:\n* `SquadcastSdk.Services.Overlays.GetDedupKey()`:  `response.Data.OverlayTemplateType` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Services.UpdateDedupKeyOverlay()`:  `response.union(class (0)).Data.OverlayTemplateType` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Rotations.GetParticipants()`:  `response.Data` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Incidents.Reassign()`: \n  *  `request.V3.incidents.reassignIncidentRequest.ReassignTo.Type` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Incidents.Actions.Webhook.TriggerManually()`:  `response.Data.Triggers[]` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Services.Create()`: \n  *  `request.V3.services.createServiceRequest.OwnerId` **Added** (Breaking ⚠️)\n* `SquadcastSdk.Services.GetAllDedupKeyOverlays()`:  `response.Data[].OverlayTemplateType` **Changed** (Breaking ⚠️)\n* `SquadcastSdk.Teams.Create()`:  `response.Data.Roles` **Changed**\n* `SquadcastSdk.Incidents.IncidentsUnmergeIncident()`: **Added**\n* `SquadcastSdk.Incidents.IncidentsMergeIncidents()`: **Added**\n* `SquadcastSdk.Teams.GetAll()`:  `response.Data[].Roles` **Changed**\n* `SquadcastSdk.Teams.GetById()`:  `response.Data.Roles` **Changed**\n* `SquadcastSdk.Teams.Update()`:  `response.Data.Roles` **Changed**\n* `SquadcastSdk.Teams.CreateRole()`:  `response.Data.Roles` **Changed**\n* `SquadcastSdk.Teams.UpdateRole()`:  `response.Data.Roles` **Changed**\n* `SquadcastSdk.StatusPages/subscribers.StatusPagesDeleteSubscriberById()`: **Added**\n* `SquadcastSdk.StatusPages.List()`:  `response.Data[].CustomDomainName` **Changed**\n* `SquadcastSdk.StatusPages.GetById()`:  `response.Data.CustomDomainName` **Changed**\n* `SquadcastSdk.StatusPages.UpdateById()`:  `response.Data.CustomDomainName` **Changed**\n"
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
